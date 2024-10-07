@@ -3,10 +3,15 @@ import {SafeAreaProvider} from 'react-native-safe-area-context';
 import {GestureHandlerRootView} from 'react-native-gesture-handler';
 import {PortalProvider} from '@gorhom/portal';
 import {KeyboardProvider} from 'react-native-keyboard-controller';
+import {LogBox} from 'react-native';
 
 import ComposeProviders from './components/ComposeProviders';
+import AppErrorBoundary from './components/AppErrorBoundary';
+
 import ThemeProvider from './theme/ThemeProvider';
-import {View} from 'react-native';
+import Root from './navigation/Root';
+
+LogBox.ignoreLogs(['findHostInstance_DEPRECATED is deprecated in StrictMode']);
 
 function App() {
   return (
@@ -19,9 +24,10 @@ function App() {
             PortalProvider,
             KeyboardProvider,
           ]}>
-          <View></View>
+          <AppErrorBoundary>
+            <Root />
+          </AppErrorBoundary>
         </ComposeProviders>
-        <SafeAreaProvider></SafeAreaProvider>
       </GestureHandlerRootView>
     </React.StrictMode>
   );

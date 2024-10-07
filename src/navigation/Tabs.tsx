@@ -1,3 +1,5 @@
+import TabBar from './Tabbar';
+
 import React from 'react';
 import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
 
@@ -7,7 +9,7 @@ const Tab = createBottomTabNavigator();
 function Tabs() {
   return (
     <Tab.Navigator
-      //tabBar={props => <Tabbar {...props} />}
+      tabBar={props => <TabBar {...props} />}
       screenOptions={{headerShown: false}}>
       <Tab.Screen name="Home" component={Home} />
       <Tab.Screen name="WhishList" component={WhishList} />

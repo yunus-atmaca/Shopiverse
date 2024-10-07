@@ -43,4 +43,4 @@ const Styles = {
   },
 };
 
-export {Styles};
+export default Styles;

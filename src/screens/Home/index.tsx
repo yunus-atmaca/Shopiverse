@@ -1,8 +1,10 @@
-import React from 'react';
-import {} from 'react-native';
+import React, {useEffect} from 'react';
+import {View} from 'react-native';
 
 const Home = () => {
-  return null;
+  useEffect(() => {}, []);
+
+  return <View style={{flex: 1, backgroundColor: 'green'}}></View>;
 };
 
 export default Home;
