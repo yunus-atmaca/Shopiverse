@@ -14,18 +14,23 @@ export enum ColorScheme {
 type ThemeColors = {
   page: ColorValue;
 
-  buttonDefault: ColorValue;
+  button: ColorValue;
+  buttonText: ColorValue;
   buttonPressed: ColorValue;
   buttonDisabled: ColorValue;
-  buttonTextDefault: ColorValue;
-  buttonTextPressed: ColorValue;
-  buttontextDisabled: ColorValue;
+  buttonTextDisabled: ColorValue;
 
   text: ColorValue;
+  textSub: ColorValue;
   textReversed: ColorValue;
   textError: ColorValue;
 
-  iconDefault: ColorValue;
+  icon: ColorValue;
+  iconBackground: ColorValue;
+
+  markers: ColorValue;
+
+  borderColor: ColorValue;
 };
 
 export type {ThemeColors};

@@ -1,12 +1,13 @@
+import NotLoggedIn from './NotLoggedIn';
+
 import React from 'react';
-import {View} from 'react-native';
 
 import PageWrapper from '@/components/PageWrapper';
 
 const WhishList = () => {
   return (
     <PageWrapper>
-      <View></View>
+      <NotLoggedIn />
     </PageWrapper>
   );
 };

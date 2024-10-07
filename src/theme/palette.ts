@@ -6,9 +6,15 @@ const palette: Record<string, ColorValue> = {
   transparent: 'transparent',
 
   orange: '#ff660e',
+  orange100: '#FFB387',
   red: '#f22613',
 
   gray100: '#f5f5f5',
+  gray200: '#ececec',
+  gray300: '#e4e9ed',
+  gray400: '#dadfe1',
+  gray500: '#bdc3c7',
+  gray600: '#6c7a89',
 };
 
 export {palette};

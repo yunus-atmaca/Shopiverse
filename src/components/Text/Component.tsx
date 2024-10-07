@@ -24,13 +24,16 @@ const P = ({
   return (
     <Text
       allowFontScaling={false}
-      style={{
-        color: color ?? theme.text,
-        fontSize: Styles.hs(size),
-        textAlign: align,
-        fontFamily: typographies.paragraph[typography],
-      }}
       {...props}
+      style={[
+        {
+          color: color ?? theme.text,
+          fontSize: Styles.hs(size),
+          textAlign: align,
+          fontFamily: typographies.paragraph[typography],
+        },
+        props.style,
+      ]}
     />
   );
 };
@@ -52,13 +55,16 @@ const H = ({
   return (
     <Text
       allowFontScaling={false}
-      style={{
-        color: color ?? theme.text,
-        fontSize: Styles.hs(size),
-        textAlign: align,
-        fontFamily: typographies.header[typography],
-      }}
       {...props}
+      style={[
+        {
+          color: color ?? theme.text,
+          fontSize: Styles.hs(size),
+          textAlign: align,
+          fontFamily: typographies.header[typography],
+        },
+        props.style,
+      ]}
     />
   );
 };

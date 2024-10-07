@@ -1,5 +1,5 @@
 import React, {PropsWithChildren} from 'react';
-import {Platform, StatusBar, View} from 'react-native';
+import {FlexAlignType, Platform, StatusBar, View} from 'react-native';
 import {SafeAreaInsetsContext} from 'react-native-safe-area-context';
 
 import {useTheme} from '@/hooks/theme';
@@ -7,11 +7,24 @@ import {useTheme} from '@/hooks/theme';
 type Props = {
   removeTop?: boolean;
   removeBottom?: boolean;
+  /** stands for alignItems */
+  ai?: FlexAlignType | undefined;
+  /** stands for justifyContent */
+  jc?:
+    | 'flex-start'
+    | 'flex-end'
+    | 'center'
+    | 'space-between'
+    | 'space-around'
+    | 'space-evenly'
+    | undefined;
 };
 
 const PageWrapper = ({
   removeTop = false,
   removeBottom = false,
+  ai = undefined,
+  jc = undefined,
   children,
 }: Props & PropsWithChildren) => {
   const theme = useTheme();
@@ -36,7 +49,16 @@ const PageWrapper = ({
 
         //console.debug('insets => ', defInsets);
         return (
-          <View style={[{flex: 1, backgroundColor: theme.page}, defInsets]}>
+          <View
+            style={[
+              {
+                flex: 1,
+                backgroundColor: theme.page,
+                alignItems: ai,
+                justifyContent: jc,
+              },
+              defInsets,
+            ]}>
             {children}
           </View>
         );

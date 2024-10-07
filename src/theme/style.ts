@@ -23,6 +23,7 @@ const Styles = {
   vs: verticalScale,
   ms: moderateScale,
   spacing: {
+    xxl: 32,
     xl: 24,
     l: 20,
     r: 16,
@@ -30,6 +31,7 @@ const Styles = {
     s: 8,
   },
   radius: {
+    xs: moderateScale(4),
     s: moderateScale(8),
     m: moderateScale(12),
     r: moderateScale(16),
