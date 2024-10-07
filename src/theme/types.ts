@@ -30,7 +30,11 @@ type ThemeColors = {
 
   markers: ColorValue;
 
-  borderColor: ColorValue;
+  border: ColorValue;
+
+  tabbar: ColorValue;
+  tabbarIconActive: ColorValue;
+  tabbarIconPassive: ColorValue;
 };
 
 export type {ThemeColors};

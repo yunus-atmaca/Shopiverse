@@ -20,7 +20,11 @@ const lightTheme: ThemeColors = {
 
   markers: palette.orange,
 
-  borderColor: palette.gray400,
+  border: palette.gray400,
+
+  tabbar: palette.white,
+  tabbarIconActive: palette.orange,
+  tabbarIconPassive: palette.gray600
 };
 
 export default lightTheme;

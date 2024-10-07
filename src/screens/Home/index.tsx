@@ -1,10 +1,10 @@
 import React, {useEffect} from 'react';
-import {View} from 'react-native';
+import PageWrapper from '@/components/PageWrapper';
 
 const Home = () => {
   useEffect(() => {}, []);
 
-  return <View style={{flex: 1, backgroundColor: 'green'}}></View>;
+  return <PageWrapper></PageWrapper>;
 };
 
 export default Home;

@@ -1,28 +1,42 @@
 import styles from './styles';
 
-import React, {FC} from 'react';
+import React, {FC, useCallback} from 'react';
 import {Text, TouchableOpacity, View} from 'react-native';
 import {BottomTabBarProps} from '@react-navigation/bottom-tabs';
 import {useSafeAreaInsets} from 'react-native-safe-area-context';
 
 import Styles from '@/theme/style';
+import {useTheme} from '@/hooks/theme';
+import Icon from '@/components/Icon';
 
-const {vs, device, hs, spacing} = Styles;
-export const BANNER_HEIGHT = 0;
-export const TABBAR_HEIGHT = vs(64) + BANNER_HEIGHT;
-const TABBAR_WIDTH = device.width - hs(spacing.l) * 2;
-export const WORLD_BUTTON_WIDTH = hs(64);
-export const TAB_WIDTH = (TABBAR_WIDTH - WORLD_BUTTON_WIDTH) / 2;
+const {vs} = Styles;
 
 const TabBar: FC<BottomTabBarProps> = ({state, navigation}) => {
+  const theme = useTheme();
+
   const {bottom} = useSafeAreaInsets();
   const BOTTOM = bottom === 0 ? vs(16) : bottom;
+
+  const getIcon = useCallback((tab: string, isActive: boolean) => {
+    const color = isActive ? theme.tabbarIconActive : theme.tabbarIconPassive;
+    if (tab === 'Home') return <Icon isTab color={color} name="Home" />;
+    else if (tab === 'WhishList')
+      return <Icon isTab color={color} name="HeartFilled" />;
+    else if (tab === 'Cart')
+      return <Icon isTab color={color} name="ShoppingCart" />;
+    else if (tab === 'Profile')
+      return <Icon isTab color={color} name="Person" />;
+  }, []);
 
   return (
     <View
       style={[
         styles.container,
-        {paddingBottom: BOTTOM, height: TABBAR_HEIGHT},
+        {
+          paddingBottom: BOTTOM,
+          borderColor: theme.border,
+          backgroundColor: theme.tabbar,
+        },
       ]}>
       <View style={styles.tabs}>
         {state.routes.map((route, index) => {
@@ -45,8 +59,8 @@ const TabBar: FC<BottomTabBarProps> = ({state, navigation}) => {
               activeOpacity={1}
               onPress={onPress}
               key={label}
-              style={[styles.tab, {width: TAB_WIDTH}]}>
-              <Text>{label}</Text>
+              style={styles.tab}>
+              {getIcon(label, isFocused)}
             </TouchableOpacity>
           );
         })}

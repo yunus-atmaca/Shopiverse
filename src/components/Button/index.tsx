@@ -1,36 +1,32 @@
 import styles from './styles';
 
 import React from 'react';
-import {
-  StyleProp,
-  TouchableHighlight,
-  TouchableHighlightProps,
-  View,
-  ViewStyle,
-} from 'react-native';
+import {TouchableHighlight, TouchableHighlightProps} from 'react-native';
 
 import Text from '@/components/Text';
 import {useTheme} from '@/hooks/theme';
 
 type Props = {
   text?: string;
+  loading?: boolean;
 };
 
 const Button = ({
   text = 'Button',
+  loading = false,
   ...props
 }: Props & TouchableHighlightProps) => {
   const theme = useTheme();
+
+  const _onPress = () => {};
 
   const isDisabled = props.disabled;
   return (
     <TouchableHighlight
       underlayColor={theme.buttonPressed}
-      onPress={() => {
-        console.debug('Clicked');
-      }}
       activeOpacity={0.7}
       {...props}
+      onPress={_onPress}
       style={[
         styles.container,
         props.style,

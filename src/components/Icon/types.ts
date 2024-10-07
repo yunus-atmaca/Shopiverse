@@ -12,4 +12,5 @@ export type Props = {
   onClick?: () => void;
   containerStyle?: ViewStyle;
   scaleFactor?: 'horizontal' | 'vertical';
+  isTab?: boolean;
 };

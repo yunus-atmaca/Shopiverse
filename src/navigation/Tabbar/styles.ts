@@ -1,14 +1,13 @@
 import {StyleSheet} from 'react-native';
 import Styles from '@/theme/style';
 
-const {vs, hs, spacing, radius} = Styles;
+const {hs, vs, spacing, borderWidth} = Styles;
 export default StyleSheet.create({
   container: {
-    backgroundColor: 'red',
+    paddingHorizontal: hs(spacing.r),
+    borderTopWidth: borderWidth.m,
   },
   tabs: {
-    backgroundColor: 'gray',
-    flex: 1,
     flexDirection: 'row',
     alignItems: 'center',
     justifyContent: 'space-between',
@@ -16,5 +15,8 @@ export default StyleSheet.create({
   tab: {
     alignItems: 'center',
     justifyContent: 'center',
+    //paddingVertical: vs(spacing.s),
+    paddingTop: vs(spacing.s),
+    flex: 1,
   },
 });

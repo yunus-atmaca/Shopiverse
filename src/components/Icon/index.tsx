@@ -16,11 +16,12 @@ const Icon: FC<Props> = ({
   bgColor,
   onClick,
   containerStyle,
+  isTab = false,
 }) => {
   const theme = useTheme();
 
   const icColor = color ?? theme.icon;
-  const icContainerBg = bgColor ?? theme.iconBackground;
+  const icContainerBg = isTab ? 'transparent' : bgColor ?? theme.iconBackground;
   const icSize = Styles.hs(size);
   const icContainerSize = Styles.hs(containerSize);
 
@@ -33,7 +34,7 @@ const Icon: FC<Props> = ({
             height: icContainerSize,
             width: icContainerSize,
             backgroundColor: icContainerBg,
-            borderColor: theme.borderColor,
+            borderColor: isTab ? undefined : theme.border,
           },
           containerStyle,
         ]}
@@ -53,7 +54,7 @@ const Icon: FC<Props> = ({
             height: icContainerSize,
             width: icContainerSize,
             backgroundColor: icContainerBg,
-            borderColor: theme.borderColor,
+            borderColor: isTab ? 'transparent' : theme.border,
           },
           containerStyle,
         ]}>
