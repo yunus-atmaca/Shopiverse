@@ -21,9 +21,11 @@ type ThemeColors = {
   buttonTextPressed: ColorValue;
   buttontextDisabled: ColorValue;
 
-  textLight: ColorValue;
-  textDark: ColorValue;
+  text: ColorValue;
+  textReversed: ColorValue;
   textError: ColorValue;
+
+  iconDefault: ColorValue;
 };
 
 export type {ThemeColors};

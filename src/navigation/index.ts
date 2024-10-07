@@ -1,6 +1,8 @@
-import type {
+import {
   CompositeScreenProps,
+  NavigationContainerRefWithCurrent,
   NavigatorScreenParams,
+  createNavigationContainerRef,
 } from '@react-navigation/native';
 import type {StackScreenProps} from '@react-navigation/stack';
 import type {BottomTabScreenProps} from '@react-navigation/bottom-tabs';
@@ -17,6 +19,9 @@ export type RootStackParamList = {
 };
 
 export type Pages = keyof TabParamList | keyof RootStackParamList;
+
+type NavigationRef = NavigationContainerRefWithCurrent<RootStackParamList>;
+export const navigationRef: NavigationRef = createNavigationContainerRef();
 
 export type RootStackScreenProps<T extends keyof RootStackParamList> =
   StackScreenProps<RootStackParamList, T>;

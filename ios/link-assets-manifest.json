@@ -1,0 +1,57 @@
+{
+  "migIndex": 1,
+  "data": [
+    {
+      "path": "src/assets/fonts/OpenSans-Bold.ttf",
+      "sha1": "953814da1b753763dfa5a7ecc18bdbb14890e16b"
+    },
+    {
+      "path": "src/assets/fonts/OpenSans-Italic.ttf",
+      "sha1": "01dbaae7500dc9244c68eb081cd5d4b61d4acb6b"
+    },
+    {
+      "path": "src/assets/fonts/OpenSans-Light.ttf",
+      "sha1": "9292ee344b331c5959c7b130d1a2df5543dfa58a"
+    },
+    {
+      "path": "src/assets/fonts/OpenSans-Medium.ttf",
+      "sha1": "a44dcac0388d78404b84578f3e593c740399ebb5"
+    },
+    {
+      "path": "src/assets/fonts/OpenSans-Regular.ttf",
+      "sha1": "76ea5d4c70539ad9b0e7faf7e4fbe3bae8a961c7"
+    },
+    {
+      "path": "src/assets/fonts/OpenSans-SemiBold.ttf",
+      "sha1": "9b1adfbc773bb8bd1e6c4ca85c34441a43c2bc54"
+    },
+    {
+      "path": "src/assets/fonts/RobotoMono-Bold.ttf",
+      "sha1": "9155bb87dab4ebc84ad4dffd69051e3dd33b73c0"
+    },
+    {
+      "path": "src/assets/fonts/RobotoMono-Italic.ttf",
+      "sha1": "5035e475365dca8693be01f149b30466d0f701d1"
+    },
+    {
+      "path": "src/assets/fonts/RobotoMono-Light.ttf",
+      "sha1": "3622747c6fd05b5ea95ef8d5e0e45ba217b59631"
+    },
+    {
+      "path": "src/assets/fonts/RobotoMono-Medium.ttf",
+      "sha1": "c86b835df1f911c6fa48b0e28f9f3fe80b981f13"
+    },
+    {
+      "path": "src/assets/fonts/RobotoMono-Regular.ttf",
+      "sha1": "c25a072c96240ab8fc288b61edf2bb133aaa975d"
+    },
+    {
+      "path": "src/assets/fonts/RobotoMono-SemiBold.ttf",
+      "sha1": "3e27af4808640005903a8791831e78ef177189a2"
+    },
+    {
+      "path": "src/assets/fonts/RobotoMono-Thin.ttf",
+      "sha1": "df9f591faa67afd4991c4129dc6509fa117eaec2"
+    }
+  ]
+}

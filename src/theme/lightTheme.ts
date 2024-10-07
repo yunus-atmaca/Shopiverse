@@ -1,7 +1,8 @@
 import {ThemeColors} from './types';
+import {palette} from './palette';
 
 const lightTheme: ThemeColors = {
-  page: '',
+  page: palette.white,
 
   buttonDefault: '',
   buttonPressed: '',
@@ -10,9 +11,11 @@ const lightTheme: ThemeColors = {
   buttonTextPressed: '',
   buttontextDisabled: '',
 
-  textDark: '',
-  textLight: '',
-  textError: '',
+  text: palette.black,
+  textReversed: palette.white,
+  textError: palette.red,
+
+  iconDefault: '',
 };
 
 export default lightTheme;

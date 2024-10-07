@@ -1,8 +1,14 @@
 import React from 'react';
-import {} from 'react-native';
+import {View} from 'react-native';
+
+import PageWrapper from '@/components/PageWrapper';
 
 const WhishList = () => {
-  return null;
+  return (
+    <PageWrapper>
+      <View></View>
+    </PageWrapper>
+  );
 };
 
 export default WhishList;
