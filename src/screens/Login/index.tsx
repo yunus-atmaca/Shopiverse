@@ -10,6 +10,7 @@ import TextInput from '@/components/TextInput';
 import Button from '@/components/Button';
 import {useTheme} from '@/hooks/theme';
 import Icon from '@/components/Icon';
+import {navigationRef} from '@/navigation';
 
 const Login = () => {
   const theme = useTheme();
@@ -41,7 +42,12 @@ const Login = () => {
             secureTextEntry
           />
         </View>
-        <Text.H color={theme.textActive} style={styles.forgotPassword}>
+        <Text.H
+          onPress={() =>
+            navigationRef.navigate('ForgotPassword', {country: undefined})
+          }
+          color={theme.textActive}
+          style={styles.forgotPassword}>
           Şifremi Unuttum
         </Text.H>
 
@@ -50,9 +56,9 @@ const Login = () => {
         </View>
 
         <View style={styles.loginWith}>
-          <View style={[styles.line, {backgroundColor: theme.inputBorder}]} />
+          <View style={[styles.line, {backgroundColor: theme.line}]} />
           <Text.H size={14}>Or</Text.H>
-          <View style={[styles.line, {backgroundColor: theme.inputBorder}]} />
+          <View style={[styles.line, {backgroundColor: theme.line}]} />
         </View>
 
         <View style={styles.social}>

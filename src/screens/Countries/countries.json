@@ -1,0 +1,482 @@
+[
+  {"name": "Aruba", "cca2": "AW", "flag": "🇦🇼", "callingCode": "+297"},
+  {"name": "Afghanistan", "cca2": "AF", "flag": "🇦🇫", "callingCode": "+93"},
+  {"name": "Angola", "cca2": "AO", "flag": "🇦🇴", "callingCode": "+244"},
+  {"name": "Anguilla", "cca2": "AI", "flag": "🇦🇮", "callingCode": "+1264"},
+  {
+    "name": "Åland Islands",
+    "cca2": "AX",
+    "flag": "🇦🇽",
+    "callingCode": "+35818"
+  },
+  {"name": "Albania", "cca2": "AL", "flag": "🇦🇱", "callingCode": "+355"},
+  {"name": "Andorra", "cca2": "AD", "flag": "🇦🇩", "callingCode": "+376"},
+  {
+    "name": "United Arab Emirates",
+    "cca2": "AE",
+    "flag": "🇦🇪",
+    "callingCode": "+971"
+  },
+  {"name": "Argentina", "cca2": "AR", "flag": "🇦🇷", "callingCode": "+54"},
+  {"name": "Armenia", "cca2": "AM", "flag": "🇦🇲", "callingCode": "+374"},
+  {
+    "name": "American Samoa",
+    "cca2": "AS",
+    "flag": "🇦🇸",
+    "callingCode": "+1684"
+  },
+  {"name": "Antarctica", "cca2": "AQ", "flag": "🇦🇶", "callingCode": ""},
+  {
+    "name": "French Southern and Antarctic Lands",
+    "cca2": "TF",
+    "flag": "🇹🇫",
+    "callingCode": "+262"
+  },
+  {
+    "name": "Antigua and Barbuda",
+    "cca2": "AG",
+    "flag": "🇦🇬",
+    "callingCode": "+1268"
+  },
+  {"name": "Australia", "cca2": "AU", "flag": "🇦🇺", "callingCode": "+61"},
+  {"name": "Austria", "cca2": "AT", "flag": "🇦🇹", "callingCode": "+43"},
+  {"name": "Azerbaijan", "cca2": "AZ", "flag": "🇦🇿", "callingCode": "+994"},
+  {"name": "Burundi", "cca2": "BI", "flag": "🇧🇮", "callingCode": "+257"},
+  {"name": "Belgium", "cca2": "BE", "flag": "🇧🇪", "callingCode": "+32"},
+  {"name": "Benin", "cca2": "BJ", "flag": "🇧🇯", "callingCode": "+229"},
+  {"name": "Burkina Faso", "cca2": "BF", "flag": "🇧🇫", "callingCode": "+226"},
+  {"name": "Bangladesh", "cca2": "BD", "flag": "🇧🇩", "callingCode": "+880"},
+  {"name": "Bulgaria", "cca2": "BG", "flag": "🇧🇬", "callingCode": "+359"},
+  {"name": "Bahrain", "cca2": "BH", "flag": "🇧🇭", "callingCode": "+973"},
+  {"name": "Bahamas", "cca2": "BS", "flag": "🇧🇸", "callingCode": "+1242"},
+  {
+    "name": "Bosnia and Herzegovina",
+    "cca2": "BA",
+    "flag": "🇧🇦",
+    "callingCode": "+387"
+  },
+  {
+    "name": "Saint Barthélemy",
+    "cca2": "BL",
+    "flag": "🇧🇱",
+    "callingCode": "+590"
+  },
+  {
+    "name": "Saint Helena, Ascension and Tristan da Cunha",
+    "cca2": "SH",
+    "flag": "🇸🇭",
+    "callingCode": "+2"
+  },
+  {"name": "Belarus", "cca2": "BY", "flag": "🇧🇾", "callingCode": "+375"},
+  {"name": "Belize", "cca2": "BZ", "flag": "🇧🇿", "callingCode": "+501"},
+  {"name": "Bermuda", "cca2": "BM", "flag": "🇧🇲", "callingCode": "+1441"},
+  {"name": "Bolivia", "cca2": "BO", "flag": "🇧🇴", "callingCode": "+591"},
+  {
+    "name": "Caribbean Netherlands",
+    "cca2": "BQ",
+    "flag": "",
+    "callingCode": "+599"
+  },
+  {"name": "Brazil", "cca2": "BR", "flag": "🇧🇷", "callingCode": "+55"},
+  {"name": "Barbados", "cca2": "BB", "flag": "🇧🇧", "callingCode": "+1246"},
+  {"name": "Brunei", "cca2": "BN", "flag": "🇧🇳", "callingCode": "+673"},
+  {"name": "Bhutan", "cca2": "BT", "flag": "🇧🇹", "callingCode": "+975"},
+  {"name": "Bouvet Island", "cca2": "BV", "flag": "🇧🇻", "callingCode": "+47"},
+  {"name": "Botswana", "cca2": "BW", "flag": "🇧🇼", "callingCode": "+267"},
+  {
+    "name": "Central African Republic",
+    "cca2": "CF",
+    "flag": "🇨🇫",
+    "callingCode": "+236"
+  },
+  {"name": "Canada", "cca2": "CA", "flag": "🇨🇦", "callingCode": "+1"},
+  {
+    "name": "Cocos (Keeling) Islands",
+    "cca2": "CC",
+    "flag": "🇨🇨",
+    "callingCode": "+61"
+  },
+  {"name": "Switzerland", "cca2": "CH", "flag": "🇨🇭", "callingCode": "+41"},
+  {"name": "Chile", "cca2": "CL", "flag": "🇨🇱", "callingCode": "+56"},
+  {"name": "China", "cca2": "CN", "flag": "🇨🇳", "callingCode": "+86"},
+  {"name": "Ivory Coast", "cca2": "CI", "flag": "🇨🇮", "callingCode": "+225"},
+  {"name": "Cameroon", "cca2": "CM", "flag": "🇨🇲", "callingCode": "+237"},
+  {"name": "DR Congo", "cca2": "CD", "flag": "🇨🇩", "callingCode": "+243"},
+  {
+    "name": "Republic of the Congo",
+    "cca2": "CG",
+    "flag": "🇨🇬",
+    "callingCode": "+242"
+  },
+  {"name": "Cook Islands", "cca2": "CK", "flag": "🇨🇰", "callingCode": "+682"},
+  {"name": "Colombia", "cca2": "CO", "flag": "🇨🇴", "callingCode": "+57"},
+  {"name": "Comoros", "cca2": "KM", "flag": "🇰🇲", "callingCode": "+269"},
+  {"name": "Cape Verde", "cca2": "CV", "flag": "🇨🇻", "callingCode": "+238"},
+  {"name": "Costa Rica", "cca2": "CR", "flag": "🇨🇷", "callingCode": "+506"},
+  {"name": "Cuba", "cca2": "CU", "flag": "🇨🇺", "callingCode": "+53"},
+  {"name": "Curaçao", "cca2": "CW", "flag": "🇨🇼", "callingCode": "+599"},
+  {
+    "name": "Christmas Island",
+    "cca2": "CX",
+    "flag": "🇨🇽",
+    "callingCode": "+61"
+  },
+  {
+    "name": "Cayman Islands",
+    "cca2": "KY",
+    "flag": "🇰🇾",
+    "callingCode": "+1345"
+  },
+  {"name": "Cyprus", "cca2": "CY", "flag": "🇨🇾", "callingCode": "+357"},
+  {"name": "Czechia", "cca2": "CZ", "flag": "🇨🇿", "callingCode": "+420"},
+  {"name": "Germany", "cca2": "DE", "flag": "🇩🇪", "callingCode": "+49"},
+  {"name": "Djibouti", "cca2": "DJ", "flag": "🇩🇯", "callingCode": "+253"},
+  {"name": "Dominica", "cca2": "DM", "flag": "🇩🇲", "callingCode": "+1767"},
+  {"name": "Denmark", "cca2": "DK", "flag": "🇩🇰", "callingCode": "+45"},
+  {
+    "name": "Dominican Republic",
+    "cca2": "DO",
+    "flag": "🇩🇴",
+    "callingCode": "+1"
+  },
+  {"name": "Algeria", "cca2": "DZ", "flag": "🇩🇿", "callingCode": "+213"},
+  {"name": "Ecuador", "cca2": "EC", "flag": "🇪🇨", "callingCode": "+593"},
+  {"name": "Egypt", "cca2": "EG", "flag": "🇪🇬", "callingCode": "+20"},
+  {"name": "Eritrea", "cca2": "ER", "flag": "🇪🇷", "callingCode": "+291"},
+  {"name": "Western Sahara", "cca2": "EH", "flag": "🇪🇭", "callingCode": "+2"},
+  {"name": "Spain", "cca2": "ES", "flag": "🇪🇸", "callingCode": "+34"},
+  {"name": "Estonia", "cca2": "EE", "flag": "🇪🇪", "callingCode": "+372"},
+  {"name": "Ethiopia", "cca2": "ET", "flag": "🇪🇹", "callingCode": "+251"},
+  {"name": "Finland", "cca2": "FI", "flag": "🇫🇮", "callingCode": "+358"},
+  {"name": "Fiji", "cca2": "FJ", "flag": "🇫🇯", "callingCode": "+679"},
+  {
+    "name": "Falkland Islands",
+    "cca2": "FK",
+    "flag": "🇫🇰",
+    "callingCode": "+500"
+  },
+  {"name": "France", "cca2": "FR", "flag": "🇫🇷", "callingCode": "+33"},
+  {
+    "name": "Faroe Islands",
+    "cca2": "FO",
+    "flag": "🇫🇴",
+    "callingCode": "+298"
+  },
+  {"name": "Micronesia", "cca2": "FM", "flag": "🇫🇲", "callingCode": "+691"},
+  {"name": "Gabon", "cca2": "GA", "flag": "🇬🇦", "callingCode": "+241"},
+  {
+    "name": "United Kingdom",
+    "cca2": "GB",
+    "flag": "🇬🇧",
+    "callingCode": "+44"
+  },
+  {"name": "Georgia", "cca2": "GE", "flag": "🇬🇪", "callingCode": "+995"},
+  {"name": "Guernsey", "cca2": "GG", "flag": "🇬🇬", "callingCode": "+44"},
+  {"name": "Ghana", "cca2": "GH", "flag": "🇬🇭", "callingCode": "+233"},
+  {"name": "Gibraltar", "cca2": "GI", "flag": "🇬🇮", "callingCode": "+350"},
+  {"name": "Guinea", "cca2": "GN", "flag": "🇬🇳", "callingCode": "+224"},
+  {"name": "Guadeloupe", "cca2": "GP", "flag": "🇬🇵", "callingCode": "+590"},
+  {"name": "Gambia", "cca2": "GM", "flag": "🇬🇲", "callingCode": "+220"},
+  {
+    "name": "Guinea-Bissau",
+    "cca2": "GW",
+    "flag": "🇬🇼",
+    "callingCode": "+245"
+  },
+  {
+    "name": "Equatorial Guinea",
+    "cca2": "GQ",
+    "flag": "🇬🇶",
+    "callingCode": "+240"
+  },
+  {"name": "Greece", "cca2": "GR", "flag": "🇬🇷", "callingCode": "+30"},
+  {"name": "Grenada", "cca2": "GD", "flag": "🇬🇩", "callingCode": "+1473"},
+  {"name": "Greenland", "cca2": "GL", "flag": "🇬🇱", "callingCode": "+299"},
+  {"name": "Guatemala", "cca2": "GT", "flag": "🇬🇹", "callingCode": "+502"},
+  {
+    "name": "French Guiana",
+    "cca2": "GF",
+    "flag": "🇬🇫",
+    "callingCode": "+594"
+  },
+  {"name": "Guam", "cca2": "GU", "flag": "🇬🇺", "callingCode": "+1671"},
+  {"name": "Guyana", "cca2": "GY", "flag": "🇬🇾", "callingCode": "+592"},
+  {"name": "Hong Kong", "cca2": "HK", "flag": "🇭🇰", "callingCode": "+852"},
+  {
+    "name": "Heard Island and McDonald Islands",
+    "cca2": "HM",
+    "flag": "🇭🇲",
+    "callingCode": ""
+  },
+  {"name": "Honduras", "cca2": "HN", "flag": "🇭🇳", "callingCode": "+504"},
+  {"name": "Croatia", "cca2": "HR", "flag": "🇭🇷", "callingCode": "+385"},
+  {"name": "Haiti", "cca2": "HT", "flag": "🇭🇹", "callingCode": "+509"},
+  {"name": "Hungary", "cca2": "HU", "flag": "🇭🇺", "callingCode": "+36"},
+  {"name": "Indonesia", "cca2": "ID", "flag": "🇮🇩", "callingCode": "+62"},
+  {"name": "Isle of Man", "cca2": "IM", "flag": "🇮🇲", "callingCode": "+44"},
+  {"name": "India", "cca2": "IN", "flag": "🇮🇳", "callingCode": "+91"},
+  {
+    "name": "British Indian Ocean Territory",
+    "cca2": "IO",
+    "flag": "🇮🇴",
+    "callingCode": "+246"
+  },
+  {"name": "Ireland", "cca2": "IE", "flag": "🇮🇪", "callingCode": "+353"},
+  {"name": "Iran", "cca2": "IR", "flag": "🇮🇷", "callingCode": "+98"},
+  {"name": "Iraq", "cca2": "IQ", "flag": "🇮🇶", "callingCode": "+964"},
+  {"name": "Iceland", "cca2": "IS", "flag": "🇮🇸", "callingCode": "+354"},
+  {"name": "Israel", "cca2": "IL", "flag": "🇮🇱", "callingCode": "+972"},
+  {"name": "Italy", "cca2": "IT", "flag": "🇮🇹", "callingCode": "+39"},
+  {"name": "Jamaica", "cca2": "JM", "flag": "🇯🇲", "callingCode": "+1876"},
+  {"name": "Jersey", "cca2": "JE", "flag": "🇯🇪", "callingCode": "+44"},
+  {"name": "Jordan", "cca2": "JO", "flag": "🇯🇴", "callingCode": "+962"},
+  {"name": "Japan", "cca2": "JP", "flag": "🇯🇵", "callingCode": "+81"},
+  {"name": "Kazakhstan", "cca2": "KZ", "flag": "🇰🇿", "callingCode": "+7"},
+  {"name": "Kenya", "cca2": "KE", "flag": "🇰🇪", "callingCode": "+254"},
+  {"name": "Kyrgyzstan", "cca2": "KG", "flag": "🇰🇬", "callingCode": "+996"},
+  {"name": "Cambodia", "cca2": "KH", "flag": "🇰🇭", "callingCode": "+855"},
+  {"name": "Kiribati", "cca2": "KI", "flag": "🇰🇮", "callingCode": "+686"},
+  {
+    "name": "Saint Kitts and Nevis",
+    "cca2": "KN",
+    "flag": "🇰🇳",
+    "callingCode": "+1869"
+  },
+  {"name": "South Korea", "cca2": "KR", "flag": "🇰🇷", "callingCode": "+82"},
+  {"name": "Kosovo", "cca2": "XK", "flag": "🇽🇰", "callingCode": "+383"},
+  {"name": "Kuwait", "cca2": "KW", "flag": "🇰🇼", "callingCode": "+965"},
+  {"name": "Laos", "cca2": "LA", "flag": "🇱🇦", "callingCode": "+856"},
+  {"name": "Lebanon", "cca2": "LB", "flag": "🇱🇧", "callingCode": "+961"},
+  {"name": "Liberia", "cca2": "LR", "flag": "🇱🇷", "callingCode": "+231"},
+  {"name": "Libya", "cca2": "LY", "flag": "🇱🇾", "callingCode": "+218"},
+  {"name": "Saint Lucia", "cca2": "LC", "flag": "🇱🇨", "callingCode": "+1758"},
+  {
+    "name": "Liechtenstein",
+    "cca2": "LI",
+    "flag": "🇱🇮",
+    "callingCode": "+423"
+  },
+  {"name": "Sri Lanka", "cca2": "LK", "flag": "🇱🇰", "callingCode": "+94"},
+  {"name": "Lesotho", "cca2": "LS", "flag": "🇱🇸", "callingCode": "+266"},
+  {"name": "Lithuania", "cca2": "LT", "flag": "🇱🇹", "callingCode": "+370"},
+  {"name": "Luxembourg", "cca2": "LU", "flag": "🇱🇺", "callingCode": "+352"},
+  {"name": "Latvia", "cca2": "LV", "flag": "🇱🇻", "callingCode": "+371"},
+  {"name": "Macau", "cca2": "MO", "flag": "🇲🇴", "callingCode": "+853"},
+  {"name": "Saint Martin", "cca2": "MF", "flag": "🇲🇫", "callingCode": "+590"},
+  {"name": "Morocco", "cca2": "MA", "flag": "🇲🇦", "callingCode": "+212"},
+  {"name": "Monaco", "cca2": "MC", "flag": "🇲🇨", "callingCode": "+377"},
+  {"name": "Moldova", "cca2": "MD", "flag": "🇲🇩", "callingCode": "+373"},
+  {"name": "Madagascar", "cca2": "MG", "flag": "🇲🇬", "callingCode": "+261"},
+  {"name": "Maldives", "cca2": "MV", "flag": "🇲🇻", "callingCode": "+960"},
+  {"name": "Mexico", "cca2": "MX", "flag": "🇲🇽", "callingCode": "+52"},
+  {
+    "name": "Marshall Islands",
+    "cca2": "MH",
+    "flag": "🇲🇭",
+    "callingCode": "+692"
+  },
+  {
+    "name": "North Macedonia",
+    "cca2": "MK",
+    "flag": "🇲🇰",
+    "callingCode": "+389"
+  },
+  {"name": "Mali", "cca2": "ML", "flag": "🇲🇱", "callingCode": "+223"},
+  {"name": "Malta", "cca2": "MT", "flag": "🇲🇹", "callingCode": "+356"},
+  {"name": "Myanmar", "cca2": "MM", "flag": "🇲🇲", "callingCode": "+95"},
+  {"name": "Montenegro", "cca2": "ME", "flag": "🇲🇪", "callingCode": "+382"},
+  {"name": "Mongolia", "cca2": "MN", "flag": "🇲🇳", "callingCode": "+976"},
+  {
+    "name": "Northern Mariana Islands",
+    "cca2": "MP",
+    "flag": "🇲🇵",
+    "callingCode": "+1670"
+  },
+  {"name": "Mozambique", "cca2": "MZ", "flag": "🇲🇿", "callingCode": "+258"},
+  {"name": "Mauritania", "cca2": "MR", "flag": "🇲🇷", "callingCode": "+222"},
+  {"name": "Montserrat", "cca2": "MS", "flag": "🇲🇸", "callingCode": "+1664"},
+  {"name": "Martinique", "cca2": "MQ", "flag": "🇲🇶", "callingCode": "+596"},
+  {"name": "Mauritius", "cca2": "MU", "flag": "🇲🇺", "callingCode": "+230"},
+  {"name": "Malawi", "cca2": "MW", "flag": "🇲🇼", "callingCode": "+265"},
+  {"name": "Malaysia", "cca2": "MY", "flag": "🇲🇾", "callingCode": "+60"},
+  {"name": "Mayotte", "cca2": "YT", "flag": "🇾🇹", "callingCode": "+262"},
+  {"name": "Namibia", "cca2": "NA", "flag": "🇳🇦", "callingCode": "+264"},
+  {
+    "name": "New Caledonia",
+    "cca2": "NC",
+    "flag": "🇳🇨",
+    "callingCode": "+687"
+  },
+  {"name": "Niger", "cca2": "NE", "flag": "🇳🇪", "callingCode": "+227"},
+  {
+    "name": "Norfolk Island",
+    "cca2": "NF",
+    "flag": "🇳🇫",
+    "callingCode": "+672"
+  },
+  {"name": "Nigeria", "cca2": "NG", "flag": "🇳🇬", "callingCode": "+234"},
+  {"name": "Nicaragua", "cca2": "NI", "flag": "🇳🇮", "callingCode": "+505"},
+  {"name": "Niue", "cca2": "NU", "flag": "🇳🇺", "callingCode": "+683"},
+  {"name": "Netherlands", "cca2": "NL", "flag": "🇳🇱", "callingCode": "+31"},
+  {"name": "Norway", "cca2": "NO", "flag": "🇳🇴", "callingCode": "+47"},
+  {"name": "Nepal", "cca2": "NP", "flag": "🇳🇵", "callingCode": "+977"},
+  {"name": "Nauru", "cca2": "NR", "flag": "🇳🇷", "callingCode": "+674"},
+  {"name": "New Zealand", "cca2": "NZ", "flag": "🇳🇿", "callingCode": "+64"},
+  {"name": "Oman", "cca2": "OM", "flag": "🇴🇲", "callingCode": "+968"},
+  {"name": "Pakistan", "cca2": "PK", "flag": "🇵🇰", "callingCode": "+92"},
+  {"name": "Panama", "cca2": "PA", "flag": "🇵🇦", "callingCode": "+507"},
+  {
+    "name": "Pitcairn Islands",
+    "cca2": "PN",
+    "flag": "🇵🇳",
+    "callingCode": "+64"
+  },
+  {"name": "Peru", "cca2": "PE", "flag": "🇵🇪", "callingCode": "+51"},
+  {"name": "Philippines", "cca2": "PH", "flag": "🇵🇭", "callingCode": "+63"},
+  {"name": "Palau", "cca2": "PW", "flag": "🇵🇼", "callingCode": "+680"},
+  {
+    "name": "Papua New Guinea",
+    "cca2": "PG",
+    "flag": "🇵🇬",
+    "callingCode": "+675"
+  },
+  {"name": "Poland", "cca2": "PL", "flag": "🇵🇱", "callingCode": "+48"},
+  {"name": "Puerto Rico", "cca2": "PR", "flag": "🇵🇷", "callingCode": "+1"},
+  {"name": "North Korea", "cca2": "KP", "flag": "🇰🇵", "callingCode": "+850"},
+  {"name": "Portugal", "cca2": "PT", "flag": "🇵🇹", "callingCode": "+351"},
+  {"name": "Paraguay", "cca2": "PY", "flag": "🇵🇾", "callingCode": "+595"},
+  {"name": "Palestine", "cca2": "PS", "flag": "🇵🇸", "callingCode": "+970"},
+  {
+    "name": "French Polynesia",
+    "cca2": "PF",
+    "flag": "🇵🇫",
+    "callingCode": "+689"
+  },
+  {"name": "Qatar", "cca2": "QA", "flag": "🇶🇦", "callingCode": "+974"},
+  {"name": "Réunion", "cca2": "RE", "flag": "🇷🇪", "callingCode": "+262"},
+  {"name": "Romania", "cca2": "RO", "flag": "🇷🇴", "callingCode": "+40"},
+  {"name": "Russia", "cca2": "RU", "flag": "🇷🇺", "callingCode": "+7"},
+  {"name": "Rwanda", "cca2": "RW", "flag": "🇷🇼", "callingCode": "+250"},
+  {"name": "Saudi Arabia", "cca2": "SA", "flag": "🇸🇦", "callingCode": "+966"},
+  {"name": "Sudan", "cca2": "SD", "flag": "🇸🇩", "callingCode": "+249"},
+  {"name": "Senegal", "cca2": "SN", "flag": "🇸🇳", "callingCode": "+221"},
+  {"name": "Singapore", "cca2": "SG", "flag": "🇸🇬", "callingCode": "+65"},
+  {
+    "name": "South Georgia",
+    "cca2": "GS",
+    "flag": "🇬🇸",
+    "callingCode": "+500"
+  },
+  {
+    "name": "Svalbard and Jan Mayen",
+    "cca2": "SJ",
+    "flag": "🇸🇯",
+    "callingCode": "+4779"
+  },
+  {
+    "name": "Solomon Islands",
+    "cca2": "SB",
+    "flag": "🇸🇧",
+    "callingCode": "+677"
+  },
+  {"name": "Sierra Leone", "cca2": "SL", "flag": "🇸🇱", "callingCode": "+232"},
+  {"name": "El Salvador", "cca2": "SV", "flag": "🇸🇻", "callingCode": "+503"},
+  {"name": "San Marino", "cca2": "SM", "flag": "🇸🇲", "callingCode": "+378"},
+  {"name": "Somalia", "cca2": "SO", "flag": "🇸🇴", "callingCode": "+252"},
+  {
+    "name": "Saint Pierre and Miquelon",
+    "cca2": "PM",
+    "flag": "🇵🇲",
+    "callingCode": "+508"
+  },
+  {"name": "Serbia", "cca2": "RS", "flag": "🇷🇸", "callingCode": "+381"},
+  {"name": "South Sudan", "cca2": "SS", "flag": "🇸🇸", "callingCode": "+211"},
+  {
+    "name": "São Tomé and Príncipe",
+    "cca2": "ST",
+    "flag": "🇸🇹",
+    "callingCode": "+239"
+  },
+  {"name": "Suriname", "cca2": "SR", "flag": "🇸🇷", "callingCode": "+597"},
+  {"name": "Slovakia", "cca2": "SK", "flag": "🇸🇰", "callingCode": "+421"},
+  {"name": "Slovenia", "cca2": "SI", "flag": "🇸🇮", "callingCode": "+386"},
+  {"name": "Sweden", "cca2": "SE", "flag": "🇸🇪", "callingCode": "+46"},
+  {"name": "Eswatini", "cca2": "SZ", "flag": "🇸🇿", "callingCode": "+268"},
+  {
+    "name": "Sint Maarten",
+    "cca2": "SX",
+    "flag": "🇸🇽",
+    "callingCode": "+1721"
+  },
+  {"name": "Seychelles", "cca2": "SC", "flag": "🇸🇨", "callingCode": "+248"},
+  {"name": "Syria", "cca2": "SY", "flag": "🇸🇾", "callingCode": "+963"},
+  {
+    "name": "Turks and Caicos Islands",
+    "cca2": "TC",
+    "flag": "🇹🇨",
+    "callingCode": "+1649"
+  },
+  {"name": "Chad", "cca2": "TD", "flag": "🇹🇩", "callingCode": "+235"},
+  {"name": "Togo", "cca2": "TG", "flag": "🇹🇬", "callingCode": "+228"},
+  {"name": "Thailand", "cca2": "TH", "flag": "🇹🇭", "callingCode": "+66"},
+  {"name": "Tajikistan", "cca2": "TJ", "flag": "🇹🇯", "callingCode": "+992"},
+  {"name": "Tokelau", "cca2": "TK", "flag": "🇹🇰", "callingCode": "+690"},
+  {"name": "Turkmenistan", "cca2": "TM", "flag": "🇹🇲", "callingCode": "+993"},
+  {"name": "Timor-Leste", "cca2": "TL", "flag": "🇹🇱", "callingCode": "+670"},
+  {"name": "Tonga", "cca2": "TO", "flag": "🇹🇴", "callingCode": "+676"},
+  {
+    "name": "Trinidad and Tobago",
+    "cca2": "TT",
+    "flag": "🇹🇹",
+    "callingCode": "+1868"
+  },
+  {"name": "Tunisia", "cca2": "TN", "flag": "🇹🇳", "callingCode": "+216"},
+  {"name": "Turkey", "cca2": "TR", "flag": "🇹🇷", "callingCode": "+90"},
+  {"name": "Tuvalu", "cca2": "TV", "flag": "🇹🇻", "callingCode": "+688"},
+  {"name": "Taiwan", "cca2": "TW", "flag": "🇹🇼", "callingCode": "+886"},
+  {"name": "Tanzania", "cca2": "TZ", "flag": "🇹🇿", "callingCode": "+255"},
+  {"name": "Uganda", "cca2": "UG", "flag": "🇺🇬", "callingCode": "+256"},
+  {"name": "Ukraine", "cca2": "UA", "flag": "🇺🇦", "callingCode": "+380"},
+  {
+    "name": "United States Minor Outlying Islands",
+    "cca2": "UM",
+    "flag": "🇺🇲",
+    "callingCode": "+268"
+  },
+  {"name": "Uruguay", "cca2": "UY", "flag": "🇺🇾", "callingCode": "+598"},
+  {"name": "United States", "cca2": "US", "flag": "🇺🇸", "callingCode": "+1"},
+  {"name": "Uzbekistan", "cca2": "UZ", "flag": "🇺🇿", "callingCode": "+998"},
+  {"name": "Vatican City", "cca2": "VA", "flag": "🇻🇦", "callingCode": "+3"},
+  {
+    "name": "Saint Vincent and the Grenadines",
+    "cca2": "VC",
+    "flag": "🇻🇨",
+    "callingCode": "+1784"
+  },
+  {"name": "Venezuela", "cca2": "VE", "flag": "🇻🇪", "callingCode": "+58"},
+  {
+    "name": "British Virgin Islands",
+    "cca2": "VG",
+    "flag": "🇻🇬",
+    "callingCode": "+1284"
+  },
+  {
+    "name": "United States Virgin Islands",
+    "cca2": "VI",
+    "flag": "🇻🇮",
+    "callingCode": "+1340"
+  },
+  {"name": "Vietnam", "cca2": "VN", "flag": "🇻🇳", "callingCode": "+84"},
+  {"name": "Vanuatu", "cca2": "VU", "flag": "🇻🇺", "callingCode": "+678"},
+  {
+    "name": "Wallis and Futuna",
+    "cca2": "WF",
+    "flag": "🇼🇫",
+    "callingCode": "+681"
+  },
+  {"name": "Samoa", "cca2": "WS", "flag": "🇼🇸", "callingCode": "+685"},
+  {"name": "Yemen", "cca2": "YE", "flag": "🇾🇪", "callingCode": "+967"},
+  {"name": "South Africa", "cca2": "ZA", "flag": "🇿🇦", "callingCode": "+27"},
+  {"name": "Zambia", "cca2": "ZM", "flag": "🇿🇲", "callingCode": "+260"},
+  {"name": "Zimbabwe", "cca2": "ZW", "flag": "🇿🇼", "callingCode": "+263"}
+]

@@ -14,8 +14,12 @@ import Eye from './Eye';
 import Apple from './Apple';
 import Google from './Google'
 import Facebook from './Facebook';
+import ArrowDown from './ArrowDown';
+import Search from './Search';
 
 export {
+  Search,
+  ArrowDown,
   Facebook,
   Google,
   Apple,

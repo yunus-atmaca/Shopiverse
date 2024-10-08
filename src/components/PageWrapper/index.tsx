@@ -26,7 +26,10 @@ const PageWrapper = ({
         if (removeBottom) defInsets = {...defInsets, bottom: 0};
 
         return (
-          <View style={[{flex: 1, backgroundColor: theme.page}, defInsets]}>
+          <View style={[{flex: 1, backgroundColor: theme.page}, {
+            paddingBottom: defInsets.bottom,
+            paddingTop: defInsets.top
+          }]}>
             {children}
           </View>
         );

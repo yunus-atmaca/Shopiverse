@@ -20,5 +20,5 @@ const fonts = {
 export const typographies = {
   fonts,
   header: fonts.OpenSans,
-  paragraph: fonts.RobotoMono,
+  paragraph: fonts.OpenSans,
 };

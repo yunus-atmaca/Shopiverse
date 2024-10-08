@@ -4,7 +4,7 @@ import Tabs from './Tabs';
 import React from 'react';
 import {createStackNavigator} from '@react-navigation/stack';
 
-import {ProductDetails, Login} from '@/screens';
+import {ProductDetails, Login, ForgotPassword, Countries} from '@/screens';
 
 const Stack = createStackNavigator<RootStackParamList>();
 
@@ -16,9 +16,16 @@ function Root() {
         headerShown: false,
         gestureEnabled: false,
       }}>
-      <Stack.Screen name="Tabs" component={Tabs} />
-      <Stack.Screen name="ProductDetails" component={ProductDetails} />
-      <Stack.Screen name="Login" component={Login} />
+      <Stack.Group>
+        <Stack.Screen name="Tabs" component={Tabs} />
+        <Stack.Screen name="ProductDetails" component={ProductDetails} />
+        <Stack.Screen name="Login" component={Login} />
+        <Stack.Screen name="ForgotPassword" component={ForgotPassword} />
+      </Stack.Group>
+
+      <Stack.Group screenOptions={{presentation: 'modal'}}>
+        <Stack.Screen name="Countries" component={Countries} />
+      </Stack.Group>
     </Stack.Navigator>
   );
 }

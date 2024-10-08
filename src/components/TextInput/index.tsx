@@ -19,7 +19,7 @@ const TextInput = ({title, headingIcon, ref, ...props}: Props) => {
   return (
     <View style={styles.container}>
       {title && (
-        <Text.H typography="semiBold" style={styles.title}>
+        <Text.H size={14} typography="semiBold" style={styles.title}>
           {title}
         </Text.H>
       )}

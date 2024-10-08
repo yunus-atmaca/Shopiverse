@@ -13,16 +13,18 @@ import {navigationRef} from '@/navigation';
 type Props = {
   header: string;
   renderBack?: boolean;
+  disableGab?: boolean;
 };
 
 //use removeTop for PageWrapper to use this for any Page
-const PageHeader = ({header, renderBack = true}: Props) => {
+const PageHeader = ({header, renderBack = true, disableGab = false}: Props) => {
   const theme = useTheme();
 
   return (
     <SafeAreaInsetsContext.Consumer>
       {insets => {
-        const defInsets = safeAreaInsets(insets);
+        let defInsets = safeAreaInsets(insets);
+        if (disableGab) defInsets = {...defInsets, top: 0};
         return (
           <View
             style={[

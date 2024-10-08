@@ -5,5 +5,7 @@ import Cart from './Cart';
 
 import ProductDetails from './ProductDetails';
 import Login from './Login';
+import ForgotPassword from './ForgotPassword';
+import Countries from './Countries';
 
-export {Cart, Home, WhishList, Profile, ProductDetails, Login};
+export {Countries, ForgotPassword, Cart, Home, WhishList, Profile, ProductDetails, Login};

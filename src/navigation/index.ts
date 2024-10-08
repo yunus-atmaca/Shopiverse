@@ -7,6 +7,8 @@ import {
 import type {StackScreenProps} from '@react-navigation/stack';
 import type {BottomTabScreenProps} from '@react-navigation/bottom-tabs';
 
+import {ICountry} from '@/screens/Countries/types';
+
 export type TabParamList = {
   Home: undefined;
   WhishList: undefined;
@@ -17,6 +19,10 @@ export type RootStackParamList = {
   Tabs: NavigatorScreenParams<TabParamList>;
   ProductDetails: undefined;
   Login: undefined;
+  ForgotPassword: {
+    country?: ICountry;
+  };
+  Countries: undefined;
 };
 
 export type Pages = keyof TabParamList | keyof RootStackParamList;

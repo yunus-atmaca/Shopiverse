@@ -24,7 +24,7 @@ type ThemeColors = {
   textSub: ColorValue;
   textReversed: ColorValue;
   textError: ColorValue;
-  textActive: ColorValue
+  textActive: ColorValue;
 
   icon: ColorValue;
   iconBackground: ColorValue;
@@ -44,6 +44,8 @@ type ThemeColors = {
   inputCursor: ColorValue;
   inputText: ColorValue;
   inputPlaceHolder: ColorValue;
+
+  line: ColorValue;
 };
 
 export type {ThemeColors};

@@ -34,6 +34,8 @@ const lightTheme: ThemeColors = {
   inputCursor: palette.orange,
   inputText: palette.black,
   inputPlaceHolder: palette.gray600,
+
+  line: palette.gray600,
 };
 
 export default lightTheme;
