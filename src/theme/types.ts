@@ -24,6 +24,7 @@ type ThemeColors = {
   textSub: ColorValue;
   textReversed: ColorValue;
   textError: ColorValue;
+  textActive: ColorValue
 
   icon: ColorValue;
   iconBackground: ColorValue;
@@ -35,6 +36,14 @@ type ThemeColors = {
   tabbar: ColorValue;
   tabbarIconActive: ColorValue;
   tabbarIconPassive: ColorValue;
+
+  appHeaderBackground: ColorValue;
+
+  inputBackground: ColorValue;
+  inputBorder: ColorValue;
+  inputCursor: ColorValue;
+  inputText: ColorValue;
+  inputPlaceHolder: ColorValue;
 };
 
 export type {ThemeColors};

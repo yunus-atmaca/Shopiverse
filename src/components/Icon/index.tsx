@@ -1,12 +1,32 @@
-import {Props} from './types';
 import styles from './styles';
 
 import React, {FC} from 'react';
-import {TouchableOpacity, View} from 'react-native';
+import {
+  ColorValue,
+  StyleProp,
+  TouchableOpacity,
+  View,
+  ViewStyle,
+} from 'react-native';
 
 import * as Icons from '@/assets/icons';
 import {useTheme} from '@/hooks/theme';
 import Styles from '@/theme/style';
+
+export type IconNames = keyof typeof Icons;
+
+export type Props = {
+  name: IconNames;
+  size?: number;
+  containerSize?: number;
+  color?: ColorValue;
+  bgColor?: ColorValue;
+  onClick?: () => void;
+  containerStyle?: StyleProp<ViewStyle>;
+  scaleFactor?: 'horizontal' | 'vertical';
+  isTab?: boolean;
+  hasContainerStyle?: boolean;
+};
 
 const Icon: FC<Props> = ({
   size = 20,
@@ -17,6 +37,7 @@ const Icon: FC<Props> = ({
   onClick,
   containerStyle,
   isTab = false,
+  hasContainerStyle = true,
 }) => {
   const theme = useTheme();
 
@@ -25,45 +46,28 @@ const Icon: FC<Props> = ({
   const icSize = Styles.hs(size);
   const icContainerSize = Styles.hs(containerSize);
 
-  if (onClick) {
-    return (
-      <TouchableOpacity
-        style={[
-          styles.container,
-          {
-            height: icContainerSize,
-            width: icContainerSize,
-            backgroundColor: icContainerBg,
-            borderColor: isTab ? undefined : theme.border,
-          },
-          containerStyle,
-        ]}
-        activeOpacity={0.7}
-        onPress={onClick}>
-        <View style={{height: icSize, width: icSize}}>
-          {Icons[name]({color: icColor})}
-        </View>
-      </TouchableOpacity>
-    );
-  } else {
-    return (
-      <View
-        style={[
-          styles.container,
-          {
-            height: icContainerSize,
-            width: icContainerSize,
-            backgroundColor: icContainerBg,
-            borderColor: isTab ? 'transparent' : theme.border,
-          },
-          containerStyle,
-        ]}>
-        <View style={{height: icSize, width: icSize}}>
-          {Icons[name]({color: icColor})}
-        </View>
+  const IconContainer = onClick ? TouchableOpacity : View;
+
+  return (
+    <IconContainer
+      style={[
+        styles.container,
+        hasContainerStyle && {
+          height: icContainerSize,
+          width: icContainerSize,
+          backgroundColor: icContainerBg,
+          borderColor: theme.border,
+          borderWidth: Styles.borderWidth.m,
+        },
+        containerStyle,
+      ]}
+      onPress={onClick}
+      activeOpacity={0.7}>
+      <View style={{height: icSize, width: icSize}}>
+        {Icons[name]({color: icColor})}
       </View>
-    );
-  }
+    </IconContainer>
+  );
 };
 
 export default Icon;

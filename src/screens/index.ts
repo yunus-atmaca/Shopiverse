@@ -4,5 +4,6 @@ import Profile from './Profile';
 import Cart from './Cart';
 
 import ProductDetails from './ProductDetails';
+import Login from './Login';
 
-export {Cart, Home, WhishList, Profile, ProductDetails};
+export {Cart, Home, WhishList, Profile, ProductDetails, Login};

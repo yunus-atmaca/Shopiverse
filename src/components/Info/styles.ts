@@ -1,10 +1,11 @@
 import {StyleSheet} from 'react-native';
 import Styles from '@/theme/style';
 
-const {vs, hs, spacing} = Styles;
+const {vs, spacing, hs} = Styles;
 export default StyleSheet.create({
   container: {
-    marginVertical: vs(spacing.xxl),
+    width: '100%',
+    justifyContent: 'center',
     alignItems: 'center',
   },
   header: {

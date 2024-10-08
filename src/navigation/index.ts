@@ -16,6 +16,7 @@ export type TabParamList = {
 export type RootStackParamList = {
   Tabs: NavigatorScreenParams<TabParamList>;
   ProductDetails: undefined;
+  Login: undefined;
 };
 
 export type Pages = keyof TabParamList | keyof RootStackParamList;

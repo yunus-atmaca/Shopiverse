@@ -1,7 +1,11 @@
 import styles from './styles';
 
 import React from 'react';
-import {TouchableHighlight, TouchableHighlightProps} from 'react-native';
+import {
+  GestureResponderEvent,
+  TouchableHighlight,
+  TouchableHighlightProps,
+} from 'react-native';
 
 import Text from '@/components/Text';
 import {useTheme} from '@/hooks/theme';
@@ -9,16 +13,24 @@ import {useTheme} from '@/hooks/theme';
 type Props = {
   text?: string;
   loading?: boolean;
+  onClick?: () => void;
 };
 
 const Button = ({
   text = 'Button',
   loading = false,
+  onClick,
   ...props
 }: Props & TouchableHighlightProps) => {
   const theme = useTheme();
 
-  const _onPress = () => {};
+  if (props.onPress) {
+    throw new Error('use onClick instead of onPress');
+  }
+
+  const _onPress = () => {
+    if (onClick) onClick();
+  };
 
   const isDisabled = props.disabled;
   return (

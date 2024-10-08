@@ -19,13 +19,18 @@ const TabBar: FC<BottomTabBarProps> = ({state, navigation}) => {
 
   const getIcon = useCallback((tab: string, isActive: boolean) => {
     const color = isActive ? theme.tabbarIconActive : theme.tabbarIconPassive;
-    if (tab === 'Home') return <Icon isTab color={color} name="Home" />;
+    if (tab === 'Home')
+      return <Icon hasContainerStyle={false} color={color} name="Home" />;
     else if (tab === 'WhishList')
-      return <Icon isTab color={color} name="HeartFilled" />;
+      return (
+        <Icon hasContainerStyle={false} color={color} name="HeartFilled" />
+      );
     else if (tab === 'Cart')
-      return <Icon isTab color={color} name="ShoppingCart" />;
+      return (
+        <Icon hasContainerStyle={false} color={color} name="ShoppingCart" />
+      );
     else if (tab === 'Profile')
-      return <Icon isTab color={color} name="Person" />;
+      return <Icon hasContainerStyle={false} color={color} name="Person" />;
   }, []);
 
   return (

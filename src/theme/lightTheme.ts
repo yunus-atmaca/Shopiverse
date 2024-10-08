@@ -14,6 +14,7 @@ const lightTheme: ThemeColors = {
   textSub: palette.gray600,
   textReversed: palette.white,
   textError: palette.red,
+  textActive: palette.orange,
 
   icon: palette.black,
   iconBackground: palette.white,
@@ -24,7 +25,15 @@ const lightTheme: ThemeColors = {
 
   tabbar: palette.white,
   tabbarIconActive: palette.orange,
-  tabbarIconPassive: palette.gray600
+  tabbarIconPassive: palette.gray600,
+
+  appHeaderBackground: palette.white,
+
+  inputBackground: palette.white,
+  inputBorder: palette.gray600,
+  inputCursor: palette.orange,
+  inputText: palette.black,
+  inputPlaceHolder: palette.gray600,
 };
 
 export default lightTheme;

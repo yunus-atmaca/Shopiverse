@@ -1,14 +1,23 @@
-import Empty from './Emptry';
+import styles from './styles';
 
 import React from 'react';
-import {} from 'react-native';
+import {View} from 'react-native';
 
 import PageWrapper from '@/components/PageWrapper';
+import Info from '@/components/Info';
 
 const Cart = () => {
   return (
     <PageWrapper>
-      <Empty />
+      <View style={styles.container}>
+        <Info
+          icon="Cart"
+          title="Sepetim"
+          desc="Sepetinde ürün bulunmamaktadır"
+          navigateTo="Home"
+          buttonText={'Alışverişe Başla'}
+        />
+      </View>
     </PageWrapper>
   );
 };
