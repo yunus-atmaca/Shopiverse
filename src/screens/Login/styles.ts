@@ -6,7 +6,6 @@ export default StyleSheet.create({
   container: {
     flex: 1,
     alignItems: 'center',
-    paddingTop: vs(spacing.xxl),
   },
   logo: {
     width: hs(128),
@@ -51,7 +50,7 @@ export default StyleSheet.create({
     width: hs(72),
     borderRadius: radius.xs,
   },
-  signUp:{
-    marginTop: vs(spacing.xxl)
-  }
+  signUp: {
+    marginTop: vs(spacing.xxl),
+  },
 });

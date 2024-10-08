@@ -10,7 +10,7 @@ export default StyleSheet.create({
     marginBottom: vs(spacing.xs),
   },
   inputContainer: {
-    height: vs(48),
+    height: vs(44),
     borderRadius: radius.xs,
     borderWidth: borderWidth.m,
     paddingEnd: hs(spacing.m),

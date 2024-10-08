@@ -46,6 +46,9 @@ type ThemeColors = {
   inputPlaceHolder: ColorValue;
 
   line: ColorValue;
+
+  checkBoxFilled: ColorValue;
+  checkBoxUnFilled: ColorValue;
 };
 
 export type {ThemeColors};

@@ -22,7 +22,15 @@ export type RootStackParamList = {
   ForgotPassword: {
     country?: ICountry;
   };
-  Countries: undefined;
+  Countries: {
+    navigateTo?: Pages;
+  };
+  ModalWebview: {
+    url: string;
+  };
+  SignUp: {
+    country?: ICountry;
+  };
 };
 
 export type Pages = keyof TabParamList | keyof RootStackParamList;

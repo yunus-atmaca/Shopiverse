@@ -36,6 +36,9 @@ const lightTheme: ThemeColors = {
   inputPlaceHolder: palette.gray600,
 
   line: palette.gray600,
+
+  checkBoxFilled: palette.orange,
+  checkBoxUnFilled: palette.white,
 };
 
 export default lightTheme;

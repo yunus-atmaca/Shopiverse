@@ -30,7 +30,11 @@ const ForgotPassword = ({
         {inputType === 'email' ? (
           <TextInput placeholder="Email" title="Email" />
         ) : (
-          <PhoneInput country={params?.country} title="Phone" />
+          <PhoneInput
+            currentPage="ForgotPassword"
+            country={params?.country}
+            title="Phone"
+          />
         )}
 
         <View style={styles.button}>

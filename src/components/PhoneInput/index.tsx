@@ -7,15 +7,22 @@ import Text from '@/components/Text';
 import {useTheme} from '@/hooks/theme';
 import {ICountry} from '@/screens/Countries/types';
 import Icon from '@/components/Icon';
-import {navigationRef} from '@/navigation';
+import {navigationRef, Pages} from '@/navigation';
 
 type Props = TextInputProps & {
   title?: string;
   isRequired?: boolean;
   country?: ICountry;
+  currentPage: Pages;
 };
 
-const PhoneInput = ({title, country, isRequired = false, ...props}: Props) => {
+const PhoneInput = ({
+  title,
+  currentPage,
+  country,
+  isRequired = false,
+  ...props
+}: Props) => {
   const theme = useTheme();
 
   const inputRef = useRef<TextInput>(null);
@@ -65,7 +72,9 @@ const PhoneInput = ({title, country, isRequired = false, ...props}: Props) => {
           },
         ]}>
         <TouchableOpacity
-          onPress={() => navigationRef.navigate('Countries')}
+          onPress={() =>
+            navigationRef.navigate('Countries', {navigateTo: currentPage})
+          }
           activeOpacity={0.7}
           style={[styles.country, {borderRightColor: theme.inputBorder}]}>
           <Text.H style={{marginEnd: 4}}>{_country.flag}</Text.H>

@@ -10,9 +10,9 @@ import PageHeader from '@/components/PageHeader';
 import PageWrapper from '@/components/PageWrapper';
 import TextInput from '@/components/TextInput';
 import Text from '@/components/Text';
-import {navigationRef} from '@/navigation';
+import {navigationRef, RootStackScreenProps} from '@/navigation';
 
-const Countries = () => {
+const Countries = ({route: {params}}: RootStackScreenProps<'Countries'>) => {
   const [filtered, setFiltered] = useState<ICountry[]>(_countries);
   const [searched, setSearched] = useState('');
 
@@ -20,7 +20,7 @@ const Countries = () => {
     return (
       <TouchableOpacity
         onPress={() => {
-          navigationRef.navigate('ForgotPassword', {
+          navigationRef.navigate(params.navigateTo as any, {
             country: item,
           });
         }}

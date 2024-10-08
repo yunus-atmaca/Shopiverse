@@ -46,6 +46,7 @@ const Login = () => {
           onPress={() =>
             navigationRef.navigate('ForgotPassword', {country: undefined})
           }
+          typography="semiBold"
           color={theme.textActive}
           style={styles.forgotPassword}>
           Şifremi Unuttum
@@ -72,7 +73,12 @@ const Login = () => {
 
         <Text.H color={theme.textSub} style={styles.signUp}>
           Dont have account?
-          <Text.H typography="semiBold" color={theme.textActive}>
+          <Text.H
+            onPress={() =>
+              navigationRef.navigate('SignUp', {country: undefined})
+            }
+            typography="semiBold"
+            color={theme.textActive}>
             {' '}
             Sign Up
           </Text.H>
