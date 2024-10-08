@@ -17,8 +17,10 @@ import Facebook from './Facebook';
 import ArrowDown from './ArrowDown';
 import Search from './Search';
 import Calendar from './Calendar';
+import Asterisk from './Asterisk';
 
 export {
+  Asterisk,
   Calendar,
   Search,
   ArrowDown,

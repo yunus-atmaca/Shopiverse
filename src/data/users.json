@@ -1,0 +1,26 @@
+[
+  {
+    "id": "b4de29f7-4fe3-4c8d-b32a-77956d017dc5",
+    "firstName": "Jessica",
+    "lastName": "Reilly",
+    "email": "ginahopkins@hotmail.com"
+  },
+  {
+    "id": "be856a7f-b2f9-4b58-a821-f5962c8a040b",
+    "firstName": "Lindsey",
+    "lastName": "Brown",
+    "email": "veronicasantos@hotmail.com"
+  },
+  {
+    "id": "c74f127f-bd58-42cd-8827-59b1483c41de",
+    "firstName": "Patricia",
+    "lastName": "Anderson",
+    "email": "christinefaulkner@thomas.com"
+  },
+  {
+    "id": "cd9347e1-9620-4fca-bc7d-1d760e279e9e",
+    "firstName": "Richard",
+    "lastName": "Russo",
+    "email": "gloria78@yahoo.com"
+  }
+]

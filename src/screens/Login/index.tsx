@@ -1,19 +1,59 @@
 import styles from './styles';
 
-import React from 'react';
+import React, {useReducer} from 'react';
 import {View, Image} from 'react-native';
 
 import PageWrapper from '@/components/PageWrapper';
 import PageHeader from '@/components/PageHeader';
 import Text from '@/components/Text';
-import TextInput from '@/components/TextInput';
+import TextInput, {inputReducer, TextInputStates} from '@/components/TextInput';
+
 import Button from '@/components/Button';
 import {useTheme} from '@/hooks/theme';
 import Icon from '@/components/Icon';
 import {navigationRef} from '@/navigation';
+import {useAppDispatch} from '@/hooks/stores';
+import {setUser} from '@/stores/controllers/auth';
+import {delay} from '@/utils/helpers';
+
+const states: TextInputStates = {
+  email: {valid: false, value: ''},
+  password: {valid: false, value: ''},
+};
 
 const Login = () => {
   const theme = useTheme();
+  const appDispatch = useAppDispatch();
+
+  const [state, dispatch] = useReducer(inputReducer, states);
+  const buttonDisabled = !state['email'].valid || !state['password'].valid;
+
+  console.debug('valid ->  ', state['email'], state['password']);
+
+  const onLogin = async () => {
+    await delay(2500);
+
+    appDispatch(
+      setUser({
+        firstName: 'Yunus',
+        lastName: 'ATMACA',
+        id: 'User-ID',
+        email: 'yunusatmacabm@gmail.com',
+      }),
+    );
+
+    navigationRef.goBack();
+  };
+
+  const onGoogle = () => {
+    console.debug('Google login');
+  };
+  const onFacebook = () => {
+    console.debug('Facebook login');
+  };
+  const onApple = () => {
+    console.debug('Apple Login');
+  };
 
   return (
     <PageWrapper removeTop>
@@ -31,15 +71,40 @@ const Login = () => {
         </Text.P>
 
         <View style={{width: '100%'}}>
-          <TextInput placeholder="Email" headingIcon="Mail" title={'Email'} />
+          <TextInput
+            required
+            validator="email"
+            keyboardType="email-address"
+            placeholder="Email"
+            headingIcon="Mail"
+            title={'Email'}
+            value={state['email'].value}
+            onChangeText={e =>
+              dispatch({type: 'value', payload: {field: 'email', value: e}})
+            }
+            errorText="Email format doğru değil"
+            onValidationChanged={v =>
+              dispatch({type: 'valid', payload: {field: 'email', value: v}})
+            }
+          />
         </View>
 
-        <View style={{width: '100%', marginTop: 10}}>
+        <View style={{width: '100%'}}>
           <TextInput
+            required
             placeholder="Password"
+            value={state['password'].value}
+            onChangeText={e =>
+              dispatch({type: 'value', payload: {field: 'password', value: e}})
+            }
+            validator="minimum8Char"
+            onValidationChanged={v =>
+              dispatch({type: 'valid', payload: {field: 'password', value: v}})
+            }
             headingIcon="Lock"
             title={'Password'}
             secureTextEntry
+            errorText="Minimum 8 char"
           />
         </View>
         <Text.H
@@ -53,7 +118,7 @@ const Login = () => {
         </Text.H>
 
         <View style={styles.login}>
-          <Button />
+          <Button onClick={onLogin} text="Login" disabled={buttonDisabled} />
         </View>
 
         <View style={styles.loginWith}>
@@ -63,12 +128,21 @@ const Login = () => {
         </View>
 
         <View style={styles.social}>
-          <Icon containerStyle={styles.socialIcon} name="Google" />
           <Icon
+            onClick={onGoogle}
+            containerStyle={styles.socialIcon}
+            name="Google"
+          />
+          <Icon
+            onClick={onApple}
             containerStyle={[styles.socialIcon, {marginHorizontal: 24}]}
             name="Apple"
           />
-          <Icon containerStyle={styles.socialIcon} name="Facebook" />
+          <Icon
+            onClick={onFacebook}
+            containerStyle={styles.socialIcon}
+            name="Facebook"
+          />
         </View>
 
         <Text.H color={theme.textSub} style={styles.signUp}>

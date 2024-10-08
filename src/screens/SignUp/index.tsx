@@ -71,17 +71,6 @@ const SignUp = ({route: {params}}: RootStackScreenProps<'SignUp'>) => {
             <DateInput title="Birth Date" />
           </View>
 
-          {/*<Text.H color={theme.textSub} style={{}}>
-          Already have an account?
-          <Text.H
-            onPress={() => navigationRef.navigate('SignUp')}
-            typography="semiBold"
-            color={theme.textActive}>
-            {' '}
-            Login
-          </Text.H>
-        </Text.H>*/}
-
           <View style={styles.field}>
             <Forms.Agreement
               agreementText="I agree with **Terms** and **Privacy**"
@@ -99,6 +88,17 @@ const SignUp = ({route: {params}}: RootStackScreenProps<'SignUp'>) => {
           <View style={styles.field}>
             <Button text={'Sign Up'} />
           </View>
+
+          <Text.H color={theme.textSub} style={{marginTop: 8}}>
+            Already have an account?
+            <Text.H
+              onPress={() => navigationRef.navigate('Login')}
+              typography="semiBold"
+              color={theme.textActive}>
+              {' '}
+              Login
+            </Text.H>
+          </Text.H>
         </View>
       </ScrollView>
     </PageWrapper>

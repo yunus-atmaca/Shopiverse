@@ -15,8 +15,8 @@ export default StyleSheet.create({
   tab: {
     alignItems: 'center',
     justifyContent: 'center',
-    //paddingVertical: vs(spacing.s),
     paddingTop: vs(spacing.s),
+    paddingBottom: vs(spacing.xs),
     flex: 1,
   },
 });

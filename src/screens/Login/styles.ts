@@ -21,7 +21,6 @@ export default StyleSheet.create({
   forgotPassword: {
     alignSelf: 'flex-end',
     marginEnd: hs(spacing.r),
-    marginTop: vs(spacing.s),
   },
   login: {
     marginTop: vs(spacing.r),

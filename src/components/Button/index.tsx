@@ -1,8 +1,8 @@
 import styles from './styles';
 
-import React from 'react';
+import React, {useState} from 'react';
 import {
-  GestureResponderEvent,
+  ActivityIndicator,
   TouchableHighlight,
   TouchableHighlightProps,
 } from 'react-native';
@@ -12,24 +12,28 @@ import {useTheme} from '@/hooks/theme';
 
 type Props = {
   text?: string;
-  loading?: boolean;
-  onClick?: () => void;
+  onClick?: () => Promise<void>;
 };
 
 const Button = ({
   text = 'Button',
-  loading = false,
   onClick,
   ...props
 }: Props & TouchableHighlightProps) => {
   const theme = useTheme();
+  const [loading, setLoading] = useState(false);
 
   if (props.onPress) {
     throw new Error('use onClick instead of onPress');
   }
 
-  const _onPress = () => {
-    if (onClick) onClick();
+  const _onPress = async () => {
+    if (loading) return;
+    setLoading(true);
+
+    if (onClick) await onClick();
+
+    setLoading(false);
   };
 
   const isDisabled = props.disabled;
@@ -44,11 +48,15 @@ const Button = ({
         props.style,
         {backgroundColor: isDisabled ? theme.buttonDisabled : theme.button},
       ]}>
-      <Text.P
-        color={isDisabled ? theme.buttonTextDisabled : theme.buttonText}
-        typography="bold">
-        {text}
-      </Text.P>
+      {loading ? (
+        <ActivityIndicator size={'large'} color={theme.buttonText} />
+      ) : (
+        <Text.P
+          color={isDisabled ? theme.buttonTextDisabled : theme.buttonText}
+          typography="bold">
+          {text}
+        </Text.P>
+      )}
     </TouchableHighlight>
   );
 };
