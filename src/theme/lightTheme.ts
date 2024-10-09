@@ -22,6 +22,8 @@ const lightTheme: ThemeColors = {
   markers: palette.orange,
 
   border: palette.gray400,
+  borderDisabled: palette.gray400,
+  borderActive: palette.orange,
 
   tabbar: palette.white,
   tabbarIconActive: palette.orange,

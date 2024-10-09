@@ -32,6 +32,8 @@ type ThemeColors = {
   markers: ColorValue;
 
   border: ColorValue;
+  borderDisabled: ColorValue;
+  borderActive: ColorValue;
 
   tabbar: ColorValue;
   tabbarIconActive: ColorValue;

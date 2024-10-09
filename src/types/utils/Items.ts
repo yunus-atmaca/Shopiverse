@@ -3,7 +3,7 @@ import {IconNames} from '@/components/Icon';
 export interface IOption {
   id: string;
   name: string;
-  icon: IconNames | undefined;
+  icon?: IconNames | undefined;
 }
 
 export interface ISection {

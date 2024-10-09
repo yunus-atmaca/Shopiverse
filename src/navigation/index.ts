@@ -19,6 +19,7 @@ export type RootStackParamList = {
   Tabs: NavigatorScreenParams<TabParamList>;
   ProductDetails: undefined;
   Login: undefined;
+  MyOrders: undefined;
   ForgotPassword: {
     country?: ICountry;
   };

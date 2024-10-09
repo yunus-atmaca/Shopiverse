@@ -10,8 +10,10 @@ import ProductDetails from './ProductDetails';
 import Login from './Login';
 import ForgotPassword from './ForgotPassword';
 import SignUp from './SignUp';
+import MyOrders from './MyOrders';
 
 export {
+  MyOrders,
   SignUp,
   ModalWebview,
   Countries,

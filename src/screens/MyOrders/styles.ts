@@ -1,11 +1,15 @@
 import {StyleSheet} from 'react-native';
 import Styles from '@/theme/style';
 
-const {hs, spacing} = Styles;
+const {vs, spacing, hs} = Styles;
 export default StyleSheet.create({
   container: {
-    paddingHorizontal: hs(spacing.r),
-    flexDirection: 'row',
+    flex: 1,
     alignItems: 'center',
+    justifyContent: 'center',
+  },
+  searchBox: {
+    //backgroundColor: 'white',
+    paddingTop: vs(spacing.s),
   },
 });

@@ -3,7 +3,7 @@ import styles from './styles';
 import APP from '../../../app.json';
 
 import React, {useEffect, useMemo} from 'react';
-import {ScrollView, View} from 'react-native';
+import {ScrollView, TouchableOpacity, View} from 'react-native';
 import {useIsFocused} from '@react-navigation/native';
 
 import {navigationRef} from '@/navigation';
@@ -72,6 +72,8 @@ const Profile = () => {
 
   const onOption = (sectionId: string, optionId: string) => {
     if (sectionId === '1') {
+      if (optionId == '11') navigationRef.navigate('MyOrders');
+      else if (optionId === '12') navigationRef.navigate('MyOrders');
     } else if (sectionId === '2') {
     } else if (sectionId === '3') {
     } else {
@@ -126,7 +128,11 @@ const Profile = () => {
                     ]}>
                     {s.options.map((o, io) => {
                       return (
-                        <View style={styles.option} key={'option-' + io}>
+                        <TouchableOpacity
+                          onPress={() => onOption(s.id, o.id)}
+                          activeOpacity={0.7}
+                          style={styles.option}
+                          key={'option-' + io}>
                           <View
                             style={{
                               flexDirection: 'row',
@@ -146,7 +152,7 @@ const Profile = () => {
                             color={theme.boxIconPassive}
                             name={'ArrowRight'}
                           />
-                        </View>
+                        </TouchableOpacity>
                       );
                     })}
                   </View>

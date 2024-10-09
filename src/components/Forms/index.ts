@@ -1,4 +1,6 @@
 import Agreement from './Agreement';
-const Forms = {Agreement};
+import Tags from './Tags';
+
+const Forms = {Tags, Agreement};
 
 export default Forms;
