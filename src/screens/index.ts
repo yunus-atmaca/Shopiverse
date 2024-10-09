@@ -12,8 +12,10 @@ import ForgotPassword from './ForgotPassword';
 import SignUp from './SignUp';
 import MyOrders from './MyOrders';
 import MyReviews from './MyReviews';
+import FAQ from './FAQ';
 
 export {
+  FAQ,
   MyReviews,
   MyOrders,
   SignUp,

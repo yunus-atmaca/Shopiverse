@@ -13,6 +13,7 @@ export default StyleSheet.create({
     shadowOpacity: 0.3,
     shadowRadius: 2.75,
     elevation: 4,
+    zIndex: 4,
   },
   content: {
     height: vs(56),

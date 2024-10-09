@@ -21,7 +21,7 @@ const {
   name,
   initialState: initialState,
   reducers: {
-    setUser: (state: State, action: PayloadAction<IUser>) => {
+    setUser: (state: State, action: PayloadAction<IUser | null>) => {
       return {
         ...state,
         user: action.payload,

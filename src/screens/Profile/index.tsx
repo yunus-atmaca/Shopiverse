@@ -13,9 +13,10 @@ import {useAppDispatch, useAppSelector} from '@/hooks/stores';
 import {SelectAuth} from '@/stores/selectors';
 import Icon from '@/components/Icon';
 import Text from '@/components/Text';
-import {ISection} from '@/types/utils/Items';
+import {ISection} from '@/types/utils/ComponentData';
 import {useTheme} from '@/hooks/theme';
 import Button from '@/components/Button';
+import {setUser} from '@/stores/controllers/auth';
 
 const Profile = () => {
   const theme = useTheme();
@@ -77,7 +78,8 @@ const Profile = () => {
     } else if (sectionId === '2') {
     } else if (sectionId === '3') {
       navigationRef.navigate('ModalWebview', {url: 'https://reactnative.dev/'});
-    } else {
+    } else if(sectionId === '4') {
+      if(optionId === '41') navigationRef.navigate('FAQ')
     }
   };
 
@@ -97,12 +99,12 @@ const Profile = () => {
         <View style={styles.container}>
           <View style={[styles.header]}>
             <View style={{flexDirection: 'row', alignItems: 'center'}}>
-              <Icon containerSize={48} name="Person" />
+              <Icon hasContainerStyle containerSize={48} name="Person" />
               <Text.H style={{marginStart: 8}} typography="semiBold">
                 {user.firstName + ' ' + user.lastName}
               </Text.H>
             </View>
-            <Icon name="Notification" />
+            <Icon hasContainerStyle name="Notification" />
           </View>
           <ScrollView
             contentContainerStyle={{paddingBottom: 36}}
@@ -157,12 +159,16 @@ const Profile = () => {
             })}
 
             <Button
-              onClick={async () => {}}
+              onClick={() => dispatch(setUser(null))}
               style={styles.logout}
               text="Log out"
             />
 
-            <Text.H align="center" style={styles.app} color={theme.iconLight}>
+            <Text.H
+              typography="bold"
+              align="center"
+              style={styles.app}
+              color={theme.textHighlighted}>
               {APP.displayName + '\n'}
               <Text.P align="center" size={12}>
                 {APP.version}

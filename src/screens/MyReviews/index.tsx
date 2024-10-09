@@ -6,7 +6,7 @@ import {View} from 'react-native';
 import PageWrapper from '@/components/PageWrapper';
 import PageHeader from '@/components/PageHeader';
 import Form from '@/components/Forms';
-import {IOption} from '@/types/utils/Items';
+import {IOption} from '@/types/utils/ComponentData';
 import Info from '@/components/Info';
 
 const MyReviews = () => {

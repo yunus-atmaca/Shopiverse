@@ -11,3 +11,8 @@ export interface ISection {
   title: string | undefined;
   options: IOption[];
 }
+
+export interface AccordionItem {
+  title: string;
+  desc: string;
+}

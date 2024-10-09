@@ -3,7 +3,7 @@ import styles from './styles/tags';
 import React, {useState} from 'react';
 import {FlatList, ListRenderItem, TouchableOpacity, View} from 'react-native';
 
-import {IOption} from '@/types/utils/items';
+import {IOption} from '@/types/utils/ComponentData';
 import Styles from '@/theme/style';
 import Text from '@/components/Text';
 import {useTheme} from '@/hooks/theme';
