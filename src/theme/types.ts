@@ -49,6 +49,10 @@ type ThemeColors = {
 
   checkBoxFilled: ColorValue;
   checkBoxUnFilled: ColorValue;
+
+  boxBackground: ColorValue;
+  boxIconActive: ColorValue;
+  boxIconPassive: ColorValue;
 };
 
 export type {ThemeColors};

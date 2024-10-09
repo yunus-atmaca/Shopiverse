@@ -18,8 +18,26 @@ import ArrowDown from './ArrowDown';
 import Search from './Search';
 import Calendar from './Calendar';
 import Asterisk from './Asterisk';
+import Box from  './Box'
+import CommentDots from './CommentDots';
+import ArrowRight from './ArrowRight';
+import Location from './Location';
+import User from './User';
+import Coupon from './Coupon';
+import CreditCard from './CreditCard';
+import QuestionMark from './QuestionMark';
+import CustomerService from './CustomerService'
 
 export {
+  CustomerService,
+  QuestionMark,
+  CreditCard,
+  Coupon,
+  User,
+  Location,
+  ArrowRight,
+  CommentDots,
+  Box,
   Asterisk,
   Calendar,
   Search,

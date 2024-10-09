@@ -39,6 +39,10 @@ const lightTheme: ThemeColors = {
 
   checkBoxFilled: palette.orange,
   checkBoxUnFilled: palette.white,
+
+  boxBackground: palette.white,
+  boxIconActive: palette.orange,
+  boxIconPassive: palette.gray600,
 };
 
 export default lightTheme;
