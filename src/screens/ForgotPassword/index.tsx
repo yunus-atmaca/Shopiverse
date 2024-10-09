@@ -92,7 +92,7 @@ const ForgotPassword = ({
           />
         </View>
 
-        <View style={[styles.line, {backgroundColor: theme.line}]} />
+        <View style={[styles.line, {backgroundColor: theme.border}]} />
 
         <Text.H color={theme.textSub} style={styles.tryAnother}>
           Try another method?
@@ -105,7 +105,7 @@ const ForgotPassword = ({
               });
             }}
             typography="semiBold"
-            color={theme.textActive}>
+            color={theme.textHighlighted}>
             {` ${inputType === 'email' ? 'Phone number' : 'Email'}`}
           </Text.H>
         </Text.H>

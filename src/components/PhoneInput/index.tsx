@@ -69,12 +69,7 @@ const PhoneInput = ({
             {title}
           </Text.H>
           {required && (
-            <Icon
-              size={8}
-              hasContainerStyle={false}
-              color={theme.textActive}
-              name="Asterisk"
-            />
+            <Icon size={8} color={theme.iconHighlighted} name="Asterisk" />
           )}
         </View>
       )}
@@ -82,8 +77,8 @@ const PhoneInput = ({
         style={[
           styles.inputContainer,
           {
-            backgroundColor: theme.inputBackground,
-            borderColor: theme.inputBorder,
+            backgroundColor: theme.boxBG,
+            borderColor: valid ? theme.border : theme.borderError,
           },
         ]}>
         <TouchableOpacity
@@ -91,15 +86,15 @@ const PhoneInput = ({
             navigationRef.navigate('Countries', {navigateTo: currentPage})
           }
           activeOpacity={0.7}
-          style={[styles.country, {borderRightColor: theme.inputBorder}]}>
+          style={[styles.country, {borderRightColor: theme.border}]}>
           <Text.H style={{marginEnd: 4}}>{country.flag}</Text.H>
-          <Icon size={16} hasContainerStyle={false} name={'ArrowDown'} />
+          <Icon size={16} name={'ArrowDown'} />
         </TouchableOpacity>
 
         <TextInput
           {...props}
           ref={inputRef}
-          style={[styles.input, {color: theme.inputText}]}
+          style={[styles.input, {color: theme.text}]}
           placeholderTextColor={theme.inputPlaceHolder}
           cursorColor={theme.inputCursor}
           onChangeText={_onChangeText}

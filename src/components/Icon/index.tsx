@@ -24,7 +24,6 @@ export type Props = {
   onClick?: () => void;
   containerStyle?: StyleProp<ViewStyle>;
   scaleFactor?: 'horizontal' | 'vertical';
-  isTab?: boolean;
   hasContainerStyle?: boolean;
 };
 
@@ -36,13 +35,12 @@ const Icon: FC<Props> = ({
   bgColor,
   onClick,
   containerStyle,
-  isTab = false,
-  hasContainerStyle = true,
+  hasContainerStyle = false,
 }) => {
   const theme = useTheme();
 
   const icColor = color ?? theme.icon;
-  const icContainerBg = isTab ? 'transparent' : bgColor ?? theme.iconBackground;
+  const icContainerBg = bgColor ?? theme.iconBG;
   const icSize = Styles.hs(size);
   const icContainerSize = Styles.hs(containerSize);
 
@@ -56,7 +54,7 @@ const Icon: FC<Props> = ({
           height: icContainerSize,
           width: icContainerSize,
           backgroundColor: icContainerBg,
-          borderColor: theme.border,
+          borderColor: theme.borderLight,
           borderWidth: Styles.borderWidth.m,
         },
         containerStyle,

@@ -13,7 +13,7 @@ import {useAppDispatch, useAppSelector} from '@/hooks/stores';
 import {SelectAuth} from '@/stores/selectors';
 import Icon from '@/components/Icon';
 import Text from '@/components/Text';
-import {ISection, IOption} from '@/types/utils/Items';
+import {ISection} from '@/types/utils/Items';
 import {useTheme} from '@/hooks/theme';
 import Button from '@/components/Button';
 
@@ -76,6 +76,7 @@ const Profile = () => {
       else if (optionId === '12') navigationRef.navigate('MyReviews');
     } else if (sectionId === '2') {
     } else if (sectionId === '3') {
+      navigationRef.navigate('ModalWebview', {url: 'https://reactnative.dev/'});
     } else {
     }
   };
@@ -122,7 +123,7 @@ const Profile = () => {
                     style={[
                       styles.sectionContent,
                       {
-                        backgroundColor: theme.boxBackground,
+                        backgroundColor: theme.boxBG,
                         borderColor: theme.border,
                       },
                     ]}>
@@ -140,18 +141,13 @@ const Profile = () => {
                             }}>
                             {o.icon && (
                               <Icon
-                                hasContainerStyle={false}
-                                color={theme.boxIconActive}
+                                color={theme.iconHighlighted}
                                 name={o.icon}
                               />
                             )}
                             <Text.P style={{marginStart: 8}}>{o.name}</Text.P>
                           </View>
-                          <Icon
-                            hasContainerStyle={false}
-                            color={theme.boxIconPassive}
-                            name={'ArrowRight'}
-                          />
+                          <Icon color={theme.iconBG} name={'ArrowRight'} />
                         </TouchableOpacity>
                       );
                     })}
@@ -166,7 +162,7 @@ const Profile = () => {
               text="Log out"
             />
 
-            <Text.H align="center" style={styles.app} color={theme.textActive}>
+            <Text.H align="center" style={styles.app} color={theme.iconLight}>
               {APP.displayName + '\n'}
               <Text.P align="center" size={12}>
                 {APP.version}

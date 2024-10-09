@@ -11,40 +11,35 @@ const lightTheme: ThemeColors = {
   buttonTextDisabled: palette.gray600,
 
   text: palette.black,
-  textSub: palette.gray600,
   textReversed: palette.white,
+  textSub: palette.gray600,
   textError: palette.red,
-  textActive: palette.orange,
+  textHighlighted: palette.orange,
 
   icon: palette.black,
-  iconBackground: palette.white,
+  iconLight: palette.gray600,
+  iconReversed: palette.white,
+  iconBG: palette.white,
+  iconHighlighted: palette.orange,
 
-  markers: palette.orange,
+  border: palette.gray600,
+  borderLight: palette.gray400,
+  borderHighlighted: palette.orange,
+  borderError: palette.red,
 
-  border: palette.gray400,
-  borderDisabled: palette.gray400,
-  borderActive: palette.orange,
+  tabbarBG: palette.white,
+  tabbarFocusedTab: palette.orange,
+  tabbarUnFocusedTab: palette.gray600,
 
-  tabbar: palette.white,
-  tabbarIconActive: palette.orange,
-  tabbarIconPassive: palette.gray600,
+  appHeaderBG: palette.white,
 
-  appHeaderBackground: palette.white,
+  boxBG: palette.white,
 
-  inputBackground: palette.white,
-  inputBorder: palette.gray600,
   inputCursor: palette.orange,
-  inputText: palette.black,
   inputPlaceHolder: palette.gray600,
-
-  line: palette.gray600,
 
   checkBoxFilled: palette.orange,
   checkBoxUnFilled: palette.white,
-
-  boxBackground: palette.white,
-  boxIconActive: palette.orange,
-  boxIconPassive: palette.gray600,
 };
 
 export default lightTheme;

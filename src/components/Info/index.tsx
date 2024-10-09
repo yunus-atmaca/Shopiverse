@@ -30,7 +30,13 @@ const Info = ({
 
   return (
     <View style={[styles.container, containerStyle]}>
-      <Icon size={48} containerSize={108} color={theme.markers} name={icon} />
+      <Icon
+        hasContainerStyle
+        size={48}
+        containerSize={108}
+        color={theme.iconHighlighted}
+        name={icon}
+      />
       <Text.P align="center" style={styles.header}>
         {title}
       </Text.P>

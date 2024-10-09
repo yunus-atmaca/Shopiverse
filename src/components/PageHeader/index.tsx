@@ -29,7 +29,7 @@ const PageHeader = ({header, renderBack = true, disableGab = false}: Props) => {
           <View
             style={[
               styles.container,
-              {backgroundColor: theme.appHeaderBackground},
+              {backgroundColor: theme.appHeaderBG},
               {paddingTop: defInsets.top},
             ]}>
             <View style={styles.content}>
@@ -37,7 +37,6 @@ const PageHeader = ({header, renderBack = true, disableGab = false}: Props) => {
                 <Icon
                   onClick={() => navigationRef.goBack()}
                   containerStyle={styles.back}
-                  hasContainerStyle={false}
                   name="Back"
                 />
               )}

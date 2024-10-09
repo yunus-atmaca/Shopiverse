@@ -110,7 +110,7 @@ const Login = () => {
             navigationRef.navigate('ForgotPassword', {country: undefined})
           }
           typography="semiBold"
-          color={theme.textActive}
+          color={theme.textHighlighted}
           style={styles.forgotPassword}>
           Şifremi Unuttum
         </Text.H>
@@ -120,9 +120,9 @@ const Login = () => {
         </View>
 
         <View style={styles.loginWith}>
-          <View style={[styles.line, {backgroundColor: theme.line}]} />
+          <View style={[styles.line, {backgroundColor: theme.border}]} />
           <Text.H size={14}>Or</Text.H>
-          <View style={[styles.line, {backgroundColor: theme.line}]} />
+          <View style={[styles.line, {backgroundColor: theme.border}]} />
         </View>
 
         <View style={styles.social}>
@@ -150,7 +150,7 @@ const Login = () => {
               navigationRef.navigate('SignUp', {country: undefined})
             }
             typography="semiBold"
-            color={theme.textActive}>
+            color={theme.textHighlighted}>
             {' '}
             Sign Up
           </Text.H>

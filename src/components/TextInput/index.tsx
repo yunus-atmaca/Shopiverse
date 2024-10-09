@@ -51,12 +51,7 @@ const TextInput = ({
             {title}
           </Text.H>
           {required && (
-            <Icon
-              size={8}
-              hasContainerStyle={false}
-              color={theme.textActive}
-              name="Asterisk"
-            />
+            <Icon size={8} color={theme.iconHighlighted} name="Asterisk" />
           )}
         </View>
       )}
@@ -64,21 +59,17 @@ const TextInput = ({
         style={[
           styles.inputContainer,
           {
-            backgroundColor: theme.inputBackground,
-            borderColor: valid ? theme.inputBorder : theme.textError,
+            backgroundColor: theme.boxBG,
+            borderColor: valid ? theme.border : theme.borderError,
           },
         ]}>
         {headingIcon && (
-          <Icon
-            containerStyle={styles.iconHeading}
-            hasContainerStyle={false}
-            name={headingIcon}
-          />
+          <Icon containerStyle={styles.iconHeading} name={headingIcon} />
         )}
         <RNTextInput
           {...props}
           ref={ref}
-          style={[styles.input, {color: theme.inputText}]}
+          style={[styles.input, {color: theme.text}]}
           placeholderTextColor={theme.inputPlaceHolder}
           cursorColor={theme.inputCursor}
           secureTextEntry={props.secureTextEntry && secure}
@@ -88,7 +79,6 @@ const TextInput = ({
           <Icon
             onClick={() => setSecure(prev => !prev)}
             containerStyle={styles.iconEnding}
-            hasContainerStyle={false}
             name={secure ? 'EyeSlash' : 'Eye'}
           />
         )}

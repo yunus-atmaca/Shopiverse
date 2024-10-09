@@ -26,8 +26,8 @@ const Tags = ({initialIndex = 0, tags}: Props) => {
         style={[
           styles.container,
           {
-            borderColor: isSelected ? theme.borderActive : theme.borderDisabled,
-            backgroundColor: theme.boxBackground,
+            borderColor: isSelected ? theme.borderHighlighted : theme.borderLight,
+            backgroundColor: theme.boxBG,
           },
           {marginStart: index === 0 ? 0 : 12},
         ]}>

@@ -1,6 +1,6 @@
 import styles from './styles/agreement';
 
-import React, {useMemo, useState} from 'react';
+import React, {useMemo} from 'react';
 import {View} from 'react-native';
 import BouncyCheckbox from 'react-native-bouncy-checkbox';
 
@@ -87,7 +87,7 @@ const Agreement = ({onValueChange, checked, urls, agreementText}: Props) => {
               onPress={() =>
                 navigationRef.navigate('ModalWebview', {url: urls[f.urlInx]})
               }
-              color={f.urlInx !== -1 ? theme.textActive : undefined}
+              color={f.urlInx !== -1 ? theme.textHighlighted : undefined}
               typography={f.urlInx !== -1 ? 'bold' : undefined}
               size={14}
               key={'f-' + index}>

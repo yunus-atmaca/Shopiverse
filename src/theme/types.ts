@@ -21,40 +21,35 @@ type ThemeColors = {
   buttonTextDisabled: ColorValue;
 
   text: ColorValue;
-  textSub: ColorValue;
   textReversed: ColorValue;
+  textSub: ColorValue;
   textError: ColorValue;
-  textActive: ColorValue;
+  textHighlighted: ColorValue;
 
   icon: ColorValue;
-  iconBackground: ColorValue;
-
-  markers: ColorValue;
+  iconLight: ColorValue;
+  iconReversed: ColorValue;
+  iconBG: ColorValue;
+  iconHighlighted: ColorValue;
 
   border: ColorValue;
-  borderDisabled: ColorValue;
-  borderActive: ColorValue;
+  borderLight: ColorValue;
+  borderHighlighted: ColorValue;
+  borderError: ColorValue;
 
-  tabbar: ColorValue;
-  tabbarIconActive: ColorValue;
-  tabbarIconPassive: ColorValue;
+  tabbarBG: ColorValue;
+  tabbarFocusedTab: ColorValue;
+  tabbarUnFocusedTab: ColorValue;
 
-  appHeaderBackground: ColorValue;
+  appHeaderBG: ColorValue;
 
-  inputBackground: ColorValue;
-  inputBorder: ColorValue;
+  boxBG: ColorValue;
+
   inputCursor: ColorValue;
-  inputText: ColorValue;
   inputPlaceHolder: ColorValue;
-
-  line: ColorValue;
 
   checkBoxFilled: ColorValue;
   checkBoxUnFilled: ColorValue;
-
-  boxBackground: ColorValue;
-  boxIconActive: ColorValue;
-  boxIconPassive: ColorValue;
 };
 
 export type {ThemeColors};

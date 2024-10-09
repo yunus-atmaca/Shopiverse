@@ -1,7 +1,7 @@
 import styles from './styles';
 
 import React, {FC, useCallback} from 'react';
-import {Text, TouchableOpacity, View} from 'react-native';
+import {TouchableOpacity, View} from 'react-native';
 import {BottomTabBarProps} from '@react-navigation/bottom-tabs';
 import {useSafeAreaInsets} from 'react-native-safe-area-context';
 
@@ -18,19 +18,12 @@ const TabBar: FC<BottomTabBarProps> = ({state, navigation}) => {
   const BOTTOM = bottom === 0 ? vs(16) : bottom;
 
   const getIcon = useCallback((tab: string, isActive: boolean) => {
-    const color = isActive ? theme.tabbarIconActive : theme.tabbarIconPassive;
-    if (tab === 'Home')
-      return <Icon hasContainerStyle={false} color={color} name="Home" />;
+    const color = isActive ? theme.tabbarFocusedTab : theme.tabbarUnFocusedTab;
+    if (tab === 'Home') return <Icon color={color} name="Home" />;
     else if (tab === 'WhishList')
-      return (
-        <Icon hasContainerStyle={false} color={color} name="HeartFilled" />
-      );
-    else if (tab === 'Cart')
-      return (
-        <Icon hasContainerStyle={false} color={color} name="ShoppingCart" />
-      );
-    else if (tab === 'Profile')
-      return <Icon hasContainerStyle={false} color={color} name="Person" />;
+      return <Icon color={color} name="HeartFilled" />;
+    else if (tab === 'Cart') return <Icon color={color} name="ShoppingCart" />;
+    else if (tab === 'Profile') return <Icon color={color} name="Person" />;
   }, []);
 
   return (
@@ -39,8 +32,8 @@ const TabBar: FC<BottomTabBarProps> = ({state, navigation}) => {
         styles.container,
         {
           paddingBottom: BOTTOM,
-          borderColor: theme.border,
-          backgroundColor: theme.tabbar,
+          borderColor: theme.borderLight,
+          backgroundColor: theme.tabbarBG,
         },
       ]}>
       <View style={styles.tabs}>

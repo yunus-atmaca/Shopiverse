@@ -32,12 +32,12 @@ const DateInput = ({title}: Props) => {
         style={[
           styles.inputContainer,
           {
-            backgroundColor: theme.inputBackground,
-            borderColor: theme.inputBorder,
+            backgroundColor: theme.boxBG,
+            borderColor: theme.border,
           },
         ]}>
         <Text.P style={{flex: 1}}>{dayjs(date).format('DD/MM/YYYY')}</Text.P>
-        <Icon hasContainerStyle={false} name="Calendar" />
+        <Icon name="Calendar" />
       </TouchableOpacity>
 
       <DatePicker
