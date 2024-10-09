@@ -20,6 +20,11 @@ export default StyleSheet.create({
   },
   field: {
     width: '100%',
+  },
+  'mt-12': {
     marginTop: vs(spacing.m),
+  },
+  'mt-6': {
+    marginTop: vs(spacing.xs),
   },
 });

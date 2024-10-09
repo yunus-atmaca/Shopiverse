@@ -8,6 +8,7 @@ export default StyleSheet.create({
   },
   title: {
     marginBottom: vs(spacing.xs),
+    flexDirection:'row'
   },
   inputContainer: {
     height: vs(44),

@@ -20,6 +20,8 @@ type Props = {
    * ex: I agree with **Company Policy**
    */
   agreementText: string;
+  checked: boolean;
+  onValueChange: () => void;
 };
 
 interface FormattedStr {
@@ -27,11 +29,11 @@ interface FormattedStr {
   urlInx: number;
 }
 
-const Agreement = ({urls, agreementText}: Props) => {
+const Agreement = ({onValueChange, checked, urls, agreementText}: Props) => {
   const theme = useTheme();
-  const [checked, setChecked] = useState(false);
+  //const [checked, setChecked] = useState(false);
 
-  //TODO: not working when input like this -> **Company Policy** 
+  //TODO: not working when input like this -> **Company Policy**
   const formatted = useMemo(() => {
     const split = agreementText.split(' ');
 
@@ -76,7 +78,7 @@ const Agreement = ({urls, agreementText}: Props) => {
         iconStyle={{borderColor: theme.checkBoxFilled}}
         innerIconStyle={{borderWidth: 1}}
         textStyle={{fontFamily: 'JosefinSans-Regular'}}
-        onPress={() => setChecked(prev => !prev)}
+        onPress={onValueChange}
       />
       <Text.P style={{marginStart: 6}}>
         {formatted.map((f, index) => {

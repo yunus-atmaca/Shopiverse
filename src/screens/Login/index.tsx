@@ -28,8 +28,6 @@ const Login = () => {
   const [state, dispatch] = useReducer(inputReducer, states);
   const buttonDisabled = !state['email'].valid || !state['password'].valid;
 
-  console.debug('valid ->  ', state['email'], state['password']);
-
   const onLogin = async () => {
     await delay(2500);
 

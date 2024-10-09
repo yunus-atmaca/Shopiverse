@@ -8,60 +8,75 @@ import {useTheme} from '@/hooks/theme';
 import {ICountry} from '@/screens/Countries/types';
 import Icon from '@/components/Icon';
 import {navigationRef, Pages} from '@/navigation';
+import validators, {Validator} from '@/utils/validators';
 
 type Props = TextInputProps & {
   title?: string;
-  isRequired?: boolean;
+  required?: boolean;
   country?: ICountry;
   currentPage: Pages;
+  validator?: Validator;
+  onValidationChanged?: (valid: boolean) => void;
+  errorText?: string;
 };
 
 const PhoneInput = ({
   title,
   currentPage,
-  country,
-  isRequired = false,
+  country = {
+    name: 'Turkey',
+    cca2: 'TR',
+    flag: '🇹🇷',
+    callingCode: '+90',
+  },
+  required = false,
+  validator,
+  onValidationChanged,
+  errorText = 'Error',
   ...props
 }: Props) => {
   const theme = useTheme();
 
   const inputRef = useRef<TextInput>(null);
-  const [_country, setCountry] = useState<ICountry>(
-    country ?? {
-      name: 'Turkey',
-      cca2: 'TR',
-      flag: '🇹🇷',
-      callingCode: '+90',
-    },
-  );
-  const [phoneNumber, setPhoneNumber] = useState(_country.callingCode);
+  const [valid, setValid] = useState(true);
 
   useEffect(() => {
-    if (country) {
-      inputRef.current?.clear();
-      setPhoneNumber(country.callingCode);
-      setCountry(country);
-    }
-  }, [country]);
+    inputRef.current?.clear();
+    if (onValidationChanged) onValidationChanged(false);
+    if (props.onChangeText) props.onChangeText(country.callingCode);
+  }, [country.cca2]);
 
   const _onChangeText = (text: string) => {
     let newValue = text;
-    if (text.length <= _country.callingCode.length) {
-      newValue = _country.callingCode;
+    if (text.length <= country.callingCode.length) {
+      newValue = country.callingCode;
     }
 
-    setPhoneNumber(newValue);
-    if (props.onChangeText) {
-      props.onChangeText(newValue);
+    if (validator) {
+      const isValid = validators[validator](text);
+      setValid(isValid);
+      if (onValidationChanged) onValidationChanged(isValid);
     }
+
+    if (props.onChangeText) props.onChangeText(newValue);
   };
 
   return (
     <View style={styles.container}>
       {title && (
-        <Text.H size={14} typography="semiBold" style={styles.title}>
-          {title}
-        </Text.H>
+        <View style={styles.title}>
+          <Text.H size={14} typography="semiBold" style={{marginEnd: 2}}>
+            {title}
+          </Text.H>
+          {required && (
+            <Icon
+              size={8}
+              hasContainerStyle={false}
+              color={theme.textActive}
+              name="Asterisk"
+            />
+          )}
+        </View>
       )}
       <View
         style={[
@@ -77,7 +92,7 @@ const PhoneInput = ({
           }
           activeOpacity={0.7}
           style={[styles.country, {borderRightColor: theme.inputBorder}]}>
-          <Text.H style={{marginEnd: 4}}>{_country.flag}</Text.H>
+          <Text.H style={{marginEnd: 4}}>{country.flag}</Text.H>
           <Icon size={16} hasContainerStyle={false} name={'ArrowDown'} />
         </TouchableOpacity>
 
@@ -88,10 +103,16 @@ const PhoneInput = ({
           placeholderTextColor={theme.inputPlaceHolder}
           cursorColor={theme.inputCursor}
           onChangeText={_onChangeText}
-          value={phoneNumber}
+          value={props.value}
           keyboardType="number-pad"
         />
       </View>
+      <Text.P
+        style={{opacity: valid ? 0 : 1}}
+        color={theme.textError}
+        size={10}>
+        {errorText ?? 'Error'}
+      </Text.P>
     </View>
   );
 };

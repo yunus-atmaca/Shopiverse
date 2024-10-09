@@ -36,9 +36,8 @@ const TextInput = ({
   const _onChangeText = (text: string) => {
     if (validator) {
       const isValid = validators[validator](text);
-      console.debug('validator -> ',validator, isValid, text);
       setValid(isValid);
-      if (onValidationChanged) onValidationChanged(valid);
+      if (onValidationChanged) onValidationChanged(isValid);
     }
 
     if (props.onChangeText) props.onChangeText(text);
@@ -116,18 +115,23 @@ export type TextInputAction = {
 export type TextInputStates = {[key: string]: TextInputState};
 
 export function inputReducer(state: TextInputStates, action: TextInputAction) {
-  switch (action.type) {
-    case action.type:
-      return {
-        ...state,
-        [action.payload.field]: {
-          ...state[action.payload.field],
-          [action.type]: action.payload.value,
-        },
-      };
-    default:
-      return state;
-  }
+  const field = action.payload.field;
+  const fieldState = state[action.payload.field];
+
+  /*if (action.type) {
+    return {
+      ...state,
+      [field]: {value: '', valid: false},
+    };
+  }*/
+
+  return {
+    ...state,
+    [field]: {
+      ...fieldState,
+      [action.type]: action.payload.value,
+    },
+  };
 }
 
 export default TextInput;
