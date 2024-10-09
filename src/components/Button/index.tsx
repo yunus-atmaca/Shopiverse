@@ -12,7 +12,7 @@ import {useTheme} from '@/hooks/theme';
 
 type Props = {
   text?: string;
-  onClick?: () => Promise<void>;
+  onClick?: (() => Promise<void>) | (() => void);
 };
 
 const Button = ({

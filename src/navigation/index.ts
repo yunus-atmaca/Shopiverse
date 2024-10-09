@@ -20,6 +20,7 @@ export type RootStackParamList = {
   ProductDetails: undefined;
   Login: undefined;
   MyOrders: undefined;
+  MyReviews: undefined
   ForgotPassword: {
     country?: ICountry;
   };

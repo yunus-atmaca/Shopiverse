@@ -12,6 +12,7 @@ import {
   Countries,
   ModalWebview,
   MyOrders,
+  MyReviews,
 } from '@/screens';
 
 const Stack = createStackNavigator<RootStackParamList>();
@@ -31,6 +32,7 @@ function Root() {
         <Stack.Screen name="ForgotPassword" component={ForgotPassword} />
         <Stack.Screen name="SignUp" component={SignUp} />
         <Stack.Screen name="MyOrders" component={MyOrders} />
+        <Stack.Screen name="MyReviews" component={MyReviews} />
       </Stack.Group>
 
       <Stack.Group screenOptions={{presentation: 'modal'}}>

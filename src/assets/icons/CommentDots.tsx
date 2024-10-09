@@ -3,7 +3,7 @@ import Svg, {Path, SvgProps} from 'react-native-svg';
 
 export default function CommentDots({color}: SvgProps) {
   return (
-    <Svg width="24" height="26" viewBox="0 0 24 26" fill="none">
+    <Svg width="100%" height="100%" viewBox="0 0 24 26" fill="none">
       <Path
         fillRule="evenodd"
         clipRule="evenodd"

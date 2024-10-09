@@ -13,7 +13,7 @@ type Props = {
   containerStyle?: StyleProp<ViewStyle>;
   icon: IconNames;
   title: string;
-  desc: string;
+  desc?: string;
   buttonText: string;
   navigateTo: Pages;
 };
@@ -34,13 +34,15 @@ const Info = ({
       <Text.P align="center" style={styles.header}>
         {title}
       </Text.P>
-      <Text.P
-        align="center"
-        color={theme.textSub}
-        style={styles.desc}
-        size={12}>
-        {desc}
-      </Text.P>
+      {desc && (
+        <Text.P
+          align="center"
+          color={theme.textSub}
+          style={styles.desc}
+          size={12}>
+          {desc}
+        </Text.P>
+      )}
 
       <View style={{width: '100%'}}>
         <Button

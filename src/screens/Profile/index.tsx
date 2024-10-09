@@ -73,7 +73,7 @@ const Profile = () => {
   const onOption = (sectionId: string, optionId: string) => {
     if (sectionId === '1') {
       if (optionId == '11') navigationRef.navigate('MyOrders');
-      else if (optionId === '12') navigationRef.navigate('MyOrders');
+      else if (optionId === '12') navigationRef.navigate('MyReviews');
     } else if (sectionId === '2') {
     } else if (sectionId === '3') {
     } else {
