@@ -21,6 +21,7 @@ const lightTheme: ThemeColors = {
   iconReversed: palette.white,
   iconBG: palette.white,
   iconHighlighted: palette.orange,
+  iconError: palette.red,
 
   border: palette.gray600,
   borderLight: palette.gray400,

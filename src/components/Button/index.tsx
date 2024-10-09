@@ -23,7 +23,7 @@ const Button = ({
   const theme = useTheme();
   const [loading, setLoading] = useState(false);
 
-  if (props.onPress) {
+  if (__DEV__ && props.onPress) {
     throw new Error('use onClick instead of onPress');
   }
 

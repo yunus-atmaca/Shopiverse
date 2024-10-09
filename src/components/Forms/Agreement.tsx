@@ -57,7 +57,7 @@ const Agreement = ({onValueChange, checked, urls, agreementText}: Props) => {
       }
     });
 
-    if (_urlInx - 1 !== urls.length - 1) {
+    if (__DEV__ && _urlInx - 1 !== urls.length - 1) {
       throw new Error(
         'number of highlighted string and urls length must ben the same',
       );

@@ -17,6 +17,7 @@ type Props = TextInputProps & {
   currentPage: Pages;
   validator?: Validator;
   onValidationChanged?: (valid: boolean) => void;
+  onPhoneChanged?: (phone: string, country: ICountry) => void;
   errorText?: string;
 };
 
@@ -32,17 +33,24 @@ const PhoneInput = ({
   required = false,
   validator,
   onValidationChanged,
+  onPhoneChanged,
   errorText = 'Error',
   ...props
 }: Props) => {
   const theme = useTheme();
+
+  /*if (__DEV__ && props.onChangeText) {
+    throw new Error('use onPhoneChanged instead of onChangeText');
+  }*/
 
   const inputRef = useRef<TextInput>(null);
   const [valid, setValid] = useState(true);
 
   useEffect(() => {
     inputRef.current?.clear();
-    if (onValidationChanged) onValidationChanged(false);
+    if (onValidationChanged) {
+      onValidationChanged(false);
+    }
     if (props.onChangeText) props.onChangeText(country.callingCode);
   }, [country.cca2]);
 

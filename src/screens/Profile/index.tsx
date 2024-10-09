@@ -76,10 +76,13 @@ const Profile = () => {
       if (optionId == '11') navigationRef.navigate('MyOrders');
       else if (optionId === '12') navigationRef.navigate('MyReviews');
     } else if (sectionId === '2') {
+      if (optionId === '21') {
+      } else if (optionId === '22') navigationRef.navigate('MyAddresses');
     } else if (sectionId === '3') {
       navigationRef.navigate('ModalWebview', {url: 'https://reactnative.dev/'});
-    } else if(sectionId === '4') {
-      if(optionId === '41') navigationRef.navigate('FAQ')
+    } else if (sectionId === '4') {
+      if (optionId === '41') navigationRef.navigate('FAQ');
+      else if (optionId === '42') navigationRef.navigate('FAQ');
     }
   };
 

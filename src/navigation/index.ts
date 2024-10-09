@@ -8,6 +8,7 @@ import type {StackScreenProps} from '@react-navigation/stack';
 import type {BottomTabScreenProps} from '@react-navigation/bottom-tabs';
 
 import {ICountry} from '@/screens/Countries/types';
+import {IAddress} from '@/types/utils/Info';
 
 export type TabParamList = {
   Home: undefined;
@@ -21,7 +22,11 @@ export type RootStackParamList = {
   Login: undefined;
   MyOrders: undefined;
   MyReviews: undefined;
+  MyAddresses: undefined;
   FAQ: undefined;
+  AddAddress: {
+    address: IAddress | undefined;
+  };
   ForgotPassword: {
     country?: ICountry;
   };

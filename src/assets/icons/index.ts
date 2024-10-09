@@ -27,8 +27,12 @@ import Coupon from './Coupon';
 import CreditCard from './CreditCard';
 import QuestionMark from './QuestionMark';
 import CustomerService from './CustomerService'
+import Delete from './Delete';
+import Edit from './Edit';
 
 export {
+  Edit,
+  Delete,
   CustomerService,
   QuestionMark,
   CreditCard,

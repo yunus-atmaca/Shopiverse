@@ -31,6 +31,7 @@ type ThemeColors = {
   iconReversed: ColorValue;
   iconBG: ColorValue;
   iconHighlighted: ColorValue;
+  iconError: ColorValue;
 
   border: ColorValue;
   borderLight: ColorValue;

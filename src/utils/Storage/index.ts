@@ -7,7 +7,7 @@ export type KEYS = ValueOf<typeof StorageKeys>;
 
 export const storage = new MMKV();
 
-function set(key: KEYS, val: string | boolean | number) {
+function set(key: KEYS, val: string | boolean | number | object) {
   storage.set(key, JSON.stringify(val));
 }
 
@@ -16,4 +16,8 @@ function get(key: KEYS) {
   return res ? JSON.parse(res) : null;
 }
 
-export {set, get, StorageKeys as Keys};
+function deleteKey(key: KEYS) {
+  storage.delete(key);
+}
+
+export {set, get, deleteKey, StorageKeys as Keys};

@@ -13,4 +13,15 @@ function randomText(len: number) {
   return result;
 }
 
-export {delay, randomText};
+function id() {
+  const characters =
+    'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789';
+  let id = '';
+  for (let i = 0; i < 4; i++) {
+    const randomIndex = Math.floor(Math.random() * characters.length);
+    id += characters[randomIndex];
+  }
+  return Date.now().toString(16) + id;
+}
+
+export {delay, randomText, id};
