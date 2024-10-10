@@ -72,7 +72,6 @@ const AddAddress = ({route: {params}}: RootStackScreenProps<'AddAddress'>) => {
       if (current) _addresses = _addresses.concat(current);
     }
 
-    console.debug(_addresses);
     Storage.set(Storage.Keys.USER_ADDRESS, _addresses);
     navigationRef.goBack();
   };

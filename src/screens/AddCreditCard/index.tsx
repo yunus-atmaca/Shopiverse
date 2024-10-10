@@ -1,5 +1,4 @@
 import React from 'react';
-import {} from 'react-native';
 
 import PageHeader from '@/components/PageHeader';
 import PageWrapper from '@/components/PageWrapper';
@@ -20,6 +19,9 @@ const AddCreditCard = ({
 
     if (params?.creditCard) {
       //Edit
+      const filtered = current.filter(c => c.id !== params?.creditCard?.id);
+      _cards.push(card);
+      _cards = _cards.concat(filtered);
     } else {
       _cards.push(card);
       if (current) _cards = _cards.concat(current);
@@ -31,9 +33,12 @@ const AddCreditCard = ({
 
   return (
     <PageWrapper removeTop>
-      <PageHeader disableGab header="Add Credit Card" />
+      <PageHeader
+        disableGab
+        header={params?.creditCard ? 'Edit Credit Card' : 'Add Credit Card'}
+      />
 
-      <CreditCard onSave={onSave} />
+      <CreditCard data={params?.creditCard} onSave={onSave} />
     </PageWrapper>
   );
 };

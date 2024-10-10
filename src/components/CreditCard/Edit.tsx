@@ -1,5 +1,5 @@
 import styles from './styles';
-import {Focus} from './types';
+import {Action, Focus, State} from './types';
 import {
   CARD_HEIGHT,
   CARD_WIDTH,
@@ -32,46 +32,23 @@ import {useTheme} from '@/hooks/theme';
 import {ICreditCard} from '@/types/utils/Info';
 import {id} from '@/utils/helpers';
 
-type State = {
-  number: string;
-  holderName: string;
-  expireDate: string;
-  cvv: string;
-  focus: Focus | undefined;
-  cardType: string | undefined;
-  text: string;
-  inputProps: {
-    keyboardType: string;
-    title: string;
-    placeHolder: string;
+const getInitialState = (data?: ICreditCard): State => {
+  const validator = cardValidator.number(data?.number);
+
+  return {
+    number: data?.number ?? '',
+    holderName: data?.holderName ?? '',
+    expireDate: data?.expireDate ?? '',
+    cvv: data?.cvv ?? '',
+    focus: undefined,
+    cardType: validator.card?.type,
+    text: data?.number ?? '',
+    inputProps: {
+      keyboardType: 'default',
+      title: '',
+      placeHolder: '',
+    },
   };
-};
-
-const initialState: State = {
-  number: '',
-  holderName: '',
-  expireDate: '',
-  cvv: '',
-  focus: undefined,
-  cardType: undefined,
-  text: '',
-  inputProps: {
-    keyboardType: 'default',
-    title: '',
-    placeHolder: '',
-  },
-};
-
-type Action = {
-  type:
-    | 'number'
-    | 'holderName'
-    | 'expireDate'
-    | 'cvv'
-    | 'focus'
-    | 'cardType'
-    | 'text';
-  payload: string | Focus;
 };
 
 export function inputReducer(state: State, action: Action) {
@@ -129,16 +106,15 @@ export function inputReducer(state: State, action: Action) {
 
 type Props = {
   onSave?: (card: ICreditCard) => void;
-  mode?: 'edit' | 'display';
   data?: ICreditCard;
 };
 
 //Check Credit Card Validations
-const CreditCard = ({onSave, mode = 'edit', data}: Props) => {
+const Edit = ({onSave, data}: Props) => {
   const theme = useTheme();
   const inputRef = useRef<RNTextInput>(null);
 
-  const [state, dispatch] = useReducer(inputReducer, initialState);
+  const [state, dispatch] = useReducer(inputReducer, getInitialState(data));
   const {
     number,
     holderName,
@@ -213,6 +189,7 @@ const CreditCard = ({onSave, mode = 'edit', data}: Props) => {
     let newValue = t;
     if (focus === Focus.CARD_NUMBER) {
       const validator = cardValidator.number(t);
+      //console.debug('validator -> ', validator);
       dispatch({type: 'cardType', payload: validator.card?.type ?? ''});
       newValue = maskCardNumber(
         t,
@@ -301,4 +278,4 @@ const CreditCard = ({onSave, mode = 'edit', data}: Props) => {
   );
 };
 
-export default CreditCard;
+export default Edit;

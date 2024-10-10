@@ -1,5 +1,3 @@
-import {LayoutRectangle, MeasureOnSuccessCallback} from 'react-native';
-
 export const creditCardTypes = {
   visa: {
     width: 117.5,
@@ -34,11 +32,6 @@ export const creditCardTypes = {
 };
 
 export type CardTypes = keyof typeof creditCardTypes;
-/*export enum FrontFocus {
-  CARD_NUMBER = 'card-number',
-  CARDHOLDER_NAME = 'cardholder-name',
-  VALID_THRU = 'valid-thru',
-}*/
 
 export enum Focus {
   CARD_NUMBER = 'card-number',
@@ -48,4 +41,31 @@ export enum Focus {
 }
 export type FocusWidth = {
   [key in Focus]: number;
+};
+
+export type State = {
+  number: string;
+  holderName: string;
+  expireDate: string;
+  cvv: string;
+  focus: Focus | undefined;
+  cardType: string | undefined;
+  text: string;
+  inputProps: {
+    keyboardType: string;
+    title: string;
+    placeHolder: string;
+  };
+};
+
+export type Action = {
+  type:
+    | 'number'
+    | 'holderName'
+    | 'expireDate'
+    | 'cvv'
+    | 'focus'
+    | 'cardType'
+    | 'text';
+  payload: string | Focus;
 };

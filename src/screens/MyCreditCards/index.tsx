@@ -26,8 +26,18 @@ const MyCreditCards = () => {
     if (isFocused) fetchAddress();
   }, [isFocused]);
 
+  const onDeleteCard = (card: ICreditCard) => {
+    if (cards) {
+      const filtered = cards.filter(a => a.id !== card.id);
+      Storage.set(Storage.Keys.USER_CREDIT_CARDS, filtered);
+      setCards(filtered);
+    }
+  };
+
   const renderCard: ListRenderItem<ICreditCard> = ({item}) => {
-    return <CreditCard mode="display" data={item} />;
+    return (
+      <CreditCard onDeleteCard={onDeleteCard} mode="display" data={item} />
+    );
   };
 
   return (
@@ -45,20 +55,21 @@ const MyCreditCards = () => {
         </View>
       )}
 
-      <View style={{flex: 1}}>
-        <FlatList
-          data={cards}
-          renderItem={renderCard}
-          keyExtractor={(_, i) => 'credit-card' + i}
-          showsVerticalScrollIndicator={false}
-        />
-      </View>
+      {cards && cards.length > 0 && (
+        <View style={styles.container}>
+          <FlatList
+            data={cards}
+            renderItem={renderCard}
+            keyExtractor={(_, i) => 'credit-card' + i}
+            showsVerticalScrollIndicator={false}
+          />
+        </View>
+      )}
 
       {cards && cards.length > 0 && (
         <View style={styles.button}>
           <Button
             onClick={() => {
-              //Storage.deleteKey(Storage.Keys.USER_ADDRESS);
               navigationRef.navigate('AddCreditCard', {creditCard: undefined});
             }}
             text="Yeni Kredi Karti Ekle"

@@ -1,7 +1,7 @@
 import styles from './styles';
 
 import React, {useCallback, useEffect, useState} from 'react';
-import {FlatList, ListRenderItem, TouchableOpacity, View} from 'react-native';
+import {FlatList, ListRenderItem, View} from 'react-native';
 
 import PageHeader from '@/components/PageHeader';
 import PageWrapper from '@/components/PageWrapper';
@@ -13,7 +13,7 @@ import Text from '@/components/Text';
 import {useTheme} from '@/hooks/theme';
 import Button from '@/components/Button';
 import {navigationRef} from '@/navigation';
-import Icon from '@/components/Icon';
+import ButtonBaseLine from '@/components/ButtonBaseLine';
 
 const MyAddresses = () => {
   const theme = useTheme();
@@ -53,31 +53,28 @@ const MyAddresses = () => {
         </Text.P>
 
         <View style={styles.icons}>
-          <TouchableOpacity
-            onPress={() =>
-              navigationRef.navigate('AddAddress', {address: item})
-            }
-            activeOpacity={0.7}
-            style={[styles.icon]}>
-            <Icon name="Edit" />
-            <Text.P style={{marginStart: 4}} size={14}>
-              Edit
-            </Text.P>
-          </TouchableOpacity>
-          <TouchableOpacity
-            onPress={async () => {
+          <ButtonBaseLine
+            containerStyle={{borderWidth: 0}}
+            icon="Edit"
+            text="Edit"
+            onClick={() => {
+              navigationRef.navigate('AddAddress', {address: item});
+            }}
+          />
+
+          <ButtonBaseLine
+            containerStyle={{borderWidth: 0}}
+            icon="Delete"
+            iconColor={theme.iconError}
+            text="Delete"
+            onClick={() => {
               if (addresses) {
                 const filtered = addresses.filter(a => a.id !== item.id);
-                await Storage.set(Storage.Keys.USER_ADDRESS, filtered);
+                Storage.set(Storage.Keys.USER_ADDRESS, filtered);
                 setAddresses(filtered);
               }
             }}
-            style={[styles.icon]}>
-            <Icon color={theme.iconError} name="Delete" />
-            <Text.P style={{marginStart: 4}} size={14}>
-              Delete
-            </Text.P>
-          </TouchableOpacity>
+          />
         </View>
       </View>
     );
@@ -98,15 +95,16 @@ const MyAddresses = () => {
         </View>
       )}
 
-      <View style={{flex: 1}}>
-        <FlatList
-          data={addresses}
-          renderItem={renderAddress}
-          keyExtractor={(_, i) => 'address' + i}
-          showsVerticalScrollIndicator={false}
-        />
-      </View>
-
+      {addresses && addresses.length > 0 && (
+        <View style={{flex: 1}}>
+          <FlatList
+            data={addresses}
+            renderItem={renderAddress}
+            keyExtractor={(_, i) => 'address' + i}
+            showsVerticalScrollIndicator={false}
+          />
+        </View>
+      )}
       {addresses && addresses.length > 0 && (
         <View style={styles.button}>
           <Button
