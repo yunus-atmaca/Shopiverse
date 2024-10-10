@@ -22,8 +22,8 @@ import Animated, {
 
 type Props = {
   type?: string;
-  onFrontReady: (field: Focus) => void;
-  onFocusChange: (focus: Focus) => void;
+  onFrontReady?: (field: Focus) => void;
+  onFocusChange?: (focus: Focus) => void;
   focus?: Focus;
   cardNumber: string;
   cardHolderName: string;
@@ -101,11 +101,15 @@ const Front = ({
       </View>
       {
         <TouchableOpacity
-          onPress={() => onFocusChange(Focus.CARD_NUMBER)}
+          onPress={() => {
+            if (onFocusChange) onFocusChange(Focus.CARD_NUMBER);
+          }}
           activeOpacity={1}
           style={styles.mid}>
           <View
-            onLayout={() => onFrontReady(Focus.CARD_NUMBER)}
+            onLayout={() => {
+              if (onFrontReady) onFrontReady(Focus.CARD_NUMBER);
+            }}
             style={styles.cardNumber}>
             <Text style={styles.cardNamerText}>
               {cardNumber || 'XXXX XXXX XXXX XXXX'}
@@ -115,14 +119,18 @@ const Front = ({
       }
       <View style={[styles.section, styles.footer]}>
         <TouchableOpacity
-          onPress={() => onFocusChange(Focus.CARDHOLDER_NAME)}
+          onPress={() => {
+            if (onFocusChange) onFocusChange(Focus.CARDHOLDER_NAME);
+          }}
           activeOpacity={1}
           style={{maxWidth: '70%'}}>
           <Text style={styles.title}>Cardholder Name</Text>
           <View
             onLayout={({nativeEvent: {layout}}) => {
               focusPosition.current['cardholder-name'] = layout.width;
-              onFrontReady(Focus.CARDHOLDER_NAME);
+              if (onFrontReady) {
+                onFrontReady(Focus.CARDHOLDER_NAME);
+              }
 
               if (focus === Focus.CARDHOLDER_NAME) {
                 focusWidth.value = layout.width;
@@ -136,13 +144,19 @@ const Front = ({
         </TouchableOpacity>
 
         <TouchableOpacity
-          onPress={() => onFocusChange(Focus.VALID_THRU)}
+          onPress={() => {
+            if (onFocusChange) {
+              onFocusChange(Focus.VALID_THRU);
+            }
+          }}
           activeOpacity={1}>
           <Text style={[styles.title, {textAlign: 'center'}]}>Valid THRU</Text>
           <View
             onLayout={({nativeEvent: {layout}}) => {
               focusPosition.current['valid-thru'] = layout.width;
-              onFrontReady(Focus.VALID_THRU);
+              if (onFrontReady) {
+                onFrontReady(Focus.VALID_THRU);
+              }
             }}
             style={styles.expire}>
             <Text style={styles.footerText}>{cardExpireDate || 'MM/YY'}</Text>

@@ -29,8 +29,12 @@ import QuestionMark from './QuestionMark';
 import CustomerService from './CustomerService'
 import Delete from './Delete';
 import Edit from './Edit';
+import ArrowTurnDown from './ArrowTurnDown';
+import ArrowTurnUp from './ArrowTurnUp';
 
 export {
+  ArrowTurnDown,
+  ArrowTurnUp,
   Edit,
   Delete,
   CustomerService,

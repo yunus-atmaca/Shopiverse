@@ -9,3 +9,11 @@ export interface IAddress {
   phone: string;
   title: string;
 }
+
+export interface ICreditCard {
+  id: string;
+  number: string;
+  holderName: string;
+  expireDate: string;
+  cvv: string;
+}

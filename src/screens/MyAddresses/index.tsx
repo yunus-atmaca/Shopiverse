@@ -99,7 +99,12 @@ const MyAddresses = () => {
       )}
 
       <View style={{flex: 1}}>
-        <FlatList data={addresses} renderItem={renderAddress} />
+        <FlatList
+          data={addresses}
+          renderItem={renderAddress}
+          keyExtractor={(_, i) => 'address' + i}
+          showsVerticalScrollIndicator={false}
+        />
       </View>
 
       {addresses && addresses.length > 0 && (

@@ -40,4 +40,14 @@ export default StyleSheet.create({
   input: {
     width: '100%',
   },
+  icon: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    paddingHorizontal: hs(spacing.s),
+    //paddingVertical: vs(spacing.xs),
+    height: vs(32),
+    borderRadius: radius.xs,
+    borderWidth: borderWidth.m,
+    marginEnd: 12,
+  },
 });

@@ -1,47 +1,70 @@
-import React, {useEffect} from 'react';
-import {Image, View} from 'react-native';
-import Animated, {
-  useAnimatedStyle,
-  useSharedValue,
-  withTiming,
-} from 'react-native-reanimated';
+import styles from './styles';
+
+import React, {useCallback, useEffect, useState} from 'react';
+import {useIsFocused} from '@react-navigation/native';
 
 import PageHeader from '@/components/PageHeader';
 import PageWrapper from '@/components/PageWrapper';
 import CreditCard from '@/components/CreditCard';
+import {ICreditCard} from '@/types/utils/Info';
+import {Storage} from '@/utils';
+import {FlatList, ListRenderItem, View} from 'react-native';
+import Info from '@/components/Info';
+import {navigationRef} from '@/navigation';
+import Button from '@/components/Button';
 
 const MyCreditCards = () => {
-  const rotate = useSharedValue('0deg');
+  const isFocused = useIsFocused();
+  const [cards, setCards] = useState<ICreditCard[]>();
 
-  /*const animatedStyle = useAnimatedStyle(() => {
-    return {
-      //transform: [{rotate: rotate.value}],
-      transform: [
-        //{rotateX: rotate.value},
-        //{rotateZ: rotate.value},
-        {rotateY: rotate.value},
-      ],
-    };
-  });
+  const fetchAddress = useCallback(async () => {
+    const _cards = await Storage.get(Storage.Keys.USER_CREDIT_CARDS);
+    setCards(_cards ?? []);
+  }, []);
 
   useEffect(() => {
-    rotate.value = '0deg';
-    setTimeout(() => {
-      rotate.value = withTiming('180deg', {duration: 4000});
-    }, 2000);
+    if (isFocused) fetchAddress();
+  }, [isFocused]);
 
-    setTimeout(() => {
-      rotate.value = withTiming('360deg', {duration: 4000});
-    }, 10000);
-
-    return () => {};
-  }, []);*/
+  const renderCard: ListRenderItem<ICreditCard> = ({item}) => {
+    return <CreditCard mode="display" data={item} />;
+  };
 
   return (
     <PageWrapper removeTop>
       <PageHeader header="My Credit Cards" />
-        
-      <CreditCard />
+      {cards && cards.length === 0 && (
+        <View style={[styles.container, styles.empty]}>
+          <Info
+            icon="CreditCard"
+            title="Kayitli Kredi Kartin Bulunmamaktadir"
+            desc="Hızlıca alışverişini geçekleştirmek için kredi kartı ekle"
+            navigateTo="AddCreditCard"
+            buttonText={'Kredi Karti Ekle'}
+          />
+        </View>
+      )}
+
+      <View style={{flex: 1}}>
+        <FlatList
+          data={cards}
+          renderItem={renderCard}
+          keyExtractor={(_, i) => 'credit-card' + i}
+          showsVerticalScrollIndicator={false}
+        />
+      </View>
+
+      {cards && cards.length > 0 && (
+        <View style={styles.button}>
+          <Button
+            onClick={() => {
+              //Storage.deleteKey(Storage.Keys.USER_ADDRESS);
+              navigationRef.navigate('AddCreditCard', {creditCard: undefined});
+            }}
+            text="Yeni Kredi Karti Ekle"
+          />
+        </View>
+      )}
     </PageWrapper>
   );
 };
