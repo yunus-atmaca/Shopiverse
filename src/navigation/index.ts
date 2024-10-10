@@ -24,6 +24,7 @@ export type RootStackParamList = {
   MyReviews: undefined;
   MyAddresses: undefined;
   FAQ: undefined;
+  MyCreditCards: undefined;
   AddAddress: {
     address: IAddress | undefined;
   };

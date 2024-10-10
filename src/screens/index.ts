@@ -15,8 +15,10 @@ import MyReviews from './MyReviews';
 import MyAddresses from './MyAddresses';
 import FAQ from './FAQ';
 import AddAddress from './AddAddress';
+import MyCreditCards from './MyCreditCards';
 
 export {
+  MyCreditCards,
   AddAddress,
   FAQ,
   MyAddresses,

@@ -3062,6 +3062,7 @@ __metadata:
     "@types/validator": ^13.12.2
     babel-jest: ^29.6.3
     babel-plugin-module-resolver: ^5.0.2
+    card-validator: 10.0.0
     dayjs: 1.11.13
     eslint: ^8.19.0
     jest: ^29.6.3
@@ -3084,7 +3085,7 @@ __metadata:
     react-test-renderer: 18.3.1
     type-fest: ^4.26.1
     typescript: 5.0.4
-    validator: ^13.12.0
+    validator: 13.12.0
   languageName: unknown
   linkType: soft
 
@@ -3752,6 +3753,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"card-validator@npm:10.0.0":
+  version: 10.0.0
+  resolution: "card-validator@npm:10.0.0"
+  dependencies:
+    credit-card-type: ^9.1.0
+  checksum: 94c5226a4c8aaffadc7ddfc2ebdb39d7859f66b4f8b8f5147a4d841d003716ea09d379b747154875e703891cd36b1b23ae2a1ca941c26e40fda182b96f5e7a55
+  languageName: node
+  linkType: hard
+
 "chalk@npm:^2.4.2":
   version: 2.4.2
   resolution: "chalk@npm:2.4.2"
@@ -4109,6 +4119,13 @@ __metadata:
   bin:
     create-jest: bin/create-jest.js
   checksum: 1427d49458adcd88547ef6fa39041e1fe9033a661293aa8d2c3aa1b4967cb5bf4f0c00436c7a61816558f28ba2ba81a94d5c962e8022ea9a883978fc8e1f2945
+  languageName: node
+  linkType: hard
+
+"credit-card-type@npm:^9.1.0":
+  version: 9.1.0
+  resolution: "credit-card-type@npm:9.1.0"
+  checksum: 2bdadf3a0b93cd740447020fea8d397c633ee2b292fcc498971c540e7ca97473c4decf23604f93a1aedd59bb8d9249da8cf0b8fbfb1a464bd63610ae814c77aa
   languageName: node
   linkType: hard
 
@@ -9862,7 +9879,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"validator@npm:^13.12.0":
+"validator@npm:13.12.0":
   version: 13.12.0
   resolution: "validator@npm:13.12.0"
   checksum: fb8f070724770b1449ea1a968605823fdb112dbd10507b2802f8841cda3e7b5c376c40f18c84e6a7b59de320a06177e471554101a85f1fa8a70bac1a84e48adf

@@ -78,6 +78,8 @@ const Profile = () => {
     } else if (sectionId === '2') {
       if (optionId === '21') {
       } else if (optionId === '22') navigationRef.navigate('MyAddresses');
+      else if (optionId === '23') {
+      } else if (optionId === '24') navigationRef.navigate('MyCreditCards');
     } else if (sectionId === '3') {
       navigationRef.navigate('ModalWebview', {url: 'https://reactnative.dev/'});
     } else if (sectionId === '4') {
