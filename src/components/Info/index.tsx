@@ -16,6 +16,7 @@ type Props = {
   desc?: string;
   buttonText: string;
   navigateTo: Pages;
+  navigateParams?: any;
 };
 
 const Info = ({
@@ -25,6 +26,7 @@ const Info = ({
   desc,
   buttonText,
   navigateTo,
+  navigateParams,
 }: Props) => {
   const theme = useTheme();
 
@@ -52,7 +54,9 @@ const Info = ({
 
       <View style={{width: '100%'}}>
         <Button
-          onClick={() => navigationRef.navigate(navigateTo as any)}
+          onClick={() => {
+            navigationRef.navigate(navigateTo as any, navigateParams);
+          }}
           text={buttonText}
           style={styles.button}
         />

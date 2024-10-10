@@ -35,6 +35,7 @@ const lightTheme: ThemeColors = {
   appHeaderBG: palette.white,
 
   boxBG: palette.white,
+  boxBGHighlighted: palette.orange,
 
   inputCursor: palette.orange,
   inputPlaceHolder: palette.gray600,

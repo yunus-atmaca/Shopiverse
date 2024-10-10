@@ -30,6 +30,7 @@ const Styles = {
     m: 12,
     s: 8,
     xs: 4,
+    xxs: 2,
   },
   radius: {
     xs: moderateScale(4),

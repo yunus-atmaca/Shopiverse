@@ -17,3 +17,13 @@ export interface ICreditCard {
   expireDate: string;
   cvv: string;
 }
+
+export interface ICoupon {
+  expireDate: string;
+  brand: string;
+  title: string;
+  desc: string;
+  discount: string;
+  lowerLimit: string | undefined;
+  termOfUse: string[];
+}

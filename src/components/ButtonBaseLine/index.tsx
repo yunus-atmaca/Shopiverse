@@ -7,7 +7,7 @@ import Text from '@/components/Text';
 import {useTheme} from '@/hooks/theme';
 
 type Props = {
-  icon: IconNames;
+  icon?: IconNames;
   text: string;
   onClick?: () => void;
   iconColor?: ColorValue;
@@ -35,10 +35,10 @@ const ButtonBaseLine = ({
         },
         containerStyle,
       ]}>
-      <Icon color={iconColor} name={icon} />
-      <Text.P style={{marginStart: 4}} size={14}>
-        {text}
-      </Text.P>
+      {icon && (
+        <Icon containerStyle={{marginEnd: 4}} color={iconColor} name={icon} />
+      )}
+      <Text.P size={14}>{text}</Text.P>
     </TouchableOpacity>
   );
 };

@@ -45,6 +45,7 @@ type ThemeColors = {
   appHeaderBG: ColorValue;
 
   boxBG: ColorValue;
+  boxBGHighlighted: ColorValue;
 
   inputCursor: ColorValue;
   inputPlaceHolder: ColorValue;
