@@ -17,24 +17,6 @@ export default StyleSheet.create({
     justifyContent: 'space-between',
     height: vs(64),
   },
-  section: {
-    paddingHorizontal: hs(spacing.r),
-    marginTop: vs(spacing.s),
-  },
-  sectionContent: {
-    paddingHorizontal: hs(spacing.m),
-    borderRadius: radius.m,
-    borderWidth: borderWidth.m,
-  },
-  title: {
-    marginBottom: vs(spacing.s),
-  },
-  option: {
-    height: vs(44),
-    flexDirection: 'row',
-    alignItems: 'center',
-    justifyContent: 'space-between',
-  },
   app: {
     marginTop: vs(spacing.xxl),
     alignSelf: 'center',

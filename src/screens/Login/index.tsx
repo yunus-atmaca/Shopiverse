@@ -128,17 +128,20 @@ const Login = () => {
         <View style={styles.social}>
           <Icon
             onClick={onGoogle}
+            hasContainerStyle
             containerStyle={styles.socialIcon}
             name="Google"
           />
           <Icon
             onClick={onApple}
+            hasContainerStyle
             containerStyle={[styles.socialIcon, {marginHorizontal: 24}]}
             name="Apple"
           />
           <Icon
             onClick={onFacebook}
             containerStyle={styles.socialIcon}
+            hasContainerStyle
             name="Facebook"
           />
         </View>

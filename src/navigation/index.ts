@@ -23,6 +23,7 @@ export type RootStackParamList = {
   MyOrders: undefined;
   MyReviews: undefined;
   MyAddresses: undefined;
+  MyCoupons: undefined;
   FAQ: undefined;
   MyCreditCards: undefined;
   AddAddress: {
