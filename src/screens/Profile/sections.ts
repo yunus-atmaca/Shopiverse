@@ -32,6 +32,7 @@ export default [
         icon: 'CreditCard',
         navigateTo: 'MyCreditCards',
       },
+      {id: '25', name: 'Language', icon: 'Language', navigateTo: ''},
     ],
   },
   {

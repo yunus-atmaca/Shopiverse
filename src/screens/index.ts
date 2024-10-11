@@ -2,6 +2,7 @@ import Home from './Home';
 import WhishList from './WhishList';
 import Profile from './Profile';
 import Cart from './Cart';
+import Categories from './Categories';
 
 import ModalWebview from  './ModalWebview';
 import Countries from './Countries';
@@ -20,6 +21,7 @@ import AddCreditCard from './AddCreditCard';
 import MyCoupons from './MyCoupons';
 
 export {
+  Categories,
   MyCoupons,
   AddCreditCard,
   MyCreditCards,

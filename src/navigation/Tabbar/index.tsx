@@ -20,6 +20,8 @@ const TabBar: FC<BottomTabBarProps> = ({state, navigation}) => {
   const getIcon = useCallback((tab: string, isActive: boolean) => {
     const color = isActive ? theme.tabbarFocusedTab : theme.tabbarUnFocusedTab;
     if (tab === 'Home') return <Icon color={color} name="Home" />;
+    else if (tab === 'Categories')
+      return <Icon color={color} name="Categories" />;
     else if (tab === 'WhishList')
       return <Icon color={color} name="HeartFilled" />;
     else if (tab === 'Cart') return <Icon color={color} name="ShoppingCart" />;

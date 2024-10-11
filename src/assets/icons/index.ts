@@ -31,8 +31,12 @@ import Delete from './Delete';
 import Edit from './Edit';
 import ArrowTurnDown from './ArrowTurnDown';
 import ArrowTurnUp from './ArrowTurnUp';
+import Language from './Language';
+import Categories from './Categories';
 
 export {
+  Categories,
+  Language,
   ArrowTurnDown,
   ArrowTurnUp,
   Edit,
