@@ -1,7 +1,6 @@
 import styles from './styles';
 
-import React, {useCallback, useEffect, useState} from 'react';
-import {useIsFocused} from '@react-navigation/native';
+import React from 'react';
 
 import PageHeader from '@/components/PageHeader';
 import PageWrapper from '@/components/PageWrapper';
@@ -12,19 +11,10 @@ import {FlatList, ListRenderItem, View} from 'react-native';
 import Info from '@/components/Info';
 import {navigationRef} from '@/navigation';
 import Button from '@/components/Button';
+import {useCreditCards} from '@/hooks/user';
 
 const MyCreditCards = () => {
-  const isFocused = useIsFocused();
-  const [cards, setCards] = useState<ICreditCard[]>();
-
-  const fetchAddress = useCallback(async () => {
-    const _cards = await Storage.get(Storage.Keys.USER_CREDIT_CARDS);
-    setCards(_cards ?? []);
-  }, []);
-
-  useEffect(() => {
-    if (isFocused) fetchAddress();
-  }, [isFocused]);
+  const {cards, setCards} = useCreditCards();
 
   const onDeleteCard = (card: ICreditCard) => {
     if (cards) {

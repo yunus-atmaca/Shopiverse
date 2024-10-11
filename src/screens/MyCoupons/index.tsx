@@ -73,7 +73,13 @@ const MyCoupons = ({route: {params}}: RootStackScreenProps<'MyCoupons'>) => {
         </View>
       )}
       {coupons && coupons.length > 0 && (
-        <FlatList renderItem={renderCoupon} data={coupons} />
+        <FlatList
+          nestedScrollEnabled
+          renderItem={renderCoupon}
+          data={coupons}
+          showsVerticalScrollIndicator={false}
+          keyExtractor={(_, i) => 'c-' + i}
+        />
       )}
     </PageWrapper>
   );

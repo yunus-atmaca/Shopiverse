@@ -1,8 +1,10 @@
 import {StyleSheet} from 'react-native';
 
 export default StyleSheet.create({
-  notLoggedIn: {
+  container: {
     flex: 1,
+  },
+  hasNoItems: {
     alignItems: 'center',
     justifyContent: 'center',
   },

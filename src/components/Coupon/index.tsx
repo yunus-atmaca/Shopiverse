@@ -30,10 +30,11 @@ const Coupon = ({containerStyle, data}: Props) => {
           </Text.H>
         </View>
         <View style={styles.termOfUser}>
+          <Text.P typography='semiBold' size={12}>Kosullar</Text.P>
           <ScrollView showsVerticalScrollIndicator={false}>
             {data.termOfUse.map((t, i) => {
               return (
-                <Text.P key={'t-' + i} size={12}>{`${i + 1}.${t}`}</Text.P>
+                <Text.P key={'t-' + i} size={12}>{`${i + 1}.${t}\n`}</Text.P>
               );
             })}
           </ScrollView>

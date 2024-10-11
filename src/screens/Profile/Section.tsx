@@ -50,11 +50,17 @@ const Section = ({data: {title, options}}: Props) => {
                   alignItems: 'center',
                 }}>
                 {option.icon && (
-                  <Icon color={theme.iconHighlighted} name={option.icon} />
+                  <Icon
+                    containerStyle={{marginEnd: 8}}
+                    color={theme.iconHighlighted}
+                    name={option.icon}
+                  />
                 )}
-                <Text.P style={{marginStart: 8}}>{option.name}</Text.P>
+                <Text.P style={{marginStart: option.icon ? 0 : 8}}>
+                  {option.name}
+                </Text.P>
               </View>
-              <Icon color={theme.iconBG} name={'ArrowRight'} />
+              <Icon color={theme.iconLight} name={'ArrowRight'} />
             </TouchableOpacity>
           );
         })}

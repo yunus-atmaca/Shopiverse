@@ -27,3 +27,10 @@ export interface ICoupon {
   lowerLimit: string | undefined;
   termOfUse: string[];
 }
+
+export interface IProduct {}
+
+export interface IFavorite {
+  product: IProduct;
+  createdAt: number;
+}
