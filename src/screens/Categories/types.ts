@@ -2,16 +2,23 @@ import {NavigationState, SceneRendererProps} from 'react-native-tab-view';
 import categories from './categories';
 import {ImageSourcePropType} from 'react-native';
 
-export type MainCategories = keyof typeof categories;
-
-export type Category = {
+export type TargetCategory = {
+  id: string;
   title: string;
   img: ImageSourcePropType;
 };
 
-export type MainSubCategory = {
+export type SubCategory = {
+  id: string;
   title: string;
-  sub_categories: Category[];
+  sub_categories: TargetCategory[];
+};
+
+export type MainCategories = keyof typeof categories;
+export type MainCategory = {
+  id: string;
+  title: string;
+  sub_categories: SubCategory[];
 };
 
 export interface IRoute {

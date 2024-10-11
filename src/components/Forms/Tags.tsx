@@ -1,6 +1,6 @@
 import styles from './styles/tags';
 
-import React, {useEffect, useState} from 'react';
+import React, {useState} from 'react';
 import {FlatList, ListRenderItem, TouchableOpacity, View} from 'react-native';
 
 import {IOption} from '@/types/utils/ComponentData';
