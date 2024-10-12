@@ -1,120 +1,6 @@
 import {MainCategory} from './types';
 
 const categories: {[key: string]: MainCategory} = {
-  electronic_phone_computer: {
-    id: 'electronic_phone_computer',
-    title: 'Electronic, Mobile Phones, Computers',
-    sub_categories: [
-      {
-        title: 'Home Appliances',
-        id: 'home_appliances',
-        sub_categories: [
-          {
-            id: 'television',
-            title: 'Television',
-            img: require('@/assets/images/categories/television.png'),
-          },
-          {
-            id: 'vacuum_cleaner',
-            title: 'Vacuum Cleaner',
-            img: require('@/assets/images/categories/vacuum_cleaner.png'),
-          },
-          {
-            id: 'airfryer_and_Oven',
-            title: 'Airfryer and Oven',
-            img: require('@/assets/images/categories/oven.png'),
-          },
-          {
-            id: 'iron',
-            title: 'Iron',
-            img: require('@/assets/images/categories/iron.png'),
-          },
-          {
-            id: 'coffee_machine',
-            title: 'Coffee Machine',
-            img: require('@/assets/images/categories/coffee_machine.png'),
-          },
-          {
-            id: 'washing_machine',
-            title: 'Washing Machine',
-            img: require('@/assets/images/categories/washing_machine.png'),
-          },
-          {
-            id: 'dishwasher',
-            title: 'Dishwasher',
-            img: require('@/assets/images/categories/dishwasher.png'),
-          },
-          {
-            id: 'freezer',
-            title: 'Freezer',
-            img: require('@/assets/images/categories/freezer.png'),
-          },
-        ],
-      },
-      {
-        title: 'Computer and Accessories',
-        id: 'computer_and_accessories',
-        sub_categories: [
-          {
-            id: 'laptop_tablet',
-            title: 'Laptop & Tablet',
-            img: require('@/assets/images/categories/tablet.png'),
-          },
-          {
-            id: 'computer',
-            title: 'Computer',
-            img: require('@/assets/images/categories/laptop.png'),
-          },
-          {
-            id: 'computer_earphones',
-            title: 'Earphones',
-            img: require('@/assets/images/categories/earphones.png'),
-          },
-          {
-            id: 'data_storages',
-            title: 'Data Storages',
-            img: require('@/assets/images/categories/usb.png'),
-          },
-          {
-            id: 'playstation',
-            title: 'Playstation',
-            img: require('@/assets/images/categories/playstation.png'),
-          },
-          {
-            id: 'computer_parts',
-            title: 'Computer Parts',
-            img: require('@/assets/images/categories/keyboard_mouse.png'),
-          },
-        ],
-      },
-      {
-        title: 'Mobile Phones',
-        id: 'mobile_phones',
-        sub_categories: [
-          {
-            id: 'android_phones',
-            title: 'Android Phones',
-            img: require('@/assets/images/categories/phone.png'),
-          },
-          {
-            id: 'ios_phones',
-            title: 'Ios Phones',
-            img: require('@/assets/images/categories/iphone.png'),
-          },
-          {
-            id: 'phone_case',
-            title: 'Phone Case',
-            img: require('@/assets/images/categories/case.png'),
-          },
-          {
-            id: 'phone_earphones',
-            title: 'Earphones',
-            img: require('@/assets/images/categories/earphones.png'),
-          },
-        ],
-      },
-    ],
-  },
   fashion_cosmetic: {
     id: 'fashion_cosmetic',
     title: 'Fashion and Cosmetic',
@@ -255,15 +141,252 @@ const categories: {[key: string]: MainCategory} = {
       },
     ],
   },
-  /*supermarket: {
+  electronic_phone_computer: {
+    id: 'electronic_phone_computer',
+    title: 'Electronic, Mobile Phones, Computers',
+    sub_categories: [
+      {
+        title: 'Home Appliances',
+        id: 'home_appliances',
+        sub_categories: [
+          {
+            id: 'television',
+            title: 'Television',
+            img: require('@/assets/images/categories/television.png'),
+          },
+          {
+            id: 'vacuum_cleaner',
+            title: 'Vacuum Cleaner',
+            img: require('@/assets/images/categories/vacuum_cleaner.png'),
+          },
+          {
+            id: 'airfryer_and_Oven',
+            title: 'Airfryer and Oven',
+            img: require('@/assets/images/categories/oven.png'),
+          },
+          {
+            id: 'iron',
+            title: 'Iron',
+            img: require('@/assets/images/categories/iron.png'),
+          },
+          {
+            id: 'coffee_machine',
+            title: 'Coffee Machine',
+            img: require('@/assets/images/categories/coffee_machine.png'),
+          },
+          {
+            id: 'washing_machine',
+            title: 'Washing Machine',
+            img: require('@/assets/images/categories/washing_machine.png'),
+          },
+          {
+            id: 'dishwasher',
+            title: 'Dishwasher',
+            img: require('@/assets/images/categories/dishwasher.png'),
+          },
+          {
+            id: 'freezer',
+            title: 'Freezer',
+            img: require('@/assets/images/categories/freezer.png'),
+          },
+        ],
+      },
+      {
+        title: 'Computer and Accessories',
+        id: 'computer_and_accessories',
+        sub_categories: [
+          {
+            id: 'laptop_tablet',
+            title: 'Laptop & Tablet',
+            img: require('@/assets/images/categories/tablet.png'),
+          },
+          {
+            id: 'computer',
+            title: 'Computer',
+            img: require('@/assets/images/categories/laptop.png'),
+          },
+          {
+            id: 'computer_earphones',
+            title: 'Earphones',
+            img: require('@/assets/images/categories/earphones.png'),
+          },
+          {
+            id: 'data_storages',
+            title: 'Data Storages',
+            img: require('@/assets/images/categories/usb.png'),
+          },
+          {
+            id: 'playstation',
+            title: 'Playstation',
+            img: require('@/assets/images/categories/playstation.png'),
+          },
+          {
+            id: 'computer_parts',
+            title: 'Computer Parts',
+            img: require('@/assets/images/categories/keyboard_mouse.png'),
+          },
+        ],
+      },
+      {
+        title: 'Mobile Phones',
+        id: 'mobile_phones',
+        sub_categories: [
+          {
+            id: 'android_phones',
+            title: 'Android Phones',
+            img: require('@/assets/images/categories/phone.png'),
+          },
+          {
+            id: 'ios_phones',
+            title: 'Ios Phones',
+            img: require('@/assets/images/categories/iphone.png'),
+          },
+          {
+            id: 'phone_case',
+            title: 'Phone Case',
+            img: require('@/assets/images/categories/case.png'),
+          },
+          {
+            id: 'phone_earphones',
+            title: 'Earphones',
+            img: require('@/assets/images/categories/earphones.png'),
+          },
+        ],
+      },
+    ],
+  },
+  supermarket: {
+    id: 'supermarket',
     title: 'Supermarket',
+    sub_categories: [
+      {
+        id: 'food',
+        title: 'Food',
+        sub_categories: [
+          {
+            id: 'breakfast_food',
+            title: 'Breakfast Food',
+            img: require('@/assets/images/categories/breakfast_food.png'),
+          },
+          {
+            id: 'coffee',
+            title: 'Coffee',
+            img: require('@/assets/images/categories/coffee.png'),
+          },
+          {
+            id: 'nuts',
+            title: 'Nuts',
+            img: require('@/assets/images/categories/nuts.png'),
+          },
+          {
+            id: 'organic_food',
+            title: 'Organic Food',
+            img: require('@/assets/images/categories/organic.png'),
+          },
+          {
+            id: 'tea',
+            title: 'Tea',
+            img: require('@/assets/images/categories/leaf.png'),
+          },
+        ],
+      },
+      {
+        id: 'home_and_cleaning',
+        title: 'Home & Cleaning',
+        sub_categories: [
+          {
+            id: 'laundry',
+            title: 'Laundry',
+            img: require('@/assets/images/categories/detergent.png'),
+          },
+          {
+            id: 'wash-up',
+            title: 'Wash-up',
+            img: require('@/assets/images/categories/wash-up.png'),
+          },
+          {
+            id: 'paper_products',
+            title: 'Paper Products',
+            img: require('@/assets/images/categories/toilet_paper.png'),
+          },
+          {
+            id: 'home_cleaning',
+            title: 'Home Cleaning',
+            img: require('@/assets/images/categories/cleaning.png'),
+          },
+        ],
+      },
+      {
+        id: 'health_and_sports',
+        title: 'Health & Sports',
+        sub_categories: [
+          {
+            id: 'vitamins_and_supplements',
+            title: 'Vitamins and Supplements',
+            img: require('@/assets/images/categories/pills.png'),
+          },
+          {
+            id: 'diaper',
+            title: 'Diaper',
+            img: require('@/assets/images/categories/diaper.png'),
+          },
+          {
+            id: 'sport_products',
+            title: 'Sport Products',
+            img: require('@/assets/images/categories/football.png'),
+          },
+        ],
+      },
+    ],
   },
-  furniture: {
-    title: 'Furniture',
+  home_and_furniture_: {
+    id: 'home_and_furniture',
+    title: 'Home & Furniture',
+    sub_categories: [
+      {
+        id: 'kitchen',
+        title: 'Kitchen',
+        sub_categories: [
+          {
+            id: 'glasses',
+            title: 'Glasses',
+            img: require('@/assets/images/categories/glass.png'),
+          },
+          {
+            id: 'pots',
+            title: 'Pots',
+            img: require('@/assets/images/categories/pots.png'),
+          },
+          {
+            id: 'dinner_set',
+            title: 'Dinner Set',
+            img: require('@/assets/images/categories/dinner_set.png'),
+          },
+        ],
+      },
+      {
+        id: 'furniture',
+        title: 'Furniture',
+        sub_categories: [
+          {
+            id: 'living_room',
+            title: 'Living Rom',
+            img: require('@/assets/images/categories/sofa.png'),
+          },
+          {
+            id: 'bedroom',
+            title: 'Bedroom',
+            img: require('@/assets/images/categories/bed.png'),
+          },
+          {
+            id: 'chairs',
+            title: 'Chairs',
+            img: require('@/assets/images/categories/chairs.png'),
+          },
+        ],
+      },
+    ],
   },
-  book_hobby: {
-    title: 'Book & Hobby',
-  },*/
 };
 
 export default categories;
