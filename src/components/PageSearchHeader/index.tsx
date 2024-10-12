@@ -1,4 +1,4 @@
-import styles from './styles/header';
+import styles from './styles';
 
 import React from 'react';
 import {View} from 'react-native';
@@ -7,8 +7,9 @@ import {SafeAreaInsetsContext} from 'react-native-safe-area-context';
 import safeAreaInsets from '@/utils/safeAreaInstents';
 import {useTheme} from '@/hooks/theme';
 import TextInput from '@/components/TextInput';
+import Styles from '@/theme/style';
 
-const Header = () => {
+const PageSearchHeader = () => {
   const theme = useTheme();
 
   return (
@@ -23,10 +24,12 @@ const Header = () => {
               {backgroundColor: theme.appHeaderBG},
               {paddingTop: defInsets.top},
             ]}>
-            <View style={{marginTop: 12}}>
+            <View style={styles.input}>
               <TextInput
-                placeholder="Products, categories, label"
+                enableErrorField={false}
+                placeholder="Products, categories, brand"
                 headingIcon="Search"
+                inputHeight={Styles.vs(36)}
               />
             </View>
           </View>
@@ -36,4 +39,4 @@ const Header = () => {
   );
 };
 
-export default Header;
+export default PageSearchHeader;

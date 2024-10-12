@@ -1,20 +1,23 @@
 import styles from './styles';
 
-import React, {useEffect} from 'react';
+import React, {useEffect, useState} from 'react';
 import {View, FlatList, ListRenderItem} from 'react-native';
 
 import Product from '@/components/Product';
-import _products from '@/data/products';
 import {IProduct} from '@/types/utils/Info';
 import Text from '@/components/Text';
 import Styles from '@/theme/style';
+import {getRandomProducts} from '@/utils/products';
 
 type Props = {
   title: string;
 };
 
 const ProductsInATitle = ({title}: Props) => {
-  useEffect(() => {}, []);
+  const [products, setProducts] = useState<IProduct[]>([]);
+  useEffect(() => {
+    setProducts(getRandomProducts());
+  }, []);
 
   const renderProduct: ListRenderItem<IProduct> = ({item, index}) => {
     return (
@@ -26,12 +29,12 @@ const ProductsInATitle = ({title}: Props) => {
   };
 
   return (
-    <View>
+    <View style={{marginTop: Styles.vs(Styles.spacing.r)}}>
       <Text.H typography="semiBold" style={styles.title}>
         {title}
       </Text.H>
       <FlatList
-        data={_products}
+        data={products}
         horizontal
         showsHorizontalScrollIndicator={false}
         renderItem={renderProduct}

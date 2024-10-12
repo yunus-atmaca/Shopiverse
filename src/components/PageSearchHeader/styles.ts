@@ -1,7 +1,7 @@
 import {StyleSheet} from 'react-native';
 import Styles from '@/theme/style';
 
-const {hs, spacing} = Styles;
+const {vs, spacing} = Styles;
 export default StyleSheet.create({
   container: {
     shadowColor: '#000',
@@ -13,5 +13,9 @@ export default StyleSheet.create({
     shadowRadius: 2.75,
     elevation: 4,
     zIndex: 4,
+  },
+  input: {
+    marginTop: vs(spacing.s),
+    marginBottom: vs(spacing.s),
   },
 });

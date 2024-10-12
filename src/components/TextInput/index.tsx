@@ -1,6 +1,6 @@
 import styles from './styles';
 
-import React, {ComponentPropsWithRef, forwardRef, useState} from 'react';
+import React, {forwardRef, useState} from 'react';
 import {View, TextInput as RNTextInput, TextInputProps} from 'react-native';
 
 import Text from '@/components/Text';
@@ -8,6 +8,7 @@ import {useTheme} from '@/hooks/theme';
 import Icon, {IconNames} from '@/components/Icon';
 import {Validator} from '@/utils/validators';
 import validators from '@/utils/validators';
+import Styles from '@/theme/style';
 
 type Props = TextInputProps & {
   title?: string;
@@ -16,6 +17,8 @@ type Props = TextInputProps & {
   required?: boolean;
   errorText?: string;
   onValidationChanged?: (valid: boolean) => void;
+  inputHeight?: number;
+  enableErrorField?: boolean;
 };
 
 const TextInput = forwardRef<RNTextInput, Props>(
@@ -27,6 +30,8 @@ const TextInput = forwardRef<RNTextInput, Props>(
       validator,
       errorText,
       onValidationChanged,
+      inputHeight = Styles.vs(44),
+      enableErrorField = true,
       ...props
     },
     ref,
@@ -63,6 +68,7 @@ const TextInput = forwardRef<RNTextInput, Props>(
             {
               backgroundColor: theme.boxBG,
               borderColor: valid ? theme.border : theme.borderError,
+              height: inputHeight,
             },
           ]}>
           {headingIcon && (
@@ -85,12 +91,14 @@ const TextInput = forwardRef<RNTextInput, Props>(
             />
           )}
         </View>
-        <Text.P
-          style={{opacity: valid ? 0 : 1}}
-          color={theme.textError}
-          size={10}>
-          {errorText ?? 'Error'}
-        </Text.P>
+        {enableErrorField && (
+          <Text.P
+            style={{opacity: valid ? 0 : 1}}
+            color={theme.textError}
+            size={10}>
+            {errorText ?? 'Error'}
+          </Text.P>
+        )}
       </View>
     );
   },

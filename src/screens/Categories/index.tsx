@@ -3,15 +3,13 @@ import {IRoute, MainCategories} from './types';
 
 import Category from './Category';
 import Tabbar from './Tabbar';
-import Header from './Header';
 
 import React, {useMemo, useState} from 'react';
-import {} from 'react-native';
 import {TabView, SceneRendererProps} from 'react-native-tab-view';
 
-import PageHeader from '@/components/PageHeader';
 import PageWrapper from '@/components/PageWrapper';
 import Styles from '@/theme/style';
+import PageSearchHeader from '@/components/PageSearchHeader';
 
 const Categories = () => {
   const [index, setIndex] = useState(0);
@@ -23,23 +21,19 @@ const Categories = () => {
       _routes.push({
         key: mc,
         title: categories[mc as MainCategories].title,
-        //sub_categories: categories[mc as MainCategories].sub_categories,
       });
     });
 
     return _routes;
   }, [categories]);
 
-  const renderScene = ({
-    route,
-    jumpTo,
-  }: SceneRendererProps & {route: IRoute}) => {
+  const renderScene = ({route}: SceneRendererProps & {route: IRoute}) => {
     return <Category route={route} />;
   };
 
   return (
     <PageWrapper removeBottom removeTop>
-      <Header />
+      <PageSearchHeader />
       <TabView<IRoute>
         navigationState={{index, routes}}
         renderScene={renderScene}
