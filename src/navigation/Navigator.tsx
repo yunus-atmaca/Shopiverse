@@ -3,6 +3,8 @@ import Root from './Root';
 import React, {Suspense, lazy, memo} from 'react';
 import {} from 'react-native';
 
+import {useAppSession} from '@/hooks/utils';
+
 //const AuthScreens = lazy(() => import('./AuthScreens'));
 //const PublicScreens = lazy(() => import('./PublicScreens'));
 
@@ -11,8 +13,9 @@ type Props = {
 };
 
 const Navigator = (props: Props) => {
-  //if(props.authenticated)
+  useAppSession();
 
+  //if(props.authenticated)
   return (
     <Suspense>
       <Root />

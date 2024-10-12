@@ -12,13 +12,13 @@ import Back from './Back';
 import EyeSlash from './EyeSlash';
 import Eye from './Eye';
 import Apple from './Apple';
-import Google from './Google'
+import Google from './Google';
 import Facebook from './Facebook';
 import ArrowDown from './ArrowDown';
 import Search from './Search';
 import Calendar from './Calendar';
 import Asterisk from './Asterisk';
-import Box from  './Box'
+import Box from './Box';
 import CommentDots from './CommentDots';
 import ArrowRight from './ArrowRight';
 import Location from './Location';
@@ -26,15 +26,17 @@ import User from './User';
 import Coupon from './Coupon';
 import CreditCard from './CreditCard';
 import QuestionMark from './QuestionMark';
-import CustomerService from './CustomerService'
+import CustomerService from './CustomerService';
 import Delete from './Delete';
 import Edit from './Edit';
 import ArrowTurnDown from './ArrowTurnDown';
 import ArrowTurnUp from './ArrowTurnUp';
 import Language from './Language';
 import Categories from './Categories';
+import StarFilled from './StarFilled';
 
 export {
+  StarFilled,
   Categories,
   Language,
   ArrowTurnDown,

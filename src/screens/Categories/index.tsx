@@ -3,6 +3,7 @@ import {IRoute, MainCategories} from './types';
 
 import Category from './Category';
 import Tabbar from './Tabbar';
+import Header from './Header';
 
 import React, {useMemo, useState} from 'react';
 import {} from 'react-native';
@@ -38,7 +39,7 @@ const Categories = () => {
 
   return (
     <PageWrapper removeBottom removeTop>
-      <PageHeader header="Categories" />
+      <Header />
       <TabView<IRoute>
         navigationState={{index, routes}}
         renderScene={renderScene}

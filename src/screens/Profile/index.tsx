@@ -15,6 +15,7 @@ import Text from '@/components/Text';
 import {useTheme} from '@/hooks/theme';
 import Button from '@/components/Button';
 import {setUser} from '@/stores/controllers/auth';
+import {Storage} from '@/utils';
 
 const Profile = () => {
   const theme = useTheme();
@@ -45,7 +46,10 @@ const Profile = () => {
             })}
 
             <Button
-              onClick={() => dispatch(setUser(null))}
+              onClick={() => {
+                Storage.deleteKey(Storage.Keys.USER_DATA);
+                dispatch(setUser(null));
+              }}
               style={styles.logout}
               text="Log out"
             />

@@ -15,6 +15,7 @@ import {navigationRef} from '@/navigation';
 import {useAppDispatch} from '@/hooks/stores';
 import {setUser} from '@/stores/controllers/auth';
 import {delay} from '@/utils/helpers';
+import {Storage} from '@/utils';
 
 const states: TextInputStates = {
   email: {valid: false, value: ''},
@@ -29,16 +30,18 @@ const Login = () => {
   const buttonDisabled = !state['email'].valid || !state['password'].valid;
 
   const onLogin = async () => {
-    await delay(2500);
+    await delay(1500);
 
-    appDispatch(
-      setUser({
-        firstName: 'Yunus',
-        lastName: 'ATMACA',
-        id: 'User-ID',
-        email: 'yunusatmacabm@gmail.com',
-      }),
-    );
+    const data = {
+      firstName: 'Yunus',
+      lastName: 'ATMACA',
+      id: 'User-ID',
+      email: 'yunusatmacabm@gmail.com',
+    };
+
+    Storage.set(Storage.Keys.USER_DATA, data);
+
+    appDispatch(setUser(data));
 
     navigationRef.goBack();
   };

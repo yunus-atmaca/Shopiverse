@@ -3,4 +3,5 @@ export default {
   USER_ADDRESS: 'user_address',
   USER_CREDIT_CARDS: 'user_credit_cards',
   USER_FAVORITES: 'user_favorites',
+  USER_DATA: 'user_data',
 };

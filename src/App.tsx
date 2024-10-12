@@ -13,22 +13,21 @@ import {LogBox} from 'react-native';
 LogBox.ignoreLogs(['findHostInstance_DEPRECATED is deprecated in StrictMode']);
 
 function App() {
+  //<React.StrictMode>
   return (
-    <React.StrictMode>
-      <GestureHandlerRootView style={{flex: 1}}>
-        <ComposeProviders
-          components={[
-            ThemeProvider,
-            SafeAreaProvider,
-            PortalProvider,
-            KeyboardProvider,
-          ]}>
-          <AppErrorBoundary>
-            <Shopiverse />
-          </AppErrorBoundary>
-        </ComposeProviders>
-      </GestureHandlerRootView>
-    </React.StrictMode>
+    <GestureHandlerRootView style={{flex: 1}}>
+      <ComposeProviders
+        components={[
+          ThemeProvider,
+          SafeAreaProvider,
+          PortalProvider,
+          KeyboardProvider,
+        ]}>
+        <AppErrorBoundary>
+          <Shopiverse />
+        </AppErrorBoundary>
+      </ComposeProviders>
+    </GestureHandlerRootView>
   );
 }
 
