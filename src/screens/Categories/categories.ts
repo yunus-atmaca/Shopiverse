@@ -1,6 +1,7 @@
+import {CATEGORIES} from '@/types/utils/Info';
 import {MainCategory} from './types';
 
-const categories: {[key: string]: MainCategory} = {
+const categories: {[key in CATEGORIES]: MainCategory} = {
   fashion_cosmetic: {
     id: 'fashion_cosmetic',
     title: 'Fashion and Cosmetic',
@@ -339,7 +340,7 @@ const categories: {[key: string]: MainCategory} = {
       },
     ],
   },
-  home_and_furniture_: {
+  home_and_furniture: {
     id: 'home_and_furniture',
     title: 'Home & Furniture',
     sub_categories: [

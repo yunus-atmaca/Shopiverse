@@ -1,14 +1,14 @@
 import React, {useEffect} from 'react';
 
 import PageWrapper from '@/components/PageWrapper';
-import Product from '@/components/Product';
+import ProductsInATitle from '@/components/ProductsInATitle';
 
 const Home = () => {
   useEffect(() => {}, []);
 
   return (
     <PageWrapper>
-      <Product containerStyle={{margin: 24}} />
+      <ProductsInATitle title="Senin icin öneriler" />
     </PageWrapper>
   );
 };

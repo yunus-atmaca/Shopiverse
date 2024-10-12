@@ -4,8 +4,16 @@ import React, {memo} from 'react';
 import {View} from 'react-native';
 
 import Icon from '@/components/Icon';
+import Text from '@/components/Text';
+import {useTheme} from '@/hooks/theme';
 
-const Header = () => {
+type Props = {
+  starRate: number;
+};
+
+const Header = ({starRate}: Props) => {
+  const theme = useTheme();
+
   const onFavorite = () => {};
 
   return (
@@ -18,8 +26,15 @@ const Header = () => {
         containerStyle={styles.favorite}
         name="Heart"
       />
-      <View style={styles.rate}>
-        <Icon size={16} name='StarFilled' />
+      <View style={[styles.rate, {backgroundColor: theme.boxBG}]}>
+        <Icon color={theme.iconHighlighted} size={12} name="StarFilled" />
+        <Text.H
+          color={theme.textHighlighted}
+          typography="bold"
+          style={{marginStart: 4}}
+          size={12}>
+          {starRate}
+        </Text.H>
       </View>
     </React.Fragment>
   );

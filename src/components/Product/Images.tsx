@@ -1,16 +1,16 @@
+import {useTheme} from '@/hooks/theme';
 import styles from './styles/images';
 
 import React, {memo, useState} from 'react';
-import {Image, View} from 'react-native';
+import {Image, ImageSourcePropType, View} from 'react-native';
 import {GestureDetector, Gesture} from 'react-native-gesture-handler';
-import Animated, {runOnJS, useSharedValue} from 'react-native-reanimated';
+import {runOnJS, useSharedValue} from 'react-native-reanimated';
 
-const img1 = require('@/assets/images/products/mattia-occhi1.jpg');
-const img2 = require('@/assets/images/products/mattia-occhi2.jpg');
-const img3 = require('@/assets/images/products/mattia-occhi3.jpg');
-
-const imgs = [img1, img2, img3];
-const Images = () => {
+type Props = {
+  imgs: ImageSourcePropType[];
+};
+const Images = ({imgs}: Props) => {
+  const theme = useTheme();
   const index = useSharedValue(0);
   const [current, setCurrent] = useState(0);
 
@@ -31,6 +31,28 @@ const Images = () => {
     <GestureDetector gesture={panGesture}>
       <View style={{width: '100%'}}>
         <Image source={imgs[current]} style={styles.img} />
+        <View style={styles.indicatorsContainer}>
+          <View style={[styles.indicators, {backgroundColor: theme.boxBG}]}>
+            {new Array(imgs.length).fill(0).map((_, i) => {
+              const isLast = i === imgs.length - 1;
+              const isSelected = current === i;
+              return (
+                <View
+                  key={'ind-' + i}
+                  style={[
+                    styles.indicator,
+                    {
+                      backgroundColor: isSelected
+                        ? theme.indicatorFocused
+                        : theme.indicatorUnfocused,
+                    },
+                    isLast && {marginEnd: 0},
+                  ]}
+                />
+              );
+            })}
+          </View>
+        </View>
       </View>
     </GestureDetector>
   );
