@@ -1,10 +1,12 @@
 import {configureStore} from '@reduxjs/toolkit';
 
 import {AuthController} from './controllers';
+import {UserController} from './controllers';
 
 const stores = configureStore({
   reducer: {
     authController: AuthController.reducer,
+    userController: UserController.reducer,
   },
   middleware: getDefaultMiddleware =>
     getDefaultMiddleware({serializableCheck: false}),

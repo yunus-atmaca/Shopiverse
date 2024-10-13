@@ -11,13 +11,14 @@ import {getRandomProducts} from '@/utils/products';
 
 type Props = {
   title: string;
+  products?: IProduct[];
 };
 
-const ProductsInATitle = ({title}: Props) => {
-  const [products, setProducts] = useState<IProduct[]>([]);
+const ProductsInATitle = ({title, products}: Props) => {
+  const [_products, setProducts] = useState<IProduct[]>([]);
   useEffect(() => {
-    setProducts(getRandomProducts());
-  }, []);
+    if (!products) setProducts(getRandomProducts());
+  }, [products]);
 
   const renderProduct: ListRenderItem<IProduct> = ({item, index}) => {
     return (
@@ -34,7 +35,7 @@ const ProductsInATitle = ({title}: Props) => {
         {title}
       </Text.H>
       <FlatList
-        data={products}
+        data={products ?? _products}
         horizontal
         showsHorizontalScrollIndicator={false}
         renderItem={renderProduct}

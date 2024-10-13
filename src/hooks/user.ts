@@ -1,8 +1,11 @@
+import {useAppSelector} from './stores';
+
 import {useIsFocused} from '@react-navigation/native';
 import {useCallback, useEffect, useState} from 'react';
 
 import {Storage} from '@/utils';
 import {IAddress, ICreditCard, IFavorite} from '@/types/utils/Info';
+import {SelectUser} from '@/stores/selectors';
 
 const useLocalItems = <T>(
   key: Storage.KEYS,
@@ -55,4 +58,16 @@ const useFavorites = () => {
   };
 };
 
-export {useFavorites, useAddresses, useCreditCards};
+const useIsFavorite = (id: string) => {
+  const favorites = useAppSelector(SelectUser.favorites);
+
+  let isFavorite = false;
+  if (favorites) {
+    const filtered = favorites.filter(favorite => favorite.productId === id);
+    isFavorite = filtered.length > 0;
+  }
+
+  return isFavorite;
+};
+
+export {useFavorites, useAddresses, useCreditCards, useIsFavorite};

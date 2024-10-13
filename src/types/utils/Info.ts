@@ -53,6 +53,6 @@ export interface IProduct {
 }
 
 export interface IFavorite {
-  product: IProduct;
+  productId: string;
   createdAt: number;
 }

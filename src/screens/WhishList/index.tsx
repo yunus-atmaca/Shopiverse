@@ -1,18 +1,23 @@
 import styles from './styles';
 
-import React, {useEffect, useMemo} from 'react';
+import React, {useEffect, useMemo, useState} from 'react';
 import {View} from 'react-native';
 
 import PageWrapper from '@/components/PageWrapper';
 import Info from '@/components/Info';
 import {useAppSelector} from '@/hooks/stores';
-import {SelectAuth} from '@/stores/selectors';
+import {SelectAuth, SelectUser} from '@/stores/selectors';
 import {useFavorites} from '@/hooks/user';
 import {Pages} from '@/navigation';
+import {IProduct} from '@/types/utils/Info';
+import {getProductsById, getRandomProducts} from '@/utils/products';
+import ProductsInATitle from '@/components/ProductsInATitle';
 
 const WhishList = () => {
   const user = useAppSelector(SelectAuth.user);
-  const {favorites, setFavorites} = useFavorites();
+  const favorites = useAppSelector(SelectUser.favorites);
+
+  const [favoriteProducts, setFProducts] = useState<IProduct[]>();
 
   const info = useMemo(() => {
     return {
@@ -25,7 +30,12 @@ const WhishList = () => {
     };
   }, [user]);
 
-  useEffect(() => {}, []);
+  useEffect(() => {
+    if (favorites) {
+      const fp = getProductsById(favorites.map(f => f.productId));
+      setFProducts(fp);
+    }
+  }, [favorites]);
 
   return (
     <PageWrapper>
@@ -39,6 +49,9 @@ const WhishList = () => {
             buttonText={info.buttonText}
           />
         </View>
+      )}
+      {favoriteProducts && favoriteProducts.length > 0 && (
+        <ProductsInATitle products={favoriteProducts} title="Favorites" />
       )}
     </PageWrapper>
   );

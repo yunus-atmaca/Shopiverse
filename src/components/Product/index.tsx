@@ -63,7 +63,7 @@ const Product = ({data, containerStyle}: Props) => {
           </Text.H>
         )}
       </Text.H>
-      <Header starRate={data.start_rate} />
+      <Header id={data.id} starRate={data.start_rate} />
     </View>
   );
 };
