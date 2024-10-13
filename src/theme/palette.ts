@@ -15,7 +15,9 @@ const palette: Record<string, ColorValue> = {
   gray400: '#dadfe1',
   gray500: '#bdc3c7',
   gray600: '#6c7a89',
-  gray1000: '#171C2A'
+  gray1000: '#171C2A',
+
+  yellow: '#FDD835',
 };
 
 export {palette};

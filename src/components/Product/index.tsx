@@ -1,6 +1,5 @@
 import styles from './styles';
 
-import Images from './Images';
 import Header from './Header';
 
 import React from 'react';
@@ -8,6 +7,7 @@ import {StyleProp, View, ViewStyle} from 'react-native';
 
 import {useTheme} from '@/hooks/theme';
 import Text from '@/components/Text';
+import ProductImages from '@/components/ProductImages';
 import {IProduct} from '@/types/utils/Info';
 
 type Props = {
@@ -25,7 +25,7 @@ const Product = ({data, containerStyle}: Props) => {
         containerStyle,
         {backgroundColor: theme.boxBG, borderColor: theme.border},
       ]}>
-      <Images imgs={data.images} />
+      <ProductImages imgs={data.images} containerStyle={styles.images} />
       <View style={{flex: 1}}>
         <Text.H
           numberOfLines={1}

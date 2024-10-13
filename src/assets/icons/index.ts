@@ -34,8 +34,10 @@ import ArrowTurnUp from './ArrowTurnUp';
 import Language from './Language';
 import Categories from './Categories';
 import StarFilled from './StarFilled';
+import Star from './Star';
 
 export {
+  Star,
   StarFilled,
   Categories,
   Language,

@@ -1,5 +1,4 @@
 import {IProduct, CATEGORIES} from '@/types/utils/Info';
-
 const products: IProduct[] = [
   {
     id: '2166c309-d673-4011-a39d-edf96c185beb',
@@ -17,6 +16,7 @@ const products: IProduct[] = [
     category: CATEGORIES.FASHION_COSMETIC,
     subCategory: 'woman',
     targetCategory: 'jacket',
+    numberOfRate: '2343',
   },
   {
     id: '8e13fc4e-a092-446e-863e-b1a3f6aff007',
@@ -34,6 +34,7 @@ const products: IProduct[] = [
     category: CATEGORIES.FASHION_COSMETIC,
     subCategory: 'woman',
     targetCategory: 'dress',
+    numberOfRate: '3509',
   },
   {
     id: 'c2b3cfd3-cc62-4d1a-8df3-41d971291a7a',
@@ -52,6 +53,7 @@ const products: IProduct[] = [
     category: CATEGORIES.ELECTRONIC_PHONE_COMPUTER,
     subCategory: 'computer_and_accessories',
     targetCategory: 'laptop_tablet',
+    numberOfRate: '3899',
   },
   {
     id: 'bf3e9651-a306-4dc2-b277-59f01d463f9e',
@@ -70,6 +72,7 @@ const products: IProduct[] = [
     category: CATEGORIES.SUPERMARKET,
     subCategory: 'food',
     targetCategory: 'coffee',
+    numberOfRate: '1076',
   },
   {
     id: '377173e8-f607-48a6-99a3-884ec3b42722',
@@ -87,6 +90,7 @@ const products: IProduct[] = [
     category: CATEGORIES.SUPERMARKET,
     subCategory: 'health_and_sports',
     targetCategory: 'vitamins_and_supplements',
+    numberOfRate: '3696',
   },
   {
     id: '32bbd646-c2f2-42ae-9446-90cbe5f2b125',
@@ -104,6 +108,7 @@ const products: IProduct[] = [
     category: CATEGORIES.ELECTRONIC_PHONE_COMPUTER,
     subCategory: 'mobile_phones',
     targetCategory: 'android_phones',
+    numberOfRate: '2219',
   },
   {
     id: '4965855c-64e0-4c36-8662-35f5255aa59c',
@@ -121,6 +126,7 @@ const products: IProduct[] = [
     category: CATEGORIES.HOME_AND_FURNITURE,
     subCategory: 'furniture',
     targetCategory: 'living_room',
+    numberOfRate: '2853',
   },
   {
     id: '5191b7bc-1b67-4720-8644-d020d5f14584',
@@ -139,6 +145,7 @@ const products: IProduct[] = [
     category: CATEGORIES.HOME_AND_FURNITURE,
     subCategory: 'kitchen',
     targetCategory: 'pots',
+    numberOfRate: '3306',
   },
   {
     id: '1f67dbda-3c98-4974-8a6a-71fb10699b18',
@@ -156,6 +163,7 @@ const products: IProduct[] = [
     category: CATEGORIES.FASHION_COSMETIC,
     subCategory: 'personal_care_and_cosmetics',
     targetCategory: 'perfume_and_deodorant',
+    numberOfRate: '3526',
   },
   {
     id: 'd7c36985-bd41-49a8-b4c7-b25543f13238',
@@ -174,6 +182,7 @@ const products: IProduct[] = [
     category: CATEGORIES.SUPERMARKET,
     subCategory: 'food',
     targetCategory: 'tea',
+    numberOfRate: '3140',
   },
   {
     id: '44cbdb02-5fd7-472f-888d-1fa8cf9b4315',
@@ -192,6 +201,7 @@ const products: IProduct[] = [
     category: CATEGORIES.FASHION_COSMETIC,
     subCategory: 'man',
     targetCategory: 'suit',
+    numberOfRate: '3807',
   },
   {
     id: '7e57d5da-12c4-4d0e-9a80-3f1f5c3a7e02',
@@ -209,6 +219,7 @@ const products: IProduct[] = [
     category: CATEGORIES.FASHION_COSMETIC,
     subCategory: 'man',
     targetCategory: 'man_t_shirt',
+    numberOfRate: '4151',
   },
   {
     id: 'f2e15840-d4e5-4ba1-8d4f-1402212d632b',
@@ -226,6 +237,7 @@ const products: IProduct[] = [
     category: CATEGORIES.ELECTRONIC_PHONE_COMPUTER,
     subCategory: 'home_appliances',
     targetCategory: 'television',
+    numberOfRate: '2571',
   },
   {
     id: 'f5f65d77-c75e-44ff-8a12-82d1a40aece4',
@@ -243,6 +255,7 @@ const products: IProduct[] = [
     category: CATEGORIES.ELECTRONIC_PHONE_COMPUTER,
     subCategory: 'home_appliances',
     targetCategory: 'coffee_machine',
+    numberOfRate: '2841',
   },
   {
     id: '0dcde4cf-2b90-4559-8dc2-aeb835ebd289',
@@ -260,6 +273,7 @@ const products: IProduct[] = [
     category: CATEGORIES.FASHION_COSMETIC,
     subCategory: 'children',
     targetCategory: 'dress',
+    numberOfRate: '1927',
   },
   {
     id: '0fa812f5-ced2-4a4e-809a-5c803616c004',
@@ -278,6 +292,7 @@ const products: IProduct[] = [
     category: CATEGORIES.ELECTRONIC_PHONE_COMPUTER,
     subCategory: 'computer_and_accessories',
     targetCategory: 'earphones',
+    numberOfRate: '4130',
   },
   {
     id: '00917865-e1e6-43fc-bbd8-9af95c6e9f00',
@@ -295,6 +310,7 @@ const products: IProduct[] = [
     category: CATEGORIES.HOME_AND_FURNITURE,
     subCategory: 'kitchen',
     targetCategory: 'dinner_set',
+    numberOfRate: '1421',
   },
   {
     id: 'b9fbd760-6b21-4f16-8051-130556e2605e',
@@ -312,6 +328,7 @@ const products: IProduct[] = [
     category: CATEGORIES.SUPERMARKET,
     subCategory: 'home_and_cleaning',
     targetCategory: 'laundry',
+    numberOfRate: '2745',
   },
   {
     id: '20aec16d-26d6-4375-9e60-b967fe441f24',
@@ -330,6 +347,7 @@ const products: IProduct[] = [
     category: CATEGORIES.FASHION_COSMETIC,
     subCategory: 'woman',
     targetCategory: 'shoes',
+    numberOfRate: '3189',
   },
 ];
 

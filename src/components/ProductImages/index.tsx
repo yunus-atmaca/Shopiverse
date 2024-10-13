@@ -1,15 +1,24 @@
-import {useTheme} from '@/hooks/theme';
-import styles from './styles/images';
+import styles from './styles';
 
-import React, {memo, useState} from 'react';
-import {Image, ImageSourcePropType, View} from 'react-native';
-import {GestureDetector, Gesture} from 'react-native-gesture-handler';
+import React, {useState} from 'react';
+import {
+  Image,
+  ImageSourcePropType,
+  StyleProp,
+  View,
+  ViewStyle,
+} from 'react-native';
+import {Gesture, GestureDetector} from 'react-native-gesture-handler';
 import {runOnJS, useSharedValue} from 'react-native-reanimated';
+
+import {useTheme} from '@/hooks/theme';
 
 type Props = {
   imgs: ImageSourcePropType[];
+  containerStyle: StyleProp<ViewStyle>;
 };
-const Images = ({imgs}: Props) => {
+
+const ProductImages = ({imgs, containerStyle}: Props) => {
   const theme = useTheme();
   const index = useSharedValue(0);
   const [current, setCurrent] = useState(0);
@@ -29,7 +38,7 @@ const Images = ({imgs}: Props) => {
 
   return (
     <GestureDetector gesture={panGesture}>
-      <View style={{width: '100%'}}>
+      <View style={containerStyle}>
         <Image source={imgs[current]} style={styles.img} />
         <View style={styles.indicatorsContainer}>
           <View style={[styles.indicators, {backgroundColor: theme.boxBG}]}>
@@ -58,4 +67,4 @@ const Images = ({imgs}: Props) => {
   );
 };
 
-export default memo(Images, () => true);
+export default ProductImages;

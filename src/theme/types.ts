@@ -55,6 +55,9 @@ type ThemeColors = {
 
   indicatorFocused: ColorValue;
   indicatorUnfocused: ColorValue;
+
+  star: ColorValue;
+  starHighlighted: ColorValue;
 };
 
 export type {ThemeColors};

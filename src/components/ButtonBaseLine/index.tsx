@@ -10,14 +10,16 @@ type Props = {
   icon?: IconNames;
   text: string;
   onClick?: () => void;
-  iconColor?: ColorValue;
   containerStyle?: StyleProp<ViewStyle>;
+  textColor?: ColorValue;
+  iconColor?: ColorValue;
 };
 
 const ButtonBaseLine = ({
   onClick,
   containerStyle,
   iconColor,
+  textColor,
   icon,
   text,
 }: Props) => {
@@ -38,7 +40,9 @@ const ButtonBaseLine = ({
       {icon && (
         <Icon containerStyle={{marginEnd: 4}} color={iconColor} name={icon} />
       )}
-      <Text.P size={14}>{text}</Text.P>
+      <Text.P color={textColor} size={14}>
+        {text}
+      </Text.P>
     </TouchableOpacity>
   );
 };

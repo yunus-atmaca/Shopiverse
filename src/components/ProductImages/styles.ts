@@ -5,7 +5,7 @@ const {hs, vs, spacing, radius} = Styles;
 export default StyleSheet.create({
   img: {
     width: '100%',
-    height: vs(108),
+    height: '100%',
     //resizeMode: 'contain',
     borderRadius: radius.xs,
   },

@@ -1,17 +1,18 @@
 import styles from './styles';
 
 import React, {useEffect, useMemo, useState} from 'react';
-import {View} from 'react-native';
+import {FlatList, ListRenderItem, View} from 'react-native';
 
 import PageWrapper from '@/components/PageWrapper';
 import Info from '@/components/Info';
 import {useAppSelector} from '@/hooks/stores';
 import {SelectAuth, SelectUser} from '@/stores/selectors';
-import {useFavorites} from '@/hooks/user';
 import {Pages} from '@/navigation';
 import {IProduct} from '@/types/utils/Info';
-import {getProductsById, getRandomProducts} from '@/utils/products';
+import {getProductsById} from '@/utils/products';
 import ProductsInATitle from '@/components/ProductsInATitle';
+import FavoriteProduct from '@/components/FavoriteProduct';
+import PageSearchHeader from '@/components/PageSearchHeader';
 
 const WhishList = () => {
   const user = useAppSelector(SelectAuth.user);
@@ -37,8 +38,13 @@ const WhishList = () => {
     }
   }, [favorites]);
 
+  const renderFavoriteProduct: ListRenderItem<IProduct> = ({item}) => {
+    return <FavoriteProduct data={item} />;
+  };
+
   return (
-    <PageWrapper>
+    <PageWrapper removeTop removeBottom>
+      <PageSearchHeader />
       {(!user || (favorites && favorites.length === 0)) && (
         <View style={[styles.container, styles.hasNoItems]}>
           <Info
@@ -51,7 +57,13 @@ const WhishList = () => {
         </View>
       )}
       {favoriteProducts && favoriteProducts.length > 0 && (
-        <ProductsInATitle products={favoriteProducts} title="Favorites" />
+        <FlatList
+          data={favoriteProducts}
+          renderItem={renderFavoriteProduct}
+          showsVerticalScrollIndicator={false}
+          keyExtractor={(_, i) => 'f-' + i}
+          contentContainerStyle={{paddingBottom: 32}}
+        />
       )}
     </PageWrapper>
   );

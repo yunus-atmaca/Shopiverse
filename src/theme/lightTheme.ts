@@ -44,7 +44,10 @@ const lightTheme: ThemeColors = {
   checkBoxUnFilled: palette.white,
 
   indicatorFocused: palette.black,
-  indicatorUnfocused: palette.gray500
+  indicatorUnfocused: palette.gray500,
+
+  star: palette.yellow,
+  starHighlighted: palette.orange
 };
 
 export default lightTheme;

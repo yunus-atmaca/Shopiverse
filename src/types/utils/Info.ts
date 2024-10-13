@@ -50,6 +50,7 @@ export interface IProduct {
   category: CATEGORIES;
   subCategory: string;
   targetCategory: string;
+  numberOfRate: string
 }
 
 export interface IFavorite {

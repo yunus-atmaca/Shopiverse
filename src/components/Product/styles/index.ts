@@ -15,4 +15,8 @@ export default StyleSheet.create({
   title: {
     marginTop: vs(4),
   },
+  images: {
+    height: vs(108),
+    width: '100%',
+  },
 });
