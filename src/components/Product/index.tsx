@@ -3,12 +3,13 @@ import styles from './styles';
 import Header from './Header';
 
 import React from 'react';
-import {StyleProp, View, ViewStyle} from 'react-native';
+import {StyleProp, TouchableOpacity, View, ViewStyle} from 'react-native';
 
 import {useTheme} from '@/hooks/theme';
 import Text from '@/components/Text';
-import ProductImages from '@/components/ProductImages';
+import ProductImage from '@/components/ProductImage';
 import {IProduct} from '@/types/utils/Info';
+import {navigationRef} from '@/navigation';
 
 type Props = {
   containerStyle?: StyleProp<ViewStyle>;
@@ -19,13 +20,18 @@ const Product = ({data, containerStyle}: Props) => {
   const theme = useTheme();
 
   return (
-    <View
+    <TouchableOpacity
+      activeOpacity={0.7}
+      onPress={() =>
+        navigationRef.navigate('ProductDetails', {productId: data.id})
+      }
       style={[
         styles.container,
         containerStyle,
         {backgroundColor: theme.boxBG, borderColor: theme.border},
       ]}>
-      <ProductImages imgs={data.images} containerStyle={styles.images} />
+      {/*<ProductImages imgs={data.images} containerStyle={styles.images} />*/}
+      <ProductImage img={data.images[0]} containerStyle={styles.images} />
       <View style={{flex: 1}}>
         <Text.H
           numberOfLines={1}
@@ -64,7 +70,7 @@ const Product = ({data, containerStyle}: Props) => {
         )}
       </Text.H>
       <Header id={data.id} starRate={data.start_rate} />
-    </View>
+    </TouchableOpacity>
   );
 };
 

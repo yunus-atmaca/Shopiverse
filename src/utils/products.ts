@@ -16,4 +16,10 @@ const getProductsById = (ids: string[]) => {
   return _products;
 };
 
-export {getRandomProducts, getProductsById};
+const getProductById = (id: string) => {
+  const _products = products.filter(p => p.id === id);
+  if (_products.length > 0) return _products[0];
+  return null;
+};
+
+export {getRandomProducts, getProductsById, getProductById};

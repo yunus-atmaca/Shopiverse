@@ -1,14 +1,12 @@
-import React, {useEffect} from 'react';
+import React from 'react';
 
 import PageWrapper from '@/components/PageWrapper';
 import ProductsInATitle from '@/components/ProductsInATitle';
 import PageSearchHeader from '@/components/PageSearchHeader';
 import Banners from '@/components/Banners';
-import {ScrollView} from 'react-native';
+import {ScrollView} from 'react-native-gesture-handler';
 
 const Home = () => {
-  useEffect(() => {}, []);
-
   return (
     <PageWrapper removeBottom removeTop>
       <PageSearchHeader />

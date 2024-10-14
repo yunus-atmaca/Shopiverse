@@ -1,7 +1,7 @@
 import styles from './styles';
 
 import React, {memo} from 'react';
-import {View} from 'react-native';
+import {StyleProp, View, ViewStyle} from 'react-native';
 
 import Icon from '@/components/Icon';
 import Text from '@/components/Text';
@@ -10,13 +10,14 @@ import {useTheme} from '@/hooks/theme';
 type Props = {
   rate: number;
   numberOfRate: string;
+  containerStyle?: StyleProp<ViewStyle>;
 };
 
-const ProductRate = ({rate, numberOfRate}: Props) => {
+const ProductRate = ({rate, numberOfRate, containerStyle}: Props) => {
   const theme = useTheme();
   const rateFloor = Math.floor(rate);
   return (
-    <View style={styles.container}>
+    <View style={[styles.container, containerStyle]}>
       <Text.H style={{marginEnd: 4}} size={14}>
         {rate}
       </Text.H>

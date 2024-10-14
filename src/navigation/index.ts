@@ -18,7 +18,9 @@ export type TabParamList = {
 
 export type RootStackParamList = {
   Tabs: NavigatorScreenParams<TabParamList>;
-  ProductDetails: undefined;
+  ProductDetails: {
+    productId: string;
+  };
   Login: undefined;
   MyOrders: undefined;
   MyReviews: undefined;
