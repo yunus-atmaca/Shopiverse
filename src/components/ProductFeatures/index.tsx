@@ -8,32 +8,32 @@ import {useTheme} from '@/hooks/theme';
 import Text from '@/components/Text';
 
 const productDesc = [
-  'Şık ve modern görünümlü, 1.4 inç yüksek çözünürlüklü dokunmatik ekran.',
-  'Adım sayar, kalp atış hızı izleme ve uyku takibi özellikleri.',
-  'Farklı spor modları ile antrenmanlarınızı izleyin ve geliştirin.',
-  'Harici bir cihaza ihtiyaç duymadan konum takibi yapma imkânı.',
-  '50 metreye kadar suya dayanıklı, yüzme gibi aktiviteler için ideal.',
-  '7 güne kadar dayanan güçlü batarya ile kesintisiz kullanım.',
-  'Akıllı telefonunuza bağlayarak mesajlarınızı ve çağrılarınızı kontrol edin.',
-  'E-postalar, mesajlar ve sosyal medya bildirimleri bileğinizde.',
-  'Zevkinize uygun farklı saat yüzlerini seçin.',
-  'Hafif yapısı sayesinde rahat bir kullanım sunar, dayanıklı malzemeleri ile uzun ömürlüdür.',
+  'Sleek and modern design with a 1.4-inch high-resolution touchscreen display.',
+  'Step counter, heart rate monitoring, and sleep tracking features.',
+  'Track and improve your workouts with various sports modes.',
+  'Built-in GPS for location tracking without needing an external device.',
+  'Water-resistant up to 50 meters, ideal for swimming and other activities.',
+  'Seamless usage with a powerful battery lasting up to 7 days.',
+  'Connect to your smartphone and control your messages and calls.',
+  'Emails, messages, and social media notifications right on your wrist.',
+  'Choose from different watch faces to match your style.',
+  'Lightweight and comfortable for everyday use, built with durable materials for long-lasting wear.',
 ];
 
 const cancelation = [
-  'Siparişinizi, kargo süreci başlamadan önce iptal edebilirsiniz.',
-  'İptal işlemi için sipariş numaranızla birlikte müşteri hizmetlerimize başvurmanız yeterlidir.',
-  'İptal edilen siparişlerin ücret iadesi, ödemenin yapıldığı yöntemle 7 iş günü içerisinde hesabınıza geri yatırılacaktır.',
-  'İade etmek istediğiniz ürünün orijinal ambalajında, kullanılmamış ve tekrar satılabilir durumda olması gerekmektedir.',
-  'Ürün teslim alındıktan sonraki 14 gün içerisinde iade talebi oluşturabilirsiniz.',
-  'İade işlemi için ürünle birlikte faturayı da göndermeniz gereklidir.',
-  'İade edilen ürünlerin ücreti, ürün bize ulaştıktan sonra 10 iş günü içerisinde ödeme yönteminize geri yatırılacaktır.',
-  'Hijyenik ürünler (iç giyim, kulaklık vb.) ve kişiye özel olarak hazırlanan ürünler iade kapsamında değildir.',
-  'İndirime giren veya kampanyalı ürünlerde iade yapılamaz.',
-  'İade işlemlerinde kargo ücreti, aksi belirtilmediği sürece müşteriye aittir.',
-  'Ürün hatalı veya kusurlu ise kargo ücreti mağazamız tarafından karşılanacaktır.',
-  'İade onaylandığında, ürün bedeli ödeme şeklinize uygun olarak hesabınıza yatırılır.',
-  'Kredi kartı ile yapılan ödemelerde iade süresi bankaya bağlı olarak değişebilir.',
+  'You can cancel your order before the shipping process begins.',
+  'To cancel, simply contact our customer service with your order number.',
+  'Refunds for canceled orders will be returned to your account within 7 business days using the original payment method.',
+  'The product must be in its original packaging, unused, and resalable condition to be eligible for a return.',
+  'You can submit a return request within 14 days after receiving the product.',
+  'Please include the invoice along with the product when returning.',
+  'Refunds will be processed within 10 business days after we receive the returned product.',
+  'Hygiene-related products (such as undergarments, earphones) and personalized items are not eligible for return.',
+  'Discounted or promotional items cannot be returned.',
+  'Return shipping costs are the customer’s responsibility unless otherwise stated.',
+  'If the product is defective or faulty, the return shipping cost will be covered by our store.',
+  'Once the return is approved, the refund will be credited to your original payment method.',
+  'For payments made via credit card, the refund time may vary depending on the bank.',
 ];
 
 const ProductFeatures = () => {
@@ -49,7 +49,7 @@ const ProductFeatures = () => {
           borderBottomColor: theme.borderLight,
         },
       ]}>
-      <AccordionItem title={'Ürün Açıklaması'}>
+      <AccordionItem title={'Product Description'}>
         {productDesc.map((pd, indx) => {
           return (
             <Text.P style={styles.text} key={'pd-' + indx} size={14}>
@@ -58,7 +58,7 @@ const ProductFeatures = () => {
           );
         })}
       </AccordionItem>
-      <AccordionItem title={'İptal ve İade Koşulları'}>
+      <AccordionItem title={'Cancellation and Refund Conditions'}>
         {cancelation.map((c, indx) => {
           return (
             <Text.P style={styles.text} key={'c-' + indx} size={14}>

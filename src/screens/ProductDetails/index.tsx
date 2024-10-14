@@ -1,5 +1,7 @@
 import styles from './styles';
 
+import Summary from './Summary';
+
 import React, {useEffect, useState} from 'react';
 import {View, ScrollView} from 'react-native';
 
@@ -16,6 +18,7 @@ import {useTheme} from '@/hooks/theme';
 import ProductColors from '@/components/ProductColors';
 import ProductSizes from '@/components/ProductSizes';
 import ProductFeatures from '@/components/ProductFeatures';
+import ProductReviews from '@/components/ProductReviews';
 
 const ProductDetails = ({route}: RootStackScreenProps<'ProductDetails'>) => {
   const theme = useTheme();
@@ -31,7 +34,7 @@ const ProductDetails = ({route}: RootStackScreenProps<'ProductDetails'>) => {
       <PageHeader header="Product Details" />
       {product && (
         <ScrollView
-          contentContainerStyle={{paddingBottom: 32}}
+          contentContainerStyle={{paddingBottom: 96}}
           showsVerticalScrollIndicator={false}>
           <ProductImgs
             imgStyle={{
@@ -66,8 +69,10 @@ const ProductDetails = ({route}: RootStackScreenProps<'ProductDetails'>) => {
           </View>
 
           <ProductFeatures />
+          <ProductReviews />
         </ScrollView>
       )}
+      <Summary />
     </PageWrapper>
   );
 };

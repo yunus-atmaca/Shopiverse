@@ -1,6 +1,8 @@
 import {Platform, StatusBar} from 'react-native';
 import {EdgeInsets} from 'react-native-safe-area-context';
 
+import Styles from '@/theme/style';
+
 const safeAreaInsets = (insets: EdgeInsets | null) => {
   let defInsets = insets ?? {
     top: 0,
@@ -15,6 +17,11 @@ const safeAreaInsets = (insets: EdgeInsets | null) => {
       top: StatusBar.currentHeight ?? defInsets.top,
     };
 
+  if (defInsets.bottom === 0)
+    defInsets = {
+      ...defInsets,
+      bottom: Styles.vs(Styles.spacing.r),
+    };
   return defInsets;
 };
 

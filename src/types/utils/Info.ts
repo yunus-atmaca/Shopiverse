@@ -50,10 +50,18 @@ export interface IProduct {
   category: CATEGORIES;
   subCategory: string;
   targetCategory: string;
-  numberOfRate: string
+  numberOfRate: string;
 }
 
 export interface IFavorite {
   productId: string;
   createdAt: number;
+}
+
+export interface IReview{
+  id: string;
+  createdAt: number;
+  fullName: string;
+  rate: number;
+  desc: string;
 }
