@@ -6,7 +6,7 @@ import {View} from 'react-native';
 import {IProduct} from '@/types/utils/Info';
 import {useTheme} from '@/hooks/theme';
 
-import ProductImages from '@/components/ProductImages';
+import ProductImage from '@/components/ProductImage';
 import Text from '@/components/Text';
 import ProductRate from '@/components/ProductRate';
 import ButtonBaseLine from '@/components/ButtonBaseLine';
@@ -24,7 +24,7 @@ const FavoriteProduct = ({data}: Props) => {
         styles.container,
         {backgroundColor: theme.boxBG, borderColor: theme.borderLight},
       ]}>
-      <ProductImages imgs={data.images} containerStyle={styles.image} />
+      <ProductImage img={data.images[0]} containerStyle={styles.image} />
       <View style={styles.info}>
         <Text.H numberOfLines={1} typography="semiBold" size={14}>
           {data.brand}

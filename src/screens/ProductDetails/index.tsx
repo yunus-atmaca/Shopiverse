@@ -15,6 +15,7 @@ import ProductRate from '@/components/ProductRate';
 import {useTheme} from '@/hooks/theme';
 import ProductColors from '@/components/ProductColors';
 import ProductSizes from '@/components/ProductSizes';
+import ProductFeatures from '@/components/ProductFeatures';
 
 const ProductDetails = ({route}: RootStackScreenProps<'ProductDetails'>) => {
   const theme = useTheme();
@@ -29,7 +30,9 @@ const ProductDetails = ({route}: RootStackScreenProps<'ProductDetails'>) => {
     <PageWrapper removeTop>
       <PageHeader header="Product Details" />
       {product && (
-        <ScrollView>
+        <ScrollView
+          contentContainerStyle={{paddingBottom: 32}}
+          showsVerticalScrollIndicator={false}>
           <ProductImgs
             imgStyle={{
               height: Styles.device.height * 0.4,
@@ -43,13 +46,16 @@ const ProductDetails = ({route}: RootStackScreenProps<'ProductDetails'>) => {
               {
                 backgroundColor: theme.boxBG,
                 borderBottomColor: theme.borderLight,
+                borderTopColor: theme.borderLight,
               },
             ]}>
             <Text.H typography="semiBold">
               {product.brand}
               <Text.H>{'  ' + product.title}</Text.H>
             </Text.H>
-            <Text.P size={14}>{product.desc}</Text.P>
+            <Text.P color={theme.textSub} size={14}>
+              {product.desc}
+            </Text.P>
             <ProductRate
               containerStyle={{marginVertical: 4}}
               rate={product.start_rate}
@@ -58,6 +64,8 @@ const ProductDetails = ({route}: RootStackScreenProps<'ProductDetails'>) => {
             <ProductColors />
             <ProductSizes />
           </View>
+
+          <ProductFeatures />
         </ScrollView>
       )}
     </PageWrapper>
