@@ -58,6 +58,10 @@ type ThemeColors = {
 
   star: ColorValue;
   starHighlighted: ColorValue;
+
+  error: ColorValue;
+  success: ColorValue;
+  warning: ColorValue;
 };
 
 export type {ThemeColors};

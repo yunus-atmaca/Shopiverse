@@ -37,8 +37,14 @@ import StarFilled from './StarFilled';
 import Star from './Star';
 import Plus from './Plus';
 import Minus from './Minus';
+import Close from './Close';
+import Check from './Check';
+import Clock from './Clock';
 
 export {
+  Clock,
+  Check,
+  Close,
   Minus,
   Plus,
   Star,

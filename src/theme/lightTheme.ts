@@ -47,7 +47,11 @@ const lightTheme: ThemeColors = {
   indicatorUnfocused: palette.gray500,
 
   star: palette.yellow,
-  starHighlighted: palette.orange
+  starHighlighted: palette.orange,
+
+  error: palette.red,
+  success: palette.green,
+  warning: palette.yellow,
 };
 
 export default lightTheme;

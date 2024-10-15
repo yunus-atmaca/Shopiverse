@@ -78,3 +78,12 @@ export interface IBanner {
   call: string;
   img: ImageSourcePropType;
 }
+
+export type OrderStatus = 'Canceled' | 'Ongoing' | 'Completed' | 'Returned';
+export interface IOrder {
+  status: OrderStatus;
+  id: number;
+  img: ImageSourcePropType;
+  orderDate: number;
+  lastUpdate: number;
+}
