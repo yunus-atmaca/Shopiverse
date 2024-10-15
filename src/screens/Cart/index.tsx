@@ -16,7 +16,7 @@ const Cart = () => {
   const _cart = useAppSelector(SelectUser.cart);
 
   return (
-    <PageWrapper>
+    <PageWrapper removeBottom>
       <ScrollView
         contentContainerStyle={{paddingBottom: 72}}
         showsVerticalScrollIndicator={false}>

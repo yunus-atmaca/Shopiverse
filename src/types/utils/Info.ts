@@ -71,3 +71,10 @@ export interface IReview {
   rate: number;
   desc: string;
 }
+
+export interface IBanner {
+  title: string;
+  desc: string;
+  call: string;
+  img: ImageSourcePropType;
+}
