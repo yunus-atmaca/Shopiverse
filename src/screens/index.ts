@@ -19,8 +19,10 @@ import AddAddress from './AddAddress';
 import MyCreditCards from './MyCreditCards';
 import AddCreditCard from './AddCreditCard';
 import MyCoupons from './MyCoupons';
+import Payment from './Payment';
 
 export {
+  Payment,
   Categories,
   MyCoupons,
   AddCreditCard,

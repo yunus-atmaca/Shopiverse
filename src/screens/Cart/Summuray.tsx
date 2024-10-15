@@ -13,6 +13,7 @@ import {useTheme} from '@/hooks/theme';
 import Text from '@/components/Text';
 import Icon from '@/components/Icon';
 import {ICartProduct} from '@/types/utils/Info';
+import {navigationRef} from '@/navigation';
 
 type Props = {
   products: ICartProduct[];
@@ -107,7 +108,11 @@ const Summary = ({products}: Props) => {
           </View>
         </TouchableOpacity>
         <View style={{flex: 2}}>
-          <Button text={'Confirm'} style={styles.approve} />
+          <Button
+            onClick={() => navigationRef.navigate('Payment', {data: products})}
+            text={'Confirm'}
+            style={styles.approve}
+          />
         </View>
       </View>
     </View>

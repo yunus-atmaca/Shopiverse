@@ -19,6 +19,7 @@ import {
   MyCreditCards,
   AddCreditCard,
   MyCoupons,
+  Payment
 } from '@/screens';
 
 const Stack = createStackNavigator<RootStackParamList>();
@@ -43,6 +44,7 @@ function Root() {
         <Stack.Screen name="MyAddresses" component={MyAddresses} />
         <Stack.Screen name="MyCreditCards" component={MyCreditCards} />
         <Stack.Screen name="MyCoupons" component={MyCoupons} />
+        <Stack.Screen name="Payment" component={Payment} />
       </Stack.Group>
 
       <Stack.Group screenOptions={{presentation: 'modal'}}>

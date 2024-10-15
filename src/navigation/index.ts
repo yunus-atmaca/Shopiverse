@@ -8,7 +8,7 @@ import type {StackScreenProps} from '@react-navigation/stack';
 import type {BottomTabScreenProps} from '@react-navigation/bottom-tabs';
 
 import {ICountry} from '@/screens/Countries/types';
-import {IAddress, ICoupon, ICreditCard} from '@/types/utils/Info';
+import {IAddress, ICartProduct, ICoupon, ICreditCard} from '@/types/utils/Info';
 
 export type TabParamList = {
   Home: undefined;
@@ -49,6 +49,9 @@ export type RootStackParamList = {
   };
   SignUp: {
     country?: ICountry;
+  };
+  Payment: {
+    data: ICartProduct[];
   };
 };
 
