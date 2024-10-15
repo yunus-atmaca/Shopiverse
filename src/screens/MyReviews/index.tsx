@@ -12,8 +12,8 @@ import Info from '@/components/Info';
 const MyReviews = () => {
   const tags = useMemo<IOption[]>(() => {
     return [
-      {id: '1', name: 'Urün Değerlendirmelerim'},
-      {id: '2', name: 'Satıcı Değerlendirmelerim'},
+      {id: '1', name: 'My Product Reviews'},
+      {id: '2', name: 'My Seller Reviews'},
     ];
   }, []);
 
@@ -27,10 +27,9 @@ const MyReviews = () => {
       <View style={styles.container}>
         <Info
           icon="CommentDots"
-          title="Degerlendirmeniz Bulunamadi"
-          //desc="Şuanda şiparişiniz bulunmamaktadır."
+          title="There Is No Review"
           navigateTo="Profile"
-          buttonText={'Alışverişe Devam Et'}
+          buttonText={'Start Shopping'}
         />
       </View>
     </PageWrapper>

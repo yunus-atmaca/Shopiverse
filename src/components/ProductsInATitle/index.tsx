@@ -1,6 +1,6 @@
 import styles from './styles';
 
-import React, {useEffect, useState} from 'react';
+import React, {memo, useEffect, useState} from 'react';
 import {View, FlatList, ListRenderItem} from 'react-native';
 
 import Product from '@/components/Product';
@@ -45,4 +45,4 @@ const ProductsInATitle = ({title, products}: Props) => {
   );
 };
 
-export default ProductsInATitle;
+export default memo(ProductsInATitle, () => true);

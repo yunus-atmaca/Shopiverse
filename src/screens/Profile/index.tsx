@@ -28,10 +28,10 @@ const Profile = () => {
         <View style={[styles.container, styles.notLoggedIn]}>
           <Info
             icon="Login"
-            title="Hesabım"
-            desc="Hesabınızı görüntülüyebilmek için lütfen giriş yapın."
+            title="My Account"
+            desc="Please log in to view your account."
             navigateTo="Login"
-            buttonText={'Giriş Yap'}
+            buttonText={'Login'}
           />
         </View>
       ) : (

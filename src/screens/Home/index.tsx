@@ -12,9 +12,9 @@ const Home = () => {
       <PageSearchHeader />
       <ScrollView contentContainerStyle={{paddingBottom: 32}}>
         <Banners />
-        <ProductsInATitle title="Senin İçin Öneriler" />
-        <ProductsInATitle title="Popüler Ürünler" />
-        <ProductsInATitle title="Indirimli Ürünler" />
+        <ProductsInATitle title="Our suggestions for you" />
+        <ProductsInATitle title="Popular Products" />
+        <ProductsInATitle title="Discounted Products" />
       </ScrollView>
     </PageWrapper>
   );

@@ -10,7 +10,6 @@ import {SelectAuth, SelectUser} from '@/stores/selectors';
 import {Pages} from '@/navigation';
 import {IProduct} from '@/types/utils/Info';
 import {getProductsById} from '@/utils/products';
-import ProductsInATitle from '@/components/ProductsInATitle';
 import FavoriteProduct from '@/components/FavoriteProduct';
 import PageSearchHeader from '@/components/PageSearchHeader';
 
@@ -22,12 +21,12 @@ const WhishList = () => {
 
   const info = useMemo(() => {
     return {
-      title: user ? 'Favori Ürünlerini Ekle' : 'Favorilerim',
+      title: user ? 'Add Your Favorite Products' : 'My Favorites',
       desc: user
-        ? 'Favori ürünlerini ekleyip fiyatları takip edebilirsin'
-        : 'Favorileriniz görüntüleyebilmek için lütfen giriş yapın.',
+        ? 'You can add your favorite products and follow the prices.'
+        : 'Please log in to view your favorites.',
       navigateTo: user ? 'Home' : 'Login',
-      buttonText: user ? 'Alışverişe Başla' : 'Giriş Yap',
+      buttonText: user ? 'Start Shopping' : 'Login',
     };
   }, [user]);
 

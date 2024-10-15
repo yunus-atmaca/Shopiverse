@@ -72,7 +72,7 @@ const ProductDetails = ({route}: RootStackScreenProps<'ProductDetails'>) => {
           <ProductReviews />
         </ScrollView>
       )}
-      <Summary />
+      {product && <Summary product={product} />}
     </PageWrapper>
   );
 };

@@ -8,10 +8,26 @@ import {SafeAreaInsetsContext} from 'react-native-safe-area-context';
 import safeAreaInsets from '@/utils/safeAreaInstents';
 import Text from '@/components/Text';
 import Button from '@/components/Button';
+import {useAppDispatch} from '@/hooks/stores';
+import {IProduct} from '@/types/utils/Info';
+import {addProductToCart} from '@/stores/controllers/user';
+import {navigationRef} from '@/navigation';
 
-const Summary = () => {
+type Props = {
+  product: IProduct;
+};
+
+const Summary = ({product}: Props) => {
   const theme = useTheme();
+  const dispatch = useAppDispatch();
 
+  const onAddToCart = () => {
+    dispatch(addProductToCart(product));
+    navigationRef.goBack();
+    navigationRef.navigate('Cart');
+  };
+
+  const {discountedPrice, price} = product;
   return (
     <SafeAreaInsetsContext.Consumer>
       {insets => {
@@ -26,10 +42,24 @@ const Summary = () => {
               {backgroundColor: theme.boxBG},
             ]}>
             <View style={{flex: 1}}>
-              <Text.H typography='bold'>17.400$</Text.H>
+              <Text.H
+                color={discountedPrice ? theme.textSub : undefined}
+                style={{
+                  textDecorationLine: discountedPrice ? 'line-through' : 'none',
+                }}
+                typography={
+                  discountedPrice ? 'semiBold' : 'bold'
+                }>{`${price}`}</Text.H>
+              {discountedPrice && (
+                <Text.H typography="bold">{`${discountedPrice}`}</Text.H>
+              )}
             </View>
             <View style={{flex: 1}}>
-              <Button style={{marginEnd: 0}} text={'Add to Cart'} />
+              <Button
+                onClick={onAddToCart}
+                style={{marginEnd: 0}}
+                text={'Add to Cart'}
+              />
             </View>
           </View>
         );

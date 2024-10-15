@@ -37,10 +37,10 @@ const MyCreditCards = () => {
         <View style={[styles.container, styles.empty]}>
           <Info
             icon="CreditCard"
-            title="Kayitli Kredi Kartin Bulunmamaktadir"
-            desc="Hızlıca alışverişini geçekleştirmek için kredi kartı ekle"
+            title="There Is No Registered Credit Card"
+            desc="Add a credit card to make your purchase quickly"
             navigateTo="AddCreditCard"
-            buttonText={'Kredi Karti Ekle'}
+            buttonText={'Add Credit Card'}
           />
         </View>
       )}
@@ -62,7 +62,7 @@ const MyCreditCards = () => {
             onClick={() => {
               navigationRef.navigate('AddCreditCard', {creditCard: undefined});
             }}
-            text="Yeni Kredi Karti Ekle"
+            text="Add New Credit Card"
           />
         </View>
       )}

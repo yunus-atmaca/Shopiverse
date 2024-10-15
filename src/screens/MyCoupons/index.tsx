@@ -14,36 +14,36 @@ const _coupons: ICoupon[] = [
   {
     expireDate: '12/12/2024',
     brand: 'Urban Wardrobe',
-    title: 'Büyük Sezon İndirimi Başladı!',
-    desc: "%50'ye varan indirimlerle alışverişin keyfini çıkarın! Ayakkabıdan giysiye, elektronik ürünlerden ev eşyalarına kadar geniş ürün yelpazemizde büyük fırsatlar sizi bekliyor. Stoklarla sınırlı olan bu fırsatı kaçırmayın, hemen alışveriş yapın ve sezonun en iyi indirimlerinden yararlanın!",
+    title: 'The Big Season Sale Has Started!',
+    desc: "Enjoy shopping with discounts up to 50%! Amazing deals await you in our wide range of products, from shoes to clothes, electronics to home goods. Don't miss out on this opportunity, which is limited to stock, shop now and take advantage of the best discounts of the season!",
     discount: '50%',
     termOfUse: [
-      'İndirim kodu, yalnızca belirtilen tarihler arasında geçerlidir ve bu sürenin sonunda kullanılamaz.',
-      'Her indirim kodu, yalnızca bir kez kullanılabilir ve birden fazla siparişte geçerli değildir.',
-      'İndirim kodunun kullanılabilmesi için minimum alışveriş tutarı (örneğin, 100 TL) gereklidir.',
-      'İndirim kullanılarak alınan ürünlerin iade edilmesi durumunda, indirim tutarı geri ödenmez.',
-      'İndirim kodu, başka kampanya veya indirimlerle birleştirilemez.',
-      'İndirim kodu yalnızca belirtilen ürün kategorilerinde veya seçili ürünlerde geçerlidir.',
-      'Mağaza, gerekli gördüğü durumlarda kampanyayı değiştirme veya sonlandırma hakkını saklı tutar.',
+      'The discount code is only valid within the specified dates and cannot be used after this period.',
+      'Each discount code can only be used once and cannot be applied to multiple orders.',
+      'A minimum purchase amount (e.g., 100$) is required to use the discount code.',
+      'If products purchased with the discount code are returned, the discount amount will not be refunded.',
+      'The discount code cannot be combined with other promotions or discounts.',
+      'The discount code is only valid for specified product categories or selected items.',
+      'The store reserves the right to change or terminate the promotion if deemed necessary.',
     ],
     lowerLimit: undefined,
   },
   {
     expireDate: '10/11/2024',
     brand: 'Moda Mart',
-    title: 'Büyük Alışveriş Festivali İndirimi Başladı!',
-    desc: 'Favori ürünlerinizde 300TL’a varan indirimlerle alışverişin tadını çıkarın! Moda, ayakkabı, aksesuar ve daha fazlasında inanılmaz fırsatlar sizleri bekliyor. Yalnızca belirli bir süre için geçerli olan bu harika fırsatları kaçırmayın, hemen sepetinizi doldurun ve avantajlı fiyatlarla alışveriş yapın!',
-    discount: '300TL',
+    title: 'The Big Shopping Festival Sale Has Started!',
+    desc: "Enjoy shopping with discounts up to 300$ on your favorite products! Amazing deals await you on fashion, shoes, accessories, and much more. Don't miss out on this limited-time offer, fill your cart now and shop at great prices!",
+    discount: '300$',
     termOfUse: [
-      'İndirim, kampanya dönemi boyunca (örneğin, 1 Ekim - 15 Ekim) geçerlidir.',
-      'İndirim kodu her kullanıcı tarafından yalnızca bir kez kullanılabilir.',
-      'İndirim kodu, en az 150 TL ve üzeri alışverişlerde geçerlidir.',
-      'İndirim, sadece seçili ürünlerde veya kategorilerde kullanılabilir.',
-      'Bu indirim, başka kampanyalar veya indirimlerle birleştirilemez.',
-      'İndirim kullanılarak yapılan alışverişlerde ürünlerin iadesi durumunda, iade edilen tutar, indirimsiz fiyat üzerinden hesaplanacaktır.',
-      'Mağazamız, kampanya koşullarını gerektiğinde değiştirme veya kampanyayı sonlandırma hakkını saklı tutar.',
+      'The discount is valid during the campaign period (e.g., October 1 - October 15).',
+      'Each discount code can only be used once per user.',
+      'The discount code is valid for purchases of 150$ or more.',
+      'The discount is only valid for selected products or categories.',
+      'This discount cannot be combined with other promotions or discounts.',
+      'If products purchased using the discount are returned, the refunded amount will be calculated based on the non-discounted price.',
+      'Our store reserves the right to modify or terminate the campaign terms as necessary.',
     ],
-    lowerLimit: '1500TL',
+    lowerLimit: '1500$',
   },
 ];
 
@@ -65,10 +65,10 @@ const MyCoupons = ({route: {params}}: RootStackScreenProps<'MyCoupons'>) => {
         <View style={[styles.container, styles.empty]}>
           <Info
             icon="Coupon"
-            title="Kayitli Indirim Bulunmamaktadir"
+            title="There Is No Coupon"
             navigateTo="MyCoupons"
             navigateParams={{coupons: _coupons}}
-            buttonText={'Kupon Ekle'}
+            buttonText={'Add Coupon'}
           />
         </View>
       )}

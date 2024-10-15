@@ -35,8 +35,12 @@ import Language from './Language';
 import Categories from './Categories';
 import StarFilled from './StarFilled';
 import Star from './Star';
+import Plus from './Plus';
+import Minus from './Minus';
 
 export {
+  Minus,
+  Plus,
   Star,
   StarFilled,
   Categories,

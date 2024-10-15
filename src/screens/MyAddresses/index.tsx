@@ -35,10 +35,10 @@ const MyAddresses = () => {
         <View style={[styles.container, styles.empty]}>
           <Info
             icon="Location"
-            title="Kayitli Adresin Bulunmamaktadir"
-            desc="Siparis teslim adresini buradan ekleyebilirsin"
+            title="There Is No registered Address"
+            desc="You can add your order delivery address here"
             navigateTo="AddAddress"
-            buttonText={'Adres Ekle'}
+            buttonText={'Add Address'}
           />
         </View>
       )}
@@ -59,7 +59,7 @@ const MyAddresses = () => {
             onClick={() => {
               navigationRef.navigate('AddAddress', {address: undefined});
             }}
-            text="Yeni Adres Ekle"
+            text="Add New Address"
           />
         </View>
       )}

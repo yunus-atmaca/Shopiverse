@@ -30,10 +30,10 @@ const MyOrders = () => {
       <View style={styles.container}>
         <Info
           icon="Box"
-          title="Şiparişiniz Bulunamadı"
-          desc="Şuanda şiparişiniz bulunmamaktadır."
+          title="There Is No Order"
+          desc="You currently have no orders."
           navigateTo="Profile"
-          buttonText={'Alışverişe Devam Et'}
+          buttonText={'Start Shopping'}
         />
       </View>
     </PageWrapper>

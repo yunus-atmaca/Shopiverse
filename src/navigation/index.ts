@@ -14,6 +14,8 @@ export type TabParamList = {
   Home: undefined;
   WhishList: undefined;
   Profile: undefined;
+  Cart: undefined;
+  Categories: undefined;
 };
 
 export type RootStackParamList = {
@@ -52,7 +54,9 @@ export type RootStackParamList = {
 
 export type Pages = keyof TabParamList | keyof RootStackParamList;
 
-type NavigationRef = NavigationContainerRefWithCurrent<RootStackParamList>;
+type NavigationRef = NavigationContainerRefWithCurrent<
+  RootStackParamList & TabParamList
+>;
 export const navigationRef: NavigationRef = createNavigationContainerRef();
 
 export type RootStackScreenProps<T extends keyof RootStackParamList> =

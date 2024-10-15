@@ -58,7 +58,13 @@ export interface IFavorite {
   createdAt: number;
 }
 
-export interface IReview{
+export interface ICartProduct {
+  piece: number;
+  isActive: boolean;
+  product: IProduct;
+}
+
+export interface IReview {
   id: string;
   createdAt: number;
   fullName: string;
