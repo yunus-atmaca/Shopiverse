@@ -1,7 +1,8 @@
 import Root from './Root';
 
-import React, {Suspense, lazy, memo} from 'react';
+import React, {Suspense, lazy, memo, useEffect} from 'react';
 import {} from 'react-native';
+import BootSplash from 'react-native-bootsplash';
 
 import {useAppSession} from '@/hooks/utils';
 
@@ -14,6 +15,12 @@ type Props = {
 
 const Navigator = (props: Props) => {
   useAppSession();
+
+  useEffect(() => {
+    setTimeout(async () => {
+      await BootSplash.hide({fade: true});
+    }, 2000);
+  }, []);
 
   //if(props.authenticated)
   return (

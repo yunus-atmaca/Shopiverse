@@ -30,7 +30,7 @@ const Coupon = ({containerStyle, data}: Props) => {
           </Text.H>
         </View>
         <View style={styles.termOfUser}>
-          <Text.P typography='semiBold' size={12}>Kosullar</Text.P>
+          <Text.P typography='semiBold' size={12}>Conditions</Text.P>
           <ScrollView showsVerticalScrollIndicator={false}>
             {data.termOfUse.map((t, i) => {
               return (
@@ -42,12 +42,12 @@ const Coupon = ({containerStyle, data}: Props) => {
         <View style={{backgroundColor: 'transparent'}}>
           {data.lowerLimit && (
             <Text.P color={theme.textSub} size={10}>
-              {`Min alisveris tutari:${data.lowerLimit}`}
+              {`Min shopping amount:${data.lowerLimit}`}
             </Text.P>
           )}
           {data.expireDate && (
             <Text.P color={theme.textSub} size={10}>
-              {`Son kullanma tarihi:${data.expireDate}`}
+              {`Expiration date:${data.expireDate}`}
             </Text.P>
           )}
         </View>
@@ -74,7 +74,7 @@ const Coupon = ({containerStyle, data}: Props) => {
           color={theme.textReversed}>
           {data.discount}
         </Text.H>
-        <ButtonBaseLine text="Urunleri Gor" />
+        <ButtonBaseLine text="Products" />
       </View>
     </View>
   );
