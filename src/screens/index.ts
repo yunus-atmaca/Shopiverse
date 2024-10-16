@@ -20,8 +20,10 @@ import MyCreditCards from './MyCreditCards';
 import AddCreditCard from './AddCreditCard';
 import MyCoupons from './MyCoupons';
 import Payment from './Payment';
+import Onboarding from './Onboarding';
 
 export {
+  Onboarding,
   Payment,
   Categories,
   MyCoupons,

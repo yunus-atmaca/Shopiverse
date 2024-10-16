@@ -53,6 +53,7 @@ export type RootStackParamList = {
   Payment: {
     data: ICartProduct[];
   };
+  Onboarding: undefined;
 };
 
 export type Pages = keyof TabParamList | keyof RootStackParamList;

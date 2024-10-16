@@ -19,7 +19,8 @@ import {
   MyCreditCards,
   AddCreditCard,
   MyCoupons,
-  Payment
+  Payment,
+  Onboarding
 } from '@/screens';
 
 const Stack = createStackNavigator<RootStackParamList>();
@@ -27,7 +28,7 @@ const Stack = createStackNavigator<RootStackParamList>();
 function Root() {
   return (
     <Stack.Navigator
-      initialRouteName="Tabs"
+      initialRouteName="Onboarding"
       screenOptions={{
         headerShown: false,
         gestureEnabled: false,
@@ -45,6 +46,7 @@ function Root() {
         <Stack.Screen name="MyCreditCards" component={MyCreditCards} />
         <Stack.Screen name="MyCoupons" component={MyCoupons} />
         <Stack.Screen name="Payment" component={Payment} />
+        <Stack.Screen name="Onboarding" component={Onboarding} />
       </Stack.Group>
 
       <Stack.Group screenOptions={{presentation: 'modal'}}>
