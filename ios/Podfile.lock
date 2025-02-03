@@ -1279,7 +1279,7 @@ PODS:
     - ReactCommon/turbomodule/bridging
     - ReactCommon/turbomodule/core
     - Yoga
-  - react-native-mmkv (3.0.2):
+  - react-native-mmkv (3.2.0):
     - DoubleConversion
     - glog
     - hermes-engine
@@ -2156,7 +2156,7 @@ SPEC CHECKSUMS:
   React-microtasksnativemodule: 2cec1d6e126598df0f165268afa231174dd1a611
   react-native-date-picker: 3399a55d9de13510ab9cb2fed2013484a6f6ebca
   react-native-keyboard-controller: 17d5830f2bd6c6cad44682eb2cc13f9078eff985
-  react-native-mmkv: 2435b053067cff3698fa2a68221e2954c5bfa0e9
+  react-native-mmkv: ae874ec060a95aaa08ba506d9c077e4151481b89
   react-native-pager-view: 94195f1bf32e7f78359fa20057c97e632364a08b
   react-native-safe-area-context: f1fda705dfe14355f41933debb5932887e234cc5
   react-native-webview: 8039cbb0aa6ad2fd7918e23aebb5586f127d3e91

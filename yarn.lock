@@ -3158,7 +3158,7 @@ __metadata:
     react-native-date-picker: 5.0.7
     react-native-gesture-handler: 2.20.0
     react-native-keyboard-controller: 1.14.0
-    react-native-mmkv: ^3.0.2
+    react-native-mmkv: ^3.2.0
     react-native-pager-view: 6.4.1
     react-native-reanimated: 3.15.4
     react-native-safe-area-context: 4.11.0
@@ -8766,13 +8766,13 @@ __metadata:
   languageName: node
   linkType: hard
 
-"react-native-mmkv@npm:^3.0.2":
-  version: 3.0.2
-  resolution: "react-native-mmkv@npm:3.0.2"
+"react-native-mmkv@npm:^3.2.0":
+  version: 3.2.0
+  resolution: "react-native-mmkv@npm:3.2.0"
   peerDependencies:
     react: "*"
     react-native: "*"
-  checksum: a6426a446514abac7f2ce76a54716210ff26e4220317d86cae0efd13b878566ce1112380915a36deb3e5e3498fa1c8910a82065b547f6c24d61aa6a026af01ed
+  checksum: 766944a7cbf265e27b57576e51bff8604cd8f58c88eaec78bd93d4ce10ff9127d5f75f4c3bb03d6c7ce5dafa07c65e233d5363c0504db802cc88eaf1ccbffaa1
   languageName: node
   linkType: hard
 
